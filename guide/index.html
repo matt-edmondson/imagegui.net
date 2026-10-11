@@ -1,0 +1,1196 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="How to use ImageGui by task: opening pictures, adjusting them, layers, text and shapes, selecting and masking, retouching, geometry, and exporting."><title>ImageGui User Guide</title><link rel="canonical" href="https://imagegui.net/guide/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="theme-color" content="#181926"><meta property="og:type" content="website"><meta property="og:title" content="ImageGui User Guide"><meta property="og:description" content="How to use ImageGui by task: opening pictures, adjusting them, layers, text and shapes, selecting and masking, retouching, geometry, and exporting."><meta property="og:url" content="https://imagegui.net/guide/"><meta property="og:site_name" content="ImageGui"><meta name="twitter:card" content="summary"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="/_astro/command-palette.CkaEKi5F.css"><style>.layout[data-astro-cid-amid4ct5]{grid-template-columns:15rem minmax(0,1fr);gap:3.5rem;padding-block:3.5rem 5rem;display:grid}.toc[data-astro-cid-amid4ct5]{align-self:start;max-height:calc(100vh - 3rem);position:sticky;top:1.5rem;overflow-y:auto}.toc[data-astro-cid-amid4ct5] .eyebrow[data-astro-cid-amid4ct5]{margin-bottom:1rem;display:block}.toc[data-astro-cid-amid4ct5] ol[data-astro-cid-amid4ct5]{gap:.45rem;list-style:none;display:grid}.toc[data-astro-cid-amid4ct5] a[data-astro-cid-amid4ct5]{color:var(--dim);border-bottom:none;font-size:.85rem}.toc[data-astro-cid-amid4ct5] a[data-astro-cid-amid4ct5]:hover{color:var(--accent-3)}.toc[data-astro-cid-amid4ct5] .source[data-astro-cid-amid4ct5]{margin-top:1.75rem;font-size:.8rem}.prose[data-astro-cid-amid4ct5]{max-width:46rem}.prose[data-astro-cid-amid4ct5] h1{margin-bottom:1.25rem;font-size:clamp(1.9rem,4.5vw,2.6rem)}.prose[data-astro-cid-amid4ct5] h2{border-top:1px solid var(--line);margin-top:3.5rem;padding-top:1.5rem;scroll-margin-top:1rem}.prose[data-astro-cid-amid4ct5] h3{margin-top:2.25rem;scroll-margin-top:1rem;font-size:1.05rem}.prose[data-astro-cid-amid4ct5] p,.prose[data-astro-cid-amid4ct5] ul,.prose[data-astro-cid-amid4ct5] ol,.prose[data-astro-cid-amid4ct5] table,.prose[data-astro-cid-amid4ct5] pre{margin-bottom:1.1rem}.prose[data-astro-cid-amid4ct5] ul,.prose[data-astro-cid-amid4ct5] ol{padding-left:1.4rem}.prose[data-astro-cid-amid4ct5] li{margin-bottom:.35rem}.prose[data-astro-cid-amid4ct5] strong{color:var(--ink);font-weight:600}.prose[data-astro-cid-amid4ct5] code{background-color:var(--panel);border:1px solid var(--line);color:var(--body-bright);border-radius:4px;padding:.1rem .35rem;font-size:.85em}.prose[data-astro-cid-amid4ct5] pre{background-color:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:.85rem 1rem;overflow-x:auto}.prose[data-astro-cid-amid4ct5] pre code{background:0 0;border:none;padding:0}.prose[data-astro-cid-amid4ct5] img{background-color:var(--panel);border:1px solid var(--line);border-radius:var(--radius);max-width:100%;height:auto;margin:1.5rem 0;display:block}.prose[data-astro-cid-amid4ct5] table{border-collapse:collapse;width:100%;font-size:.88rem;display:block;overflow-x:auto}.prose[data-astro-cid-amid4ct5] th,.prose[data-astro-cid-amid4ct5] td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:.5rem .75rem}.prose[data-astro-cid-amid4ct5] th{font-family:var(--mono);color:var(--ink);border-bottom-color:var(--line-strong);font-weight:500}@media (width<=900px){.layout[data-astro-cid-amid4ct5]{grid-template-columns:minmax(0,1fr);gap:0}.toc[data-astro-cid-amid4ct5]{display:none}}
+</style></head><body><header class="bar" data-astro-cid-wpvy4v7s><div class="container bar-inner" data-astro-cid-wpvy4v7s><a class="wordmark mono" href="/" data-astro-cid-wpvy4v7s>ImageGui</a><nav class="links mono" data-astro-cid-wpvy4v7s><a href="/#gallery" data-astro-cid-wpvy4v7s>Gallery</a><a href="/#how" data-astro-cid-wpvy4v7s>How It Works</a><a href="/#scope" data-astro-cid-wpvy4v7s>Scope</a><a href="/#roadmap" data-astro-cid-wpvy4v7s>Roadmap</a><a class="keep" href="/guide/" data-astro-cid-wpvy4v7s>Guide</a><a class="keep" href="https://github.com/ktsu-dev/ImageGui" target="_blank" rel="noopener" data-astro-cid-wpvy4v7s>GitHub</a></nav></div></header><main class="container layout" data-astro-cid-amid4ct5><aside class="toc" data-astro-cid-amid4ct5><p class="eyebrow" data-astro-cid-amid4ct5>User Guide</p><nav data-astro-cid-amid4ct5><ol data-astro-cid-amid4ct5><li data-astro-cid-amid4ct5><a href="#opening-pictures-and-projects" data-astro-cid-amid4ct5>Opening pictures and projects</a></li><li data-astro-cid-amid4ct5><a href="#looking-at-the-picture" data-astro-cid-amid4ct5>Looking at the picture</a></li><li data-astro-cid-amid4ct5><a href="#adjusting-colour-and-tone" data-astro-cid-amid4ct5>Adjusting colour and tone</a></li><li data-astro-cid-amid4ct5><a href="#layers" data-astro-cid-amid4ct5>Layers</a></li><li data-astro-cid-amid4ct5><a href="#text" data-astro-cid-amid4ct5>Text</a></li><li data-astro-cid-amid4ct5><a href="#shapes" data-astro-cid-amid4ct5>Shapes</a></li><li data-astro-cid-amid4ct5><a href="#selecting-and-masking" data-astro-cid-amid4ct5>Selecting and masking</a></li><li data-astro-cid-amid4ct5><a href="#retouching" data-astro-cid-amid4ct5>Retouching</a></li><li data-astro-cid-amid4ct5><a href="#liquify" data-astro-cid-amid4ct5>Liquify</a></li><li data-astro-cid-amid4ct5><a href="#geometry-crop-straighten-turn-and-resize" data-astro-cid-amid4ct5>Geometry: crop, straighten, turn and resize</a></li><li data-astro-cid-amid4ct5><a href="#saving-and-exporting" data-astro-cid-amid4ct5>Saving and exporting</a></li><li data-astro-cid-amid4ct5><a href="#undo-and-history" data-astro-cid-amid4ct5>Undo and history</a></li><li data-astro-cid-amid4ct5><a href="#preferences" data-astro-cid-amid4ct5>Preferences</a></li><li data-astro-cid-amid4ct5><a href="#keyboard-shortcuts" data-astro-cid-amid4ct5>Keyboard shortcuts</a></li></ol></nav><p class="source note" data-astro-cid-amid4ct5>From the <a href="https://github.com/ktsu-dev/ImageGui/blob/main/docs/user-guide.md" target="_blank" rel="noopener" data-astro-cid-amid4ct5>repository</a>, with pictures the UI test harness takes of the running app.</p></aside><article class="prose" data-astro-cid-amid4ct5><!-- Copied from ImageGui's docs/user-guide.md by sync-docs.mjs. Edit it there, not here. -->
+<h1 id="imagegui-user-guide">ImageGui user guide</h1>
+<p>This guide walks through ImageGui by task: opening a picture, adjusting it, working with layers, text
+and shapes, selecting and masking, retouching, changing its geometry, and exporting it. The pictures come from the
+<a href="https://github.com/ktsu-dev/ImageGui/blob/main/docs/gallery/README.md">feature gallery</a>, which the test harness photographs from the running
+application on every build of <code>main</code>, so they show the shell as it is today.</p>
+<p>Every edit in ImageGui is non-destructive. Adjustments, crops, turns and masks are recorded as steps
+on top of your original files, which are never changed, and every step can be undone, edited later or
+switched off.</p>
+<p><img  src="/_astro/editing-a-photo.tqezc1S9_1WPJl0.webp" alt="Editing a photo" loading="lazy" decoding="async" width="1440" height="900"></p>
+<ul>
+<li><a href="#opening-pictures-and-projects">Opening pictures and projects</a></li>
+<li><a href="#looking-at-the-picture">Looking at the picture</a></li>
+<li><a href="#adjusting-colour-and-tone">Adjusting colour and tone</a></li>
+<li><a href="#layers">Layers</a></li>
+<li><a href="#text">Text</a></li>
+<li><a href="#shapes">Shapes</a></li>
+<li><a href="#selecting-and-masking">Selecting and masking</a></li>
+<li><a href="#retouching">Retouching</a></li>
+<li><a href="#liquify">Liquify</a></li>
+<li><a href="#geometry-crop-straighten-turn-and-resize">Geometry: crop, straighten, turn and resize</a></li>
+<li><a href="#saving-and-exporting">Saving and exporting</a></li>
+<li><a href="#undo-and-history">Undo and history</a></li>
+<li><a href="#preferences">Preferences</a></li>
+<li><a href="#keyboard-shortcuts">Keyboard shortcuts</a></li>
+</ul>
+<h2 id="opening-pictures-and-projects">Opening pictures and projects</h2>
+<p><strong>File &gt; Open</strong> (Ctrl+O) opens a PNG, JPEG, WebP or TIFF image, a Photoshop file (<code>.psd</code> or <code>.psb</code>),
+or an <code>.imagegui</code> project. You can also name one when starting ImageGui (<code>ImageGui photo.jpg</code>). With
+nothing open, the canvas shows a start screen: <strong>New</strong>, <strong>Open</strong>, and your recent files as a grid of
+thumbnails.</p>
+<p><img  src="/_astro/start-screen.NZhs2aHC_18OYJh.webp" alt="Start screen" loading="lazy" decoding="async" width="720" height="330"></p>
+<p><strong>File &gt; New</strong> (Ctrl+N) makes a blank canvas: type a size or pick one of the screen, print and square
+presets, over white, black, a colour or nothing at all. A coloured background is an ordinary fill
+layer named <em>Background</em>, so it can be recoloured or deleted later.</p>
+<p><img  src="/_astro/new-document.BVm13By7_q2bLQ.webp" alt="New document" loading="lazy" decoding="async" width="349" height="250"></p>
+<p>TIFF files from scanners and other editors open whether uncompressed or LZW, Deflate or PackBits
+compressed, at 8 or 16 bits, in colour or greyscale, with or without transparency.</p>
+<p><img  src="/_astro/tiff.CHi2QXr7_ZlUl4G.webp" alt="TIFF" loading="lazy" decoding="async" width="540" height="552"></p>
+<p>Photoshop files open with their layers: names, groups and pass-through, visibility, opacity,
+clipping, blend modes and layer masks all come across, and each layer’s pixels are kept inside the
+project. Text, smart objects and fill layers arrive as the pixels Photoshop last drew for them,
+renamed to say so. An Invert, Levels or Exposure adjustment layer becomes the same adjustment here;
+other adjustment layers are left out. Whatever didn’t come across exactly is listed once the file
+opens. <strong>File &gt; Place</strong> takes a Photoshop file too, and adds its layers as one group.</p>
+<p><img  src="/_astro/opening-photoshop-files.pQV7uHJq_Z1rcRl8.webp" alt="Opening Photoshop files" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><strong>Edit &gt; Paste as New Layer</strong> (Ctrl+V) adds the image on the system clipboard as a layer at its own
+size, in the middle of the canvas, or opens it as a new picture when nothing is open. <strong>Edit &gt; Copy
+Merged</strong> puts what the canvas shows on the clipboard, every layer together, cut to the selection when
+there is one.</p>
+<p><img  src="/_astro/copy-merged-and-paste.B5__2UKv_Z25KtwO.webp" alt="Copy Merged and paste" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>Photos open the way they were taken: a picture the camera stored sideways is turned upright, and a
+wide-gamut colour profile such as Display P3 is converted to sRGB.</p>
+<p><img  src="/_astro/photos-open-the-way-they-were-taken.ZQpVNqok_dUdBp.webp" alt="Photos open the way they were taken" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><strong>File &gt; Open Recent</strong> lists recent files with a thumbnail of each project beside it.</p>
+<p><img  src="/_astro/open-recent-thumbnails.Ds6IL86V_BA871.webp" alt="Open Recent thumbnails" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>A project links to its original images rather than copying them. If one has moved, ImageGui asks where
+it went, or opens the project without it so you can point the layer at its file later with
+<strong>Layer &gt; Relink Image</strong>. Once one file is found, others from the same folder are offered too.</p>
+<p><img  src="/_astro/missing-originals.0kdf0nyl_Zv9n6J.webp" alt="Missing originals" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>If ImageGui stops without saving, the next start offers your unsaved work back.</p>
+<p><img  src="/_astro/crash-recovery.C4pXgW2a_HVbCX.webp" alt="Crash recovery" loading="lazy" decoding="async" width="520" height="160"></p>
+<p>If ImageGui ever closes because of an error, it also writes a report to a dated file in its data folder
+(<code>ImageGui/Crashes</code> under your local application data folder): the error, the versions in use, the
+picture’s size and layer count, and the names of the last steps you took. It holds no pixels and no
+folder names, and nothing is ever sent anywhere. The next launch says so once and offers to open the
+folder or copy the report, so you can share it if you want to report the problem.</p>
+<p><img  src="/_astro/crash-reports.BEjYPFXm_AAgre.webp" alt="Crash reports" loading="lazy" decoding="async" width="681" height="192"></p>
+<p>ImageGui starts on the start screen. To pick up where you left off instead, choose <strong>Reopen what was
+open</strong> under <strong>On launch</strong> in Preferences: the project or picture that was open when ImageGui last
+closed opens again at the zoom and scroll you left it at. A file named when starting ImageGui, or one
+opened from the file manager, comes first, and unsaved work from a crash is offered back as above
+rather than reopened silently.</p>
+<p><img  src="/_astro/reopening-the-last-session.Bos-mL6o_2xmak.webp" alt="Reopening the last session" loading="lazy" decoding="async" width="377" height="666"></p>
+<h2 id="looking-at-the-picture">Looking at the picture</h2>
+<p><strong>View &gt; Zoom In</strong> (Ctrl+=) and <strong>Zoom Out</strong> (Ctrl+-) step through fixed scales; <strong>Fit</strong>, <strong>50%</strong>,
+<strong>100%</strong> and <strong>200%</strong> jump straight to one. Scrolling over the canvas zooms too.</p>
+<p><img  src="/_astro/zoom.UjjfSaue_1RBji1.webp" alt="Zoom" loading="lazy" decoding="async" width="1064" height="884"></p>
+<p>While you work, the canvas shows a preview of the picture held to the <strong>Preview size</strong> set in Preferences, so
+edits stay quick on large pictures. Zoomed in past that preview’s own pixels, the canvas renders just
+the part you can see at the screen’s scale, up to the picture’s own pixels, as soon as you stop
+panning or zooming. While you drag, the last render stays where it belongs and the enlarged preview
+fills in around it. A few adjustments, such as lens correction, need the whole picture to render any
+part of it; on a picture too large to render whole at that size, the canvas keeps the enlarged
+preview and shows a <strong>Preview</strong> badge in its corner. Exports always use the full picture.</p>
+<p>From 600% each pixel is drawn as a flat square, and <strong>View &gt; Pixel Grid</strong> draws a line around each.</p>
+<p><img  src="/_astro/full-resolution-zoom.DgekpMEt_ZmfraC.webp" alt="Full-resolution zoom" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/pixel-grid.D4lPJt-S_cELhQ.webp" alt="Pixel grid" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>The View menu also opens these panels:</p>
+<ul>
+<li><strong>Navigator</strong>: the whole picture small, with a rectangle you drag to pan.</li>
+<li><strong>Info</strong>: the position and colour under the pointer, and while you edit an adjustment, the colour
+entering and leaving it.</li>
+<li><strong>Histogram</strong>: the finished picture’s histogram, per channel or luminance, with clipping, for the
+whole picture or the selection only.</li>
+<li><strong>Show Clipping</strong> (Shift+J): tints the canvas where the picture has clipped, blue where every channel is
+black and red where any channel is at white. It only marks the screen, never the picture, and
+follows drags live. Clicking either clipping readout in the histogram turns it on or off, and
+Preferences can widen its thresholds to warn of pixels that are nearly clipped.</li>
+<li><strong>History</strong>: every edit by name (see <a href="#undo-and-history">Undo and history</a>).</li>
+<li><strong>Before/After</strong>: compare with the picture before its adjustments and effects, alone, side by side
+or split by a divider. Backslash (\) toggles it.</li>
+<li><strong>Rotate View</strong> (R): turn the canvas on screen, as a painter turns the paper, without changing the
+picture. Drag round the canvas to turn it; hold Shift to turn in 15° steps. Double-click or press
+Esc to put it upright, or choose <strong>Reset Rotation</strong>. The zoom readout shows the angle, and every
+tool, guide and readout follows the turn.</li>
+<li><strong>Proof</strong>: show the canvas as seen with protanopia, deuteranopia or tritanopia, or as greyscale,
+to check that text and graphics don’t rely on colours only some people can tell apart. It changes
+only what the canvas shows: a badge marks it while it’s on, and exports are untouched.</li>
+<li><strong>Rulers</strong>: pixel rulers to drag guides out of. Dragged layers snap to guides, and <strong>Snap</strong> turns
+snapping off.</li>
+</ul>
+<p><img  src="/_astro/navigator.BcsXWMfc_ZUr5Nu.webp" alt="Navigator" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/colour-under-the-pointer.bOyXzjfS_1SKaLJ.webp" alt="Colour under the pointer" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/histogram.Dz84st-b_2dFadk.webp" alt="Histogram" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/clipping-overlay.B_WnmJFx_Z2hW8iK.webp" alt="Clipping overlay" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/before-and-after.CaDEYdkj_Z24rfVF.webp" alt="Before and after" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/rotating-the-view.K36AhXTc_ih2u4.webp" alt="Rotating the view" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/colour-blindness-proofing.w6Rtd2Ms_1pVtUI.webp" alt="Colour-blindness proofing" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/rulers-and-guides._G0hGyo1_Z2uvE0D.webp" alt="Rulers and guides" loading="lazy" decoding="async" width="1048" height="800"></p>
+<h3 id="notes-on-the-canvas">Notes on the canvas</h3>
+<p>Notes are reminders pinned to a spot on the picture, such as “fix this edge” or “client wants
+warmer”. Choose the <strong>Note</strong> tool (N), click where the note belongs, type it and press Enter;
+Ctrl+Enter starts a new line, and Escape drops it. Each note is a numbered pin. Hover a pin to read
+its note, click it to edit or delete it, and drag it to move it.</p>
+<p><strong>View &gt; Notes</strong> lists every note by its first line. Click one to highlight its pin and edit its text
+below the list. <strong>View &gt; Show Notes</strong> hides or shows the pins; the Note tool shows them while it is
+chosen. Notes are saved with the project and move with the picture through crops, turns and Canvas
+Size, but they are never drawn into the picture, so no export has them in it.</p>
+<p><img  src="/_astro/canvas-notes.B0rm5cWx_2cgFXX.webp" alt="Canvas notes" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h2 id="adjusting-colour-and-tone">Adjusting colour and tone</h2>
+<p>Select a layer and choose from <strong>Add adjustment</strong> in the inspector. Adjustments stack, and each
+applies to the result of the ones before it. Move one up or down with its arrow buttons, switch it off without losing its
+settings, or remove it.</p>
+<p><img  src="/_astro/adjustment-stack.pABo-gU5_2e5E1f.webp" alt="Adjustment stack" loading="lazy" decoding="async" width="376" height="880"></p>
+<p>The adjustments available are exposure, brightness/contrast, saturation/vibrance, black and white,
+levels, curves, white balance, HSL, colour balance, colour grading, channel mixer, selective colour,
+sharpen, Gaussian blur, clarity, vignette, noise reduction, dehaze, lens correction, invert,
+posterize, threshold, gradient map and photo filter.</p>
+<p><strong>Levels and curves</strong> are drawn on the histogram of the pixels reaching them, and both have a tab for
+each colour channel as well as the composite. <strong>Pick black point</strong> and <strong>Pick white point</strong> set levels
+from a click on something that should be black or white.</p>
+<p><img  src="/_astro/levels-per-channel.jAoSu4qd_1pixWO.webp" alt="Levels per channel" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/curves-per-channel.CORE1qJ4_13vtso.webp" alt="Curves per channel" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>Levels, curves and white balance each have an <strong>Auto</strong> button that sets them from the histogram, as one
+undo step you can carry on editing. White balance takes a grey-world estimate of the light, levels sets
+each channel’s black and white points so a tenth of a percent clips at either end, and curves draws a
+stretch between the darkest and brightest tenth of a percent with a gentle S.</p>
+<p><img  src="/_astro/auto-tone.CrWcip2A_2bng0g.webp" alt="Auto tone" loading="lazy" decoding="async" width="376" height="880"></p>
+<p><strong>White balance</strong> and <strong>HSL</strong> can be set by clicking on the canvas: <strong>Pick neutral point</strong> balances on
+something that should be grey, and <strong>Pick color on canvas</strong> finds the HSL band under the pointer, which
+you then drag left or right to adjust.</p>
+<p><img  src="/_astro/picking-from-the-canvas.BI_y-CAD_Z2ccDAl.webp" alt="Picking from the canvas" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/colour-by-hue-band.YzLT0avH_Z12QDDh.webp" alt="Colour by hue band" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/colour-balance.DkGYkA65_ZbIY9g.webp" alt="Colour balance" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><strong>Colour grading</strong> has a wheel each for the shadows, midtones and highlights, and a global wheel for the
+whole picture. Push a wheel’s handle towards the colour to add; how far from the centre is how strong
+the tint is, and the slider under the wheel brightens or darkens that range. Double-click the wheel or
+its slider to reset it. <strong>Blending</strong> sets how far the ranges overlap, and <strong>Balance</strong> leans them
+towards the shadows or the highlights.</p>
+<p><img  src="/_astro/colour-grading.BdIhk3do_Br29j.webp" alt="Colour grading" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><strong>Channel mixer</strong> rebuilds each output channel from red, green and blue plus a constant, on a tab per
+channel. Its total turns amber when a row strays from 100%, since above that the channel brightens.
+<strong>Monochrome</strong> mixes one grey for all three. <strong>Selective colour</strong> adds or takes away cyan, magenta,
+yellow and black in one family of colours at a time, from reds to blacks: <strong>Relative</strong> scales each
+change by the ink already there, and <strong>Absolute</strong> adds it outright.</p>
+<p><img  src="/_astro/channel-mixer-and-selective-colour.jDw3acQp_Z2d4DkT.webp" alt="Channel mixer and selective colour" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/sharpen-and-vignette.uq-zw_UM_1EiIJM.webp" alt="Sharpen and vignette" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><strong>Gaussian blur</strong> softens the whole layer, so a layer’s own edge feathers out without a dark fringe.
+<strong>Clarity</strong> is local contrast: it pushes each pixel away from the area around it, weighted to the
+midtones, and dragged left it softens instead. Both measure their radius against the layer’s height,
+so the preview shows what the export will.</p>
+<p><img  src="/_astro/gaussian-blur.BCjYU_bj_1E7tXA.webp" alt="Gaussian blur" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/clarity.B2tPb04q_ZQEl8R.webp" alt="Clarity" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><strong>Noise reduction</strong> smooths grain in lightness while keeping edges, and <strong>Detail</strong> puts some texture
+back; <strong>Color</strong> smooths colour blotches. <strong>Dehaze</strong> takes out haze, clearing distant hills and
+deepening the sky; dragged left, it adds haze instead.</p>
+<p><img  src="/_astro/noise-reduction-and-dehaze.cJhhfazn_Z1XSqaX.webp" alt="Noise reduction and dehaze" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><strong>Lens correction</strong> removes barrel or pincushion distortion, the red/cyan and blue/yellow fringes
+towards the corners, and the darkening a lens leaves in them, centred on the layer. Correcting barrel
+distortion pulls the middle of each side in and leaves transparent edges; <strong>Auto Scale</strong> enlarges the
+picture just enough to crop them away.</p>
+<p><img  src="/_astro/lens-correction.JBEnSzd9_ZqNUJF.webp" alt="Lens correction" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/invert-and-posterize.BTvAtv_n_Z124NP4.webp" alt="Invert and posterize" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/threshold.SBfSjJcy_ZOU8T5.webp" alt="Threshold" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/gradient-map.RczSZec5_aFqF7.webp" alt="Gradient map" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/photo-filter.2VOCR001_ZXzCsX.webp" alt="Photo filter" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="fading-and-blending-an-adjustment">Fading and blending an adjustment</h3>
+<p>Under each adjustment’s name are its <strong>Blend</strong> mode and its <strong>Opacity</strong>. Lowering the opacity fades the
+adjustment towards the pixels it was given, so a black and white at 60% leaves some colour in. A blend
+mode combines the adjustment’s result with its input the way a layer’s mode combines it with what is
+below: <strong>Luminosity</strong> changes brightness without shifting colour, <strong>Color</strong> changes colour and keeps
+brightness, and a neutral adjustment in <strong>Multiply</strong>, <strong>Screen</strong> or <strong>Soft Light</strong> darkens, lightens or
+adds contrast on its own. A mask has only an opacity, which fades how much of it applies.</p>
+<p><img  src="/_astro/adjustment-opacity-and-blend.B85kKPbG_ZVR2wq.webp" alt="Adjustment opacity and blend" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="reusing-adjustments">Reusing adjustments</h3>
+<p><strong>Edit &gt; Copy Adjustments</strong> (Ctrl+Shift+C) copies the selected layer’s stack, and the copy button on an
+adjustment copies just that one. <strong>Paste Adjustments</strong> (Ctrl+Shift+V) adds them to every selected
+layer.</p>
+<p><img  src="/_astro/copy-and-paste-adjustments.CKHA99rl_1REbx8.webp" alt="Copy and paste adjustments" loading="lazy" decoding="async" width="376" height="880"></p>
+<p>To keep a stack for later, or for other pictures, save it with <strong>Layer &gt; Adjustment Presets &gt; Save
+Stack as Preset</strong>, or right-click one adjustment and <strong>Save as Preset</strong>. Presets apply from the same
+menu or from the inspector’s <strong>Presets</strong> list. Saving a whole stack can include the layer’s effects
+too; applying such a preset replaces each layer’s effects with them.</p>
+<p><img  src="/_astro/adjustment-presets.CLLlhig7_Z1ytJeG.webp" alt="Adjustment presets" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h2 id="layers">Layers</h2>
+<p>A document is a tree of layers and groups, listed top first in the <strong>Layers</strong> panel. Click a row to
+select it, Ctrl+click to select several, double-click to rename, and drag to reorder or drop into a
+group. Every panel acts on the selected layer.</p>
+<p><img  src="/_astro/layers.CQBo5OG1_1NthfT.webp" alt="Layers" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>From the <strong>Layer</strong> menu:</p>
+<ul>
+<li><strong>Add Image Layer</strong> places another picture on the canvas; <strong>Add Text Layer</strong> (Ctrl+Shift+T) adds
+text; <strong>New Fill Layer</strong> adds a solid colour, a gradient or a pattern.</li>
+<li><strong>New Group</strong> (Ctrl+Shift+N), <strong>Group</strong> (Ctrl+G) and <strong>Ungroup</strong> (Ctrl+Shift+G).</li>
+<li><strong>Duplicate</strong> (Ctrl+J), <strong>Delete</strong> (Delete), <strong>Move Up</strong> (Ctrl+]) and <strong>Move Down</strong> (Ctrl+[).</li>
+<li><strong>Clip to Layer Below</strong> (Ctrl+Alt+G) shows a layer only where the one beneath it is.</li>
+<li><strong>Align</strong> and <strong>Distribute</strong> line layers up with the canvas or each other.</li>
+<li><strong>Rasterize</strong> turns a text layer into an image layer that looks the same, <strong>Merge Down</strong> (Ctrl+E)
+merges a layer into the one beneath it, and <strong>Flatten Image</strong> leaves one layer of what the canvas
+shows. The result’s pixels are kept inside the project, and undo brings back the layers they
+replaced.</li>
+</ul>
+<p><img  src="/_astro/rasterize-merge-and-flatten.BMHa8baa_190SBR.webp" alt="Rasterize, merge and flatten" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/fill-layers.BdJ37Bet_11GXUB.webp" alt="Fill layers" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>Every colour picker, for text, fills, gradient stops and effects, shows the same row of recently chosen
+colours and the same swatch palette under it. Click either to set the colour; <strong>+</strong> adds the current
+colour to the swatches, <strong>-</strong> removes it, and a swatch can be dragged to reorder it. Both are kept
+between runs.</p>
+<p><img  src="/_astro/shared-swatches-and-recent-colours.BpZ-OV27_2jH1on.webp" alt="Shared swatches and recent colours" loading="lazy" decoding="async" width="376" height="880"></p>
+<h3 id="pattern-fills">Pattern fills</h3>
+<p>A fill layer whose <strong>Type</strong> is <strong>Pattern</strong> repeats an image across itself. Each document keeps its own
+patterns, saved inside the project, and the inspector’s <strong>Pattern</strong> list picks one. <strong>Load Pattern…</strong>
+adds an image file and fills with it, and <strong>Edit &gt; Define Pattern</strong> adds what the canvas shows: the
+selection’s contents, with anything outside a feathered or shaped selection left transparent, or the
+whole canvas with no selection. <strong>Layer &gt; New Fill Layer &gt; Pattern</strong> fills with the newest one, and the
+<strong>Pattern overlay</strong> effect tiles the same patterns over any layer.</p>
+<p>A tile is laid at its own pixel size, starting from the layer’s top-left corner. <strong>Scale</strong> sizes it,
+<strong>Angle</strong> turns it, and <strong>Offset</strong> shifts it in canvas pixels. Moving the layer moves the pattern with
+it, while resizing the layer only shows more or less of it.</p>
+<p><img  src="/_astro/pattern-fills.DAte6D7p_26q84b.webp" alt="Pattern fills" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/clipping-masks.C0yWaQkQ_Z2jtvr2.webp" alt="Clipping masks" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>A row’s right-click menu also tags layers with a colour <strong>Label</strong>.</p>
+<p><img  src="/_astro/colour-labels.BOi7Mu5w_AN6fG.webp" alt="Colour labels" loading="lazy" decoding="async" width="376" height="880"></p>
+<h3 id="placing-a-project">Placing a project</h3>
+<p><strong>File &gt; Place…</strong> takes an <code>.imagegui</code> project as well as an image. An image becomes an image layer
+at its own pixel size. A project asks whether to <strong>Embed</strong> a copy of it in this project or <strong>Link</strong> to
+its file, and becomes a layer of its own at its canvas’s size. That layer is drawn by evaluating the
+whole placed project at the size it appears on the canvas, so its text and shapes stay sharp however
+far it is scaled, and like any layer it takes adjustments, effects, masks, blend modes, locks and the
+Move tool’s transforms.</p>
+<p>An embedded project is saved inside this one and never changes on its own. A linked project follows
+its file: when the file is saved again, by ImageGui or anything else, the layer takes in the new
+version as one undo step. A linked project whose file has moved opens with its edits and its shape
+kept, drawing nothing, and <strong>Layer &gt; Relink Project…</strong> points it at the file wherever it is now.
+<strong>Save Packaged Copy</strong> carries linked projects’ files along, as it does images.</p>
+<p><strong>Layer &gt; Edit Contents</strong> opens the selected placed project as the current document. This project is
+saved first, and saving the placed project brings you back to it with the change in place: a linked
+project is simply read again, and an embedded one takes in the edit as an undo step, leaving this
+project to save. <strong>File &gt; Return to …</strong> goes back without saving, and saving the placed project
+under another name keeps it as a project of its own.</p>
+<p><img  src="/_astro/placing-a-project.Dw0-4nff_ZNJ6aV.webp" alt="Placing a project" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="finding-a-layer">Finding a layer</h3>
+<p>Once a document has four or more layers and groups, the search box over the rows shows only the layers whose names contain what you type, and the
+<strong>Filter</strong> button beside it narrows them by kind (image, text, shape, fill or group), colour label,
+visibility or lock. A match inside a group shows with the groups around it, even folded ones, and
+nothing about the document changes: clear the box and the panel is as it was. Rows can’t be dragged
+to reorder while a filter is on.</p>
+<p>With the <strong>Move</strong> tool, Ctrl-click the canvas (or Alt-right-click it) to select the topmost layer
+drawn there, or right-click to list every layer drawn there and choose one. Hidden layers, the
+transparent parts of a layer and what its masks hide don’t count, and picking a layer inside a folded
+group unfolds the group so its row shows.</p>
+<p><img  src="/_astro/finding-a-layer.Dj4h4pdi_KhQce.webp" alt="Finding a layer" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="locking-layers">Locking layers</h3>
+<p>The padlock on a layer’s row locks it. <strong>Position</strong> stops it being moved, scaled, nudged, aligned or
+straightened; <strong>Pixels</strong> stops adjustments, effects, masks and text edits; <strong>All</strong> also locks its blend
+mode, opacity and clipping. A group’s lock covers everything inside it. Whatever a lock refuses is
+greyed out, and its tooltip says which lock is in the way. Each change of lock is one undo step.</p>
+<p><img  src="/_astro/layer-locks.Dwktf7Ex_HmHKV.webp" alt="Layer locks" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="blending-and-opacity">Blending and opacity</h3>
+<p>The <strong>Blend</strong> picker offers twenty-six modes, and the opacity slider fades a layer. A group normally
+blends its own layers together first; choose <strong>Pass Through</strong> at the top of its blend list to let each
+layer blend straight onto what is below the group.</p>
+<p><img  src="/_astro/blend-modes.Djxg5uHd_1g2ToS.webp" alt="Blend modes" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/pass-through-groups.BiwSJcQX_PaQqn.webp" alt="Pass-through groups" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="moving-and-scaling">Moving and scaling</h3>
+<p>With the <strong>Move</strong> tool (V), drag inside a selected layer’s outline to move it, a corner to scale it in
+proportion (Shift scales freely), or an edge to stretch it. The arrow keys nudge it a pixel at a time,
+or ten with Shift. Dragged layers snap to the canvas, other layers and guides; hold Ctrl to drag
+freely.</p>
+<p>Ctrl-drag an edge to skew the layer along it. Ctrl+Shift-drag a corner to move that corner alone and
+give the layer a perspective; once distorted, its corners move one at a time with a plain drag. Any
+layer can be distorted: text, fill and shape layers are drawn in their own frame and then warped, so
+text stays editable and sharp, and a group’s perspective carries everything in it.</p>
+<p><img  src="/_astro/move-and-scale.B5L-vkN8_Z1YL02i.webp" alt="Move and scale" loading="lazy" decoding="async" width="1048" height="751"></p>
+<p><img  src="/_astro/skew.DyqHDspd_1UGnrR.webp" alt="Skew" loading="lazy" decoding="async" width="1048" height="751"></p>
+<p><img  src="/_astro/distort.DlzRdvMf_XE9YT.webp" alt="Distort" loading="lazy" decoding="async" width="1048" height="751"></p>
+<p><img  src="/_astro/distorted-text.CBHOKXIN_Zauukx.webp" alt="Distorted text" loading="lazy" decoding="async" width="1048" height="751"></p>
+<p><img  src="/_astro/align-distribute-and-snapping.Cj4gSaHc_3CDcE.webp" alt="Align, distribute and snapping" loading="lazy" decoding="async" width="1048" height="751"></p>
+<h3 id="warping">Warping</h3>
+<p><strong>Edit &gt; Transform &gt; Warp</strong> lays a grid over the selected layer, in place of its transform box. Drag a
+point to pull the layer with it, or one of its handles to bend the lines either side of it, and the
+layer follows the grid as if it were printed on a sheet of rubber. The grid starts at three cells by
+three; the same menu offers four, five or six, and changing the grid keeps the bend as nearly as the
+new grid can hold it. Press Enter or Escape, choose Warp again, or select another layer to put the box
+back; the bend stays. <strong>Remove Warp</strong> straightens the layer again.</p>
+<p>Any layer can be warped. Images and placed projects are resampled through the grid with the
+document’s resampling filter; text, shapes and fills bend their outlines, so they stay sharp at every
+size; a group bends everything in it. The warp is applied in the layer’s own frame, before its
+perspective and placement, so moving, scaling or distorting a warped layer carries the bend with it.
+Each drag is one undo step. A position-locked layer can’t be warped, and a layer inside a warped group
+is warped with its group. Text is typed straight while it is edited on the canvas, and a warped shape
+can’t have its points edited or be combined until the warp is removed. A layer’s masks and limits
+are held in its frame before the warp, so they don’t bend with it.</p>
+<p><img  src="/_astro/warp.Brb_UkTL_1qyO6T.webp" alt="Warp" loading="lazy" decoding="async" width="1048" height="751"></p>
+<h3 id="linking-layers">Linking layers</h3>
+<p>Select two or more layers and choose <strong>Layer &gt; Link Layers</strong> to have them move together without
+grouping them. Moving, scaling, skewing, distorting, nudging or aligning any one of them moves the
+others by the same change on the canvas, wherever they sit in the layer tree. A chain icon at the
+right of each linked row shows which layers are linked; click it to select them all. Linking a layer
+to one that is already linked adds it to that link.</p>
+<p><strong>Layer &gt; Unlink Layers</strong> takes the selected layers out of their link, and the rest stay linked, as
+they do when one of them is deleted. A linked layer whose position is locked keeps all of them in
+place, and the tooltip names it. Each link change is one undo step, and links are saved with the
+project.</p>
+<p><img  src="/_astro/linked-layers.DYa5msbk_TD4Ne.webp" alt="Linked layers" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="effects">Effects</h3>
+<p>The inspector’s <strong>Effects</strong> section adds a drop shadow, a stroke, an outer glow, an inner shadow, an
+inner glow, a colour overlay, a gradient overlay, a pattern overlay, a bevel and emboss and a satin to
+any layer, each with its own blend mode. They
+follow the layer’s shape, so they work on text and groups too.</p>
+<p><img  src="/_astro/drop-shadow-and-stroke.JTJa_BOS_ZaP3pn.webp" alt="Drop shadow and stroke" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/inner-shadow-and-outer-glow.Cy4pxZvb_Z1HiyVX.webp" alt="Inner shadow and outer glow" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>A stroke’s <strong>Position</strong> puts it outside the edge, inside it, or centred on it. The <strong>Colour overlay</strong>
+paints the layer one colour, and the <strong>Gradient overlay</strong> paints it with a gradient edited like a
+gradient fill’s, linear along an angle or radial, fitted to the layer’s pixels; <strong>Scale</strong> stretches it.
+The <strong>Pattern overlay</strong> tiles one of the document’s <a href="#pattern-fills">patterns</a> over the layer from the
+corner of its pixels, so it moves with the layer, at a <strong>Scale</strong> and <strong>Angle</strong> of its own. It needs a
+pattern in the document first, and a preset leaves it behind, since patterns belong to a document.
+The <strong>Inner glow</strong> lights the layer from its edge inwards, or from its middle out. Overlays and inner
+glows lie inside the layer’s edge, over anything clipped to it.</p>
+<p>Shadows follow the document’s light: <strong>Layer &gt; Layer Effects &gt; Global Light</strong> turns every shadow with
+<strong>Use global light</strong> ticked at once, in one undo step, and so does changing the angle of any one of them.
+Untick it to give a shadow an angle of its own. Effects pasted or applied from a preset take the
+document’s light too.</p>
+<p><img  src="/_astro/overlays-inner-glow-and-global-light.Dkd74bDX_Z7vcxB.webp" alt="Overlays, inner glow and global light" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/pattern-overlay.ChMnnvQo_ZdQ5Pb.webp" alt="Pattern overlay" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><strong>Bevel and emboss</strong> shades the layer’s edge as a slope lit from one side, so it looks carved. Its
+<strong>Style</strong> puts the slope inside the edge (<strong>Inner</strong>), outside it so the canvas rises to meet the layer
+(<strong>Outer</strong>), across it so the layer looks pressed up out of the canvas (<strong>Emboss</strong>), or down into the
+edge from both sides like a stamp (<strong>Pillow</strong>). <strong>Depth</strong> steepens the slope, <strong>Size</strong> widens it,
+<strong>Soften</strong> blurs the shading, and <strong>Direction</strong> raises or sinks it. The light has an <strong>Angle</strong>, which
+follows the global light like a shadow’s, and an <strong>Altitude</strong> above the canvas. The <strong>Highlight</strong> and
+<strong>Shadow</strong> each have their own colour, opacity and blend mode.</p>
+<p><strong>Satin</strong> lays a silky sheen inside the layer: its own shape, softened by <strong>Size</strong>, moved by
+<strong>Distance</strong> both ways along an <strong>Angle</strong>, and laid where the two copies differ, or where they agree
+with <strong>Invert</strong> ticked, which is how it starts.</p>
+<p><img  src="/_astro/bevel-emboss-and-satin.B0aKeVwt_1Xwafm.webp" alt="Bevel, emboss and satin" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><strong>Layer &gt; Layer Effects &gt; Copy</strong> copies the selected layer’s effects, and <strong>Paste</strong> gives them to every
+selected layer in place of their own, as one undo step. Both are on a layer row’s right-click menu too.
+They are separate from copying adjustments, so each keeps what it holds. Pasted effects keep their size
+on the canvas: a 3 px stroke is 3 px on a small layer and a big one alike. The layer thumbnails show
+each layer with its effects.</p>
+<p><img  src="/_astro/copying-layer-effects.BqMchpuP_ZnuBvG.webp" alt="Copying layer effects" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="layer-comps">Layer comps</h3>
+<p><strong>View &gt; Layer Comps</strong> keeps named layouts of the layers, so one project can hold several versions of
+a design. <strong>New</strong> saves which layers are shown, where each sits, its opacity, blend mode and which of
+its effects are on; <strong>Apply</strong> (or a double click) goes back to the chosen comp in one undo step;
+<strong>Update</strong> replaces what it remembers with the layers as they are now; and the name field beside
+<strong>Rename</strong> and <strong>Delete</strong> manages the list. Layers deleted since a comp was saved are skipped, layers
+added since keep what they have, and a locked layer keeps what its locks protect. Pixels,
+adjustments and text are the same in every comp. <a href="#exporting-an-animation">Export Animation</a> can
+play the comps as the frames of a GIF or WebP.</p>
+<p><img  src="/_astro/layer-comps.Xf8AJUXw_Z1yAWOF.webp" alt="Layer comps" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="artboards">Artboards</h3>
+<p>An artboard is a named rectangle of the canvas that exports as a picture of its own, so one project
+can hold every size of a social post or every icon of a set. <strong>Layer &gt; New Artboard</strong> asks for a name,
+a size (type one, or pick a common social or icon size) and a background: white, black, a colour, or
+transparent. The first artboard takes the canvas, so the picture becomes the first of the set; each
+later one goes to the right of the last, and the canvas grows to hold it.</p>
+<p>Whatever sits on an artboard belongs to it: a layer at the top of the stack belongs to the artboard
+its middle is in. Each artboard’s background is a fill layer at the bottom of the stack, named after
+it, so it can be recoloured or given a gradient in the Fill panel like any other fill. With the Move
+tool, drag an artboard’s name to move it and everything on it, or click the name to choose it and
+drag an edge or corner to resize it, which leaves what is on it where it is. Escape, or a click
+elsewhere on the canvas, goes back to the layers. <strong>Layer &gt; Artboards</strong> lists them all, with their
+names, places and sizes in pixels and their background colours, each editable, and deletes them.
+Deleting an artboard deletes its background and leaves everything else on the canvas.</p>
+<p>When a document has artboards, <a href="#saving-and-exporting">Export</a> offers <strong>Each artboard</strong>, which writes
+every artboard beside the file you chose, named after it and the artboard (<code>post-Story.png</code>),
+rendered over its own rectangle alone. <a href="#exporting-several-files-at-once">Export Layers</a> offers
+<strong>Each artboard</strong> too, and a <a href="#batches-and-the-command-line">batch</a> can write each artboard of every
+project in it. A document with no artboards exports exactly as before.</p>
+<p><img  src="/_astro/artboards.ij8ognTh_Z1qyll7.webp" alt="Artboards" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h2 id="text">Text</h2>
+<p><strong>Layer &gt; Add Text Layer</strong> (Ctrl+Shift+T) adds a line of text. The inspector’s <strong>Text</strong> section sets
+what it says, the font, size, alignment, line spacing and colour. Text stays sharp at any size,
+because it is drawn from the font’s outlines.</p>
+<p><img  src="/_astro/text-layers.DtZ2Kgz-_Z24wEFp.webp" alt="Text layers" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>To type on the canvas, double-click a text layer, or choose the <strong>Text</strong> tool (T) and click it.
+Clicking where there is no text adds a new text layer. While editing, the arrows, Home, End, Ctrl+A and
+the clipboard work as in any editor, a double click selects a word, a triple click a line, and dragging
+a selection moves it (Ctrl copies). Ctrl+Enter or a click elsewhere finishes; Escape puts the text back.</p>
+<p><img  src="/_astro/editing-text-on-the-canvas.C2KJPaue_Z1dOlSA.webp" alt="Editing text on the canvas" loading="lazy" decoding="async" width="1048" height="849"></p>
+<p><strong>Wrap in a box</strong> turns a caption into a paragraph that wraps to a box you can resize.</p>
+<p><img  src="/_astro/boxed-text.Dt8YX9_r_1XO5rI.webp" alt="Boxed text" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>A character the font has no glyph for, such as an emoji, a Chinese, Japanese or Korean character, or a
+symbol, is drawn in the first installed font that has it instead of as an empty box: first the fonts
+the project carries, then the emoji, symbol and CJK fonts each platform installs (Segoe UI Emoji and
+Symbol, Apple Symbols, the Noto families, DejaVu Sans and others). The caret and wrapping measure it
+in that font, and <strong>Save as Package</strong> carries the fallback font along with the text’s own. Colour
+emoji fonts that hold only pictures are skipped, because text is drawn from outlines.</p>
+<p><img  src="/_astro/font-fallback.DYWTI3hZ_ZPcNgz.webp" alt="Font fallback" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>Select some of the text while editing it and a bar floats over it. Its first row sets the selection’s
+bold and italic faces (Ctrl+B, Ctrl+I), size, colour and font. Its second row underlines it (Ctrl+U)
+or strikes it through, at the position and thickness the font gives; makes it superscript or
+subscript; loosens or tightens its tracking; and raises or lowers it off the baseline. Its third row
+aligns the paragraphs the selection touches left, centre, right or justified, each paragraph on its
+own. <strong>Justify</strong> spreads every line of a boxed paragraph but its last across the box; the inspector’s
+<strong>Alignment</strong> sets every paragraph at once.</p>
+<p><img  src="/_astro/styling-part-of-the-text.CzzdlCG1_ZBWm2C.webp" alt="Styling part of the text" loading="lazy" decoding="async" width="1048" height="849"></p>
+<p><img  src="/_astro/underline-tracking-and-alignment.CIvGNLHH_22WYdL.webp" alt="Underline, tracking and alignment" loading="lazy" decoding="async" width="1048" height="849"></p>
+<p><strong>Leading and paragraphs</strong>, folded away under the inspector’s Text section, sets how far apart lines
+and paragraphs sit, all in ems of the text’s size:</p>
+<ul>
+<li><strong>Auto leading</strong> spaces lines by the line spacing times their largest size. Clear it to set the
+<strong>Leading</strong>, baseline to baseline, yourself. Leading belongs to characters, as size does, so a line
+takes the largest leading on it.</li>
+<li><strong>Before</strong> and <strong>After</strong> add space above and below a paragraph. The space before the first
+paragraph is left out, so the text still starts at the top of its box.</li>
+<li><strong>First line</strong>, <strong>Left</strong> and <strong>Right</strong> indent a paragraph from the box’s edges. Below zero, the first
+line hangs out to the left of the rest, as far as the box’s edge.</li>
+</ul>
+<p>While you edit the text on the canvas, these apply to the paragraphs your selection touches, or the
+caret’s paragraph, and leading to the selected characters or the caret’s paragraph; they drag rather
+than take typing, and using them doesn’t end the edit. Otherwise they apply to all of the text. Point
+text has no edges to indent from, so it takes leading only.</p>
+<p><img  src="/_astro/leading-paragraph-spacing-and-indents.BX38v0eF_Z2Dv9z.webp" alt="Leading, paragraph spacing and indents" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><strong>OpenType features</strong>, folded away below it, turns on the extras a font draws: <strong>Ligatures</strong> (on
+unless you turn them off) and <strong>Discretionary ligatures</strong>, <strong>Small caps</strong>, old-style or lining
+<strong>Figures</strong>, <strong>Tabular figures</strong> for columns of numbers, <strong>Fractions</strong>, <strong>Stylistic sets</strong> 1 to 20, and
+<strong>Kerning</strong> (on unless you turn it off). Only the features the text’s font has are listed. While you
+edit text on the canvas they apply to the selection, or the caret’s paragraph, without ending the
+edit; otherwise to all of the text, each switch one undo step. The caret still stops between the
+letters a ligature joins.</p>
+<p><img  src="/_astro/opentype-features.kOzIUpWZ_mU4fJ.webp" alt="OpenType features" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="text-styles">Text styles</h3>
+<p><strong>View &gt; Text Styles</strong> keeps named styles in the document, so a heading or a caption looks the same
+wherever it is used:</p>
+<ul>
+<li>A <strong>character style</strong> holds a font, size, colour, tracking, baseline shift, underline,
+strikethrough and OpenType features. It applies to characters.</li>
+<li>A <strong>paragraph style</strong> holds alignment, space before and after, and indents. It applies to whole
+paragraphs.</li>
+</ul>
+<p><strong>New</strong> makes a style from the selected text and links the text to it. Clicking a style applies it:
+to the selected text layers, or, while you edit text on the canvas, to the selection (a character
+style) or the paragraphs it touches (a paragraph style). Using the panel doesn’t end the edit.</p>
+<p>Choose a style to edit it below the list. A change, or <strong>Redefine</strong>, which takes the selected text’s
+values into the style, updates every text linked to it, in one undo step. Text you changed by hand
+keeps that change: if a linked word is struck through and the style isn’t, it stays struck through
+when the style changes. A <strong>+</strong> beside a style’s name means the selected text is linked to it but
+differs from it; clicking the style again clears the differences. <strong>Delete</strong> removes a style and
+leaves its text looking as it did.</p>
+<p>Styles are saved in the project. Text copied on the canvas and pasted into another document brings
+the styles it uses, joining a style of the same name there if it has one; undoing the paste removes
+them again.</p>
+<p><img  src="/_astro/text-styles.BtypGL1h_Z1ycsLs.webp" alt="Text styles" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><strong>Layer &gt; Warp Text</strong>, or <strong>Warp</strong> in the inspector’s Text section, bends a text layer into an arc,
+arch, bulge, flag, wave, fish, rise or squeeze. Each starts at a bend of 50%; the inspector’s <strong>Bend</strong>,
+<strong>Horizontal</strong> and <strong>Vertical</strong> distortion sliders (-100% to 100%) adjust it, and <strong>None</strong>
+straightens it again. The warp bends the text’s outline rather than its pixels, so the text stays
+editable and sharp at any size, and moving, scaling and distorting the layer work on the warped text.
+While you edit warped text on the canvas it is shown straight, so the caret sits on the letters; it
+bends again when you finish. A warped paragraph’s handles scale it rather than resize its box.</p>
+<p><img  src="/_astro/warped-text.YV0Dj-ic_1b5e9u.webp" alt="Warped text" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="text-on-a-path">Text on a path</h3>
+<p>Text can follow a path instead of a straight line. With the <strong>Text</strong> tool, click a path drawn with the
+Pen, or a line, ellipse or rectangle, and type: the text starts where you clicked. To put existing
+text on a path, select it and choose <strong>Layer &gt; Attach Text to Path</strong>, or pick the path from <strong>Path</strong> in
+the inspector’s Text section. Each letter stands upright on the path, turned to its direction, and an
+underline or strikethrough bends along it. An ellipse’s path runs from its left over the top, so text
+on a circle reads upright across its top.</p>
+<p>The text’s <strong>Alignment</strong> says whether the line starts, centres or ends at its place on the path, and
+<strong>Position</strong> moves that place along the path (0% is the path’s start, 100% its end). <strong>Flip</strong> runs the
+text the other way, on the path’s other side. Text longer than an open path carries straight on past
+its end; round a closed one it wraps.</p>
+<p>The text follows its path layer: edit the path’s points, or move, scale or rotate the layer, and the
+text goes with it. While you edit text on a path on the canvas, the caret and selection travel along
+the path. Text on a path can’t be warped or wrapped in a box; <strong>Layer &gt; Detach Text from Path</strong>, or
+<strong>None</strong> in the Path list, sets it straight again. If you delete the path layer, the text keeps the
+path where it last was, in the same step, so undoing the delete puts both back.</p>
+<p><img  src="/_astro/text-on-a-path.Dus9xBw5_Z20b61n.webp" alt="Text on a path" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h2 id="shapes">Shapes</h2>
+<p>The <strong>Shape</strong> tool (U) draws a rectangle, rounded rectangle, ellipse, line, polygon or star as a layer
+of its own. Press U again to move to the next shape, or pick one from the strip beside the tools, which
+also sets the fill, the stroke, the corner radius, the polygon’s number of sides and the star’s points
+and inner radius for the next shape you draw. Hold Shift to draw a square or a circle, or to keep a line to 45 degrees; hold Alt to draw out
+from the centre. <strong>Layer &gt; New Shape</strong> adds one in the middle of the picture instead.</p>
+<p><img  src="/_astro/shape-layers.DuxzQSLz_emQJN.webp" alt="Shape layers" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>A shape is drawn from its outline, so it stays sharp however far you scale it. The inspector’s
+<strong>Shape</strong> section changes its fill (a colour or none) and stroke (a colour and a width, or none)
+afterwards, and the Move tool’s box moves, scales, rotates and skews it like any other layer. Shapes
+take adjustments, masks, blend modes, opacity, clipping, effects and locks too. <strong>Select &gt; From Shape</strong>
+turns the selected shape’s outline into a selection.</p>
+<h3 id="dashes-caps-and-joins">Dashes, caps and joins</h3>
+<p>Once a shape is stroked, the inspector’s <strong>Shape</strong> section also styles the stroke. <strong>Dashes</strong> breaks it
+up: the presets (Dashed, Long dashes, Dotted, Dash dot) are worked out from the stroke’s width when you
+pick one, and <strong>Custom</strong> takes your own lengths in pixels, drawn and gap in turn, such as <code>12 4 0 4</code>. A
+length of 0 is a dot, which only shows with round or square caps, so picking Dotted turns butt caps
+round. <strong>Caps</strong> finishes the ends of a line, an open path and every dash: butt stops at the end,
+square reaches half the width past it and round finishes it with a half circle. <strong>Joins</strong> turns the
+outside of each corner: miter carries the edges on to a point, round rounds it and bevel cuts it off.
+A miter longer than the <strong>Miter limit</strong>, measured in half the stroke’s width, is beveled instead; 1
+bevels every corner and 4 is the usual default. Dash lengths belong to the shape, so they grow and
+shrink with it when the Move tool scales it.</p>
+<p><img  src="/_astro/dashes-caps-and-joins.vRSxgwFo_Z6PCNH.webp" alt="Dashes, caps and joins" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="arrowheads-stars-and-corners">Arrowheads, stars and corners</h3>
+<p>A line or an open path can end in an arrowhead. In the inspector’s <strong>Shape</strong> section, <strong>Start arrow</strong>
+and <strong>End arrow</strong> each pick a filled triangle, an open chevron (drawn with the stroke’s own caps and
+joins), a circle centred on the end, or a bar across it. <strong>W</strong> sets how wide it is across the stroke and
+<strong>L</strong> how far it reaches back along it, both in widths of the stroke, so an arrowhead grows when you
+make the stroke wider. An arrowhead replaces that end’s cap, points the way the line arrives, and is
+drawn whole however the dashes fall.</p>
+<p>A <strong>star</strong> has a number of <strong>Points</strong> and an <strong>Inner radius</strong>: how far out its inner corners lie, as a
+share of the way to its points. At 100% it is a polygon of twice as many sides; lower values sharpen
+the points.</p>
+<p>A rounded rectangle’s corners start linked, with one <strong>Corner radius</strong> for all four. Untick <strong>Link
+corners</strong> to give each its own, top left, top right, bottom right and bottom left; ticking it again gives
+every corner the top left’s. Two corners on the same side share it in proportion to their radii, so a
+large corner beside a square one can use the whole side.</p>
+<p><img  src="/_astro/arrowheads-stars-and-corners.CjyxdrA1_ZKrlc2.webp" alt="Arrowheads, stars and corners" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="drawing-paths-with-the-pen">Drawing paths with the Pen</h3>
+<p>The <strong>Pen</strong> tool (P) draws your own shapes out of curves. Click to put down a corner; press and drag
+to put down a smooth point, whose handles follow the pointer and bend the curve through it. Hold Shift
+to put the next point at a multiple of 45 degrees from the last. Click the first point to close the
+path, or press Enter to finish it open; Backspace takes the last point back and Escape abandons the
+path. A finished path becomes a shape layer painted with the fill and stroke in the strip beside the
+tools, and an open one is always stroked. Set the strip’s first list to <strong>Selection</strong> and the path
+becomes the selection instead, added to, subtracted from or intersected with the one you have by
+holding Shift, Alt or both as you put down its first point.</p>
+<p><img  src="/_astro/pen-paths.CEG6NQhb_KsPIW.webp" alt="Pen paths" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>The <strong>Direct Selection</strong> tool (A) shows the selected path layer’s points and handles. Drag a point to
+move it with its handles, or drag a handle to reshape the curve: a smooth point turns its other handle
+to match, and holding Alt moves one handle alone. Alt-click a point to make it a sharp corner. Each
+drag is one step to undo. The inspector’s <strong>Closed</strong> box opens or closes the path, and <strong>Select &gt; From
+Shape</strong> selects inside it like any other shape.</p>
+<h3 id="combining-shapes">Combining shapes</h3>
+<p>One shape layer can be made of several shapes. With a shape layer selected, draw another shape over
+it holding <strong>Shift</strong> to add it, <strong>Alt</strong> to cut it out, or both to keep only where the two overlap. The
+second list in the strip beside the tools does the same without the keys, and also offers <strong>Exclude</strong>,
+which keeps where exactly one of them covers and leaves the overlap a hole; with it set to <strong>New
+layer</strong> a shape is a layer of its own, as usual. The Pen tool uses the same list and keys for the path
+it draws. <strong>Layer &gt; Combine Shapes</strong> merges the selected shape layers into one, keeping the fill and
+stroke of the lowest. Each step is one to undo.</p>
+<p><img  src="/_astro/combined-shapes.C7d-csEd_ZN1KAL.webp" alt="Combined shapes" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>The fill and stroke paint the outline the shapes make together, so a hole is outlined too and an edge
+inside the shape is not. The inspector lists the shapes it is made of, where you can change how each
+combines or remove it, and its <strong>Fill rule</strong> decides what happens where a path crosses itself or loops
+inside itself: <strong>Non-zero</strong> fills it and <strong>Even-odd</strong> leaves it a hole. <strong>Select &gt; From Shape</strong> selects
+the combined outline, holes and all.</p>
+<h2 id="selecting-and-masking">Selecting and masking</h2>
+<p>A selection decides which part of the picture a mask or an adjustment covers. Choose a selection tool
+from the tool strip over the canvas, where each tool’s name sits under its icon. When the chosen tool’s
+options need the room, the names give way to icons alone and show as tooltips instead:</p>
+<ul>
+<li><strong>Marquee</strong> (M, press again for the ellipse): drag a rectangle or ellipse.</li>
+<li><strong>Lasso</strong> (L, press again for the polygonal lasso): draw freehand or click corners.</li>
+<li><strong>Magic Wand</strong> (W): click a colour to select the pixels near it.</li>
+<li><strong>Quick Selection</strong> (W again from the wand): paint over part of a subject and the selection grows
+out to the edges near the stroke. <strong>Tolerance</strong> decides how far in colour from what you painted over
+it may spread, and <strong>Edge</strong> how sharp a change in colour stops it; [ and ] change the brush’s size.
+Each stroke adds to a quick selection already there, Alt takes one away, and Deselect starts again.
+<strong>Select &gt; Refine Edge</strong> afterwards tidies hair and soft edges the stroke found.</li>
+<li><strong>Brush</strong> (B): paint into the selection; hold Alt or press X to erase, and [ and ] change its size.</li>
+<li><strong>Gradient</strong> (G): drag a ramp that fades the selection from where you press to where you let go,
+along the drag (<strong>Linear</strong>) or out from its start (<strong>Radial</strong>). Drag either handle afterwards to move
+that end; pressing Shift once the drag has started keeps it to 45 degree steps.</li>
+</ul>
+<p>Hold Shift as you start to add to the selection, Alt to subtract, or both to intersect.</p>
+<p><img  src="/_astro/selections.CnMaSQk7_Znpb77.webp" alt="Selections" loading="lazy" decoding="async" width="1048" height="849"></p>
+<p><img  src="/_astro/selecting-with-the-magic-wand.BeLf1gyB_Z2pAClb.webp" alt="Selecting with the magic wand" loading="lazy" decoding="async" width="1048" height="849"></p>
+<p><img  src="/_astro/painting-a-selection-with-quick-selection.CcaqDbJw_Z2dRGsj.webp" alt="Painting a selection with Quick Selection" loading="lazy" decoding="async" width="1048" height="849"></p>
+<p><img  src="/_astro/painting-a-selection-with-a-brush.CGDVay3Q_ZDx3Fe.webp" alt="Painting a selection with a brush" loading="lazy" decoding="async" width="1048" height="849"></p>
+<p>The Brush tool’s <strong>Tip</strong> button, beside its size and hardness, shapes how it paints:</p>
+<ul>
+<li><strong>Spacing</strong>: at <strong>Continuous</strong> the tip is swept along the stroke with no gaps, and doubling back
+never builds up. Above that it stamps separate dabs this far apart, as a share of the brush’s size.</li>
+<li><strong>Flow</strong>: how much each dab adds. Dabs build up where they overlap, so a low flow darkens gradually
+as you paint over the same place, like an airbrush. On a continuous stroke it is the stroke’s
+strength.</li>
+<li><strong>Scatter</strong>: how far each dab may stray across the stroke, as a share of the brush’s size. It needs
+a spacing.</li>
+<li><strong>Angle</strong> and <strong>Roundness</strong>: below 100% roundness the tip is an ellipse, turned by the angle, for a
+calligraphic edge. The outline under the pointer shows its shape.</li>
+<li><strong>Smoothing</strong>: the stroke trails the pointer by this many screen pixels on a string, which takes the
+wobble out of a hand-drawn line.</li>
+</ul>
+<p><strong>Preset</strong> lists saved brushes. Type a name and <strong>Save Preset</strong> to keep the current size, hardness and
+tip settings under it (a name already listed is replaced), or <strong>Delete Preset</strong> to remove it. Presets
+are kept in the app’s settings, so every document can use them. The tip settings are written into
+each stroke, so it still paints the same dabs at any export size.</p>
+<p><img  src="/_astro/brush-tip-settings.DthK0TVP_LCXXL.webp" alt="Brush tip settings" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>A gradient makes a graduated filter: drag one down over the sky, then <strong>Select &gt; Limit Adjustment to
+Selection</strong> on an exposure, and the sky darkens and fades out towards the horizon.</p>
+<p><img  src="/_astro/graduated-filters-with-the-gradient-tool.DAljrurJ_s7iRx.webp" alt="Graduated filters with the Gradient tool" loading="lazy" decoding="async" width="1048" height="849"></p>
+<p>The <strong>Select</strong> menu holds everything else: <strong>All</strong> (Ctrl+A), <strong>Deselect</strong> (Ctrl+D), <strong>Invert</strong>
+(Ctrl+Shift+I), <strong>Feather</strong> (Shift+F6), <strong>Modify</strong> to grow, shrink, border or smooth, and <strong>Color
+Range</strong> to select by colour.</p>
+<p><img  src="/_astro/selecting-by-colour.DT369ZYL_1xf9Ql.webp" alt="Selecting by colour" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/growing-shrinking-and-bordering-a-selection.cOeRO6ku_Z2fQnYo.webp" alt="Growing, shrinking and bordering a selection" loading="lazy" decoding="async" width="1048" height="849"></p>
+<p><strong>Select &gt; Refine Edge</strong> works on the edge of the selection you have. Its <strong>View</strong> shows the selection
+under a red overlay, on black or on white, and the canvas updates as you drag:</p>
+<ul>
+<li><strong>Radius</strong> looks this far either side of the edge and fits it to the selected layer’s own pixels, so
+a rough outline picks up hair, foliage or a skyline beside it. Layers with no pixels of their own,
+such as text and groups, skip it.</li>
+<li><strong>Smooth</strong> rounds off corners and specks, <strong>Feather</strong> softens the edge, <strong>Contrast</strong> hardens it
+again, and <strong>Shift Edge</strong> moves it outwards (positive) or inwards (negative).</li>
+<li><strong>Decontaminate Colors</strong> only matters to a mask: it replaces the colour along the edge with the
+colour of the nearby fully selected pixels, so a background’s colour does not fringe what is kept.
+<strong>Amount</strong> sets how much. Exports of a document that uses it are not banded.</li>
+</ul>
+<p><strong>OK</strong> adds the refinement to the end of the selection’s recipe. Opening Refine Edge again edits it
+rather than adding a second one, and undo takes it back. Like Modify, it follows the selection into a
+mask and scales with the layer, so the export refines exactly what the preview showed.</p>
+<p><img  src="/_astro/refining-a-selection-s-edge.CRCS9e_J_Z1EFyOI.webp" alt="Refining a selection’s edge" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><strong>Select &gt; From Layer Transparency</strong>, or Ctrl+click on a layer’s thumbnail, selects what that layer
+draws; Shift adds it to the selection and Alt subtracts it. The selection names the layer rather than
+copying it, so a mask made from it follows the layer when it moves.</p>
+<p><img  src="/_astro/selecting-from-layer-transparency.Ulp5zuER_Zpg3wN.webp" alt="Selecting from layer transparency" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><strong>Save Selection</strong> keeps a selection in the project under a name, and <strong>Load Selection</strong> brings it back
+or combines it with the current one.</p>
+<p><img  src="/_astro/saving-and-loading-selections.DEeqwR6Q_1FTdtO.webp" alt="Saving and loading selections" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="masks-and-limited-adjustments">Masks and limited adjustments</h3>
+<p><strong>Select &gt; Add Mask</strong> hides the selected layer outside the selection. <strong>Limit Adjustment to
+Selection</strong> confines one adjustment to it. Both stay editable: load one back with its <strong>Edit</strong> button,
+change the selection, and write it back with <strong>Replace Mask with Selection</strong>.</p>
+<p><img  src="/_astro/masks-and-limited-adjustments.DwfqKdD0_ZVmHW1.webp" alt="Masks and limited adjustments" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h2 id="retouching">Retouching</h2>
+<p>Two brushes copy one part of a layer over another, to take out dust, blemishes and stray wires.
+Both paint on the selected layer and keep what they paint as a recipe: each stroke is added to a
+<strong>Retouch</strong> adjustment at the top of the layer’s stack, or to a new one put there, so the layer’s own
+pixels are never changed. Switch the adjustment off to see the layer without its retouching, use
+<strong>Remove Last Stroke</strong> in the inspector to take a stroke back off, or undo it. Strokes move, scale and
+turn with the layer, and an export retouches exactly what the preview showed. A layer whose pixels are
+locked can’t be retouched.</p>
+<ul>
+<li><strong>Clone Stamp</strong> (S): Alt-click to set the source, then paint to copy it. With <strong>Aligned</strong> (the link button) on, the
+first stroke fixes the distance between the source and the brush and every later stroke keeps it,
+so the source moves with the brush; off, every stroke starts copying from the source again. A cross
+shows where the brush is copying from.</li>
+<li><strong>Spot Healing</strong> (J): paint over a blemish. When you let go, ImageGui looks around the stroke for the
+nearby patch whose surroundings best match the stroke’s, copies it, and shifts its brightness and
+colour so it meets the edge of the stroke, matching both the level and the gradient there.</li>
+</ul>
+<p>Both have a size, set with <strong>[</strong> and <strong>]</strong> as well as the slider, and a hardness: a soft brush blends
+its edge into the picture. A stroke reads the layer as the adjustments beneath its Retouch leave it,
+and each stroke reads what the strokes before it painted.</p>
+<p><img  src="/_astro/clone-stamp-and-spot-healing.DUDJvRt1_Z1uzbGb.webp" alt="Clone Stamp and Spot Healing" loading="lazy" decoding="async" width="1048" height="849"></p>
+<h3 id="content-aware-fill">Content-Aware Fill</h3>
+<p>For something too big to paint out, select it and choose <strong>Edit &gt; Content-Aware Fill</strong>. ImageGui fills
+the selection on the selected image layer from the rest of the layer: it searches the picture for the
+patches that best continue what surrounds the hole, first on a small copy and then on finer ones, and
+copies them in, so texture carries on through the fill rather than being smeared across it. Where what
+it copies is lit a little differently from the edge of the selection, as sky beside a glow is, the
+copy’s level is bent to meet the edge, so no seam shows.</p>
+<p>The dialog previews the fill before you commit to it. Each <strong>Seed</strong> searches the picture its own way,
+so if the fill copied something you don’t want, <strong>Try Another</strong> searches again. To keep it from copying
+a particular area, save a selection over that area first (<strong>Select &gt; Save Selection</strong>) and pick it under
+<strong>Don’t copy from</strong>. The selection can be feathered or soft: the fill blends in where it is.</p>
+<p><strong>OK</strong> adds a <strong>Content-Aware Fill</strong> adjustment at the top of the layer’s stack, holding the selection
+and the seed, so the layer’s own pixels are never changed. Change the seed from the inspector later,
+switch the fill off, or undo it. An export fills the same way the preview does, at full size. A layer
+whose pixels are locked can’t be filled.</p>
+<p>The fill looks at the whole layer, so on a very large picture it is one of the slower things on a
+layer’s stack, a second or so on a 24-megapixel photo with a large hole.</p>
+<p><img  src="/_astro/content-aware-fill.CMEyxStU_2hY6hL.webp" alt="Content-Aware Fill" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h2 id="liquify">Liquify</h2>
+<p><strong>Filter &gt; Liquify</strong> turns the canvas into a brush that pushes the selected image layer’s pixels
+around, like soft clay. A window opens beside the canvas with five tools:</p>
+<ul>
+<li><strong>Forward Warp</strong> pushes the pixels the way the brush moves.</li>
+<li><strong>Twirl</strong> turns them about the brush’s centre while you hold or drag it.</li>
+<li><strong>Pucker</strong> draws them in towards the centre, and <strong>Bloat</strong> swells them out from it.</li>
+<li><strong>Reconstruct</strong> paints the pixels back towards where they started.</li>
+</ul>
+<p>Each tool has a <strong>size</strong> (also <strong>[</strong> and <strong>]</strong>), a <strong>pressure</strong>, which is how strongly a dab moves the
+pixels, and a <strong>density</strong>, which is how much of the brush moves them fully before the effect fades to
+its edge. Holding the brush still keeps twirling, puckering or bloating.</p>
+<p>The strokes are a recipe, not pixels: they are added to a <strong>Liquify</strong> adjustment at the top of the
+layer’s stack, so you can switch it off, take the last stroke off from the inspector, or undo it. They
+follow the layer when it moves, and an export redraws them at full size. <strong>Restore All</strong> takes every
+stroke off at once, <strong>OK</strong> closes the window keeping them, and <strong>Cancel</strong> takes back everything painted
+since the window opened. A layer whose pixels are locked can’t be liquified.</p>
+<p><img  src="/_astro/liquify.DhMrdAIP_tWRY1.webp" alt="Liquify" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h2 id="geometry-crop-straighten-turn-and-resize">Geometry: crop, straighten, turn and resize</h2>
+<p>These all change where a layer sits rather than its pixels, so they can be undone or changed at any
+time without losing quality.</p>
+<p><strong>Crop</strong> in the inspector draws a crop box: drag its corners and edges, lock an aspect ratio if you
+like, then <strong>Apply crop</strong>.</p>
+<p><img  src="/_astro/crop.BuR_-vYc_Z1NgaWK.webp" alt="Crop" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>The guide drawn over the crop box is picked from its <strong>Overlay</strong> list, or cycled with O: thirds, the
+golden ratio, a golden spiral, diagonals, triangles and a fine grid. Shift+O flips the spiral and the
+triangles round, and the choice is remembered for the next crop.</p>
+<p><img  src="/_astro/crop-overlays.DFg9WFGJ_1QOgus.webp" alt="Crop overlays" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><strong>Straighten</strong> turns the selected layer by an angle. <strong>Draw horizon</strong> lets you draw a line along
+something that should be level, and turns the picture to match.</p>
+<p><img  src="/_astro/levelling-the-horizon.DvRHz0kT_EDlf7.webp" alt="Levelling the horizon" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><strong>Auto</strong>, beside the Straighten field, finds the strongest near-level or upright line in the picture
+and levels it in one undo step, which the field can then fine-tune. A picture with no clear line is
+left alone, and the panel says so.</p>
+<p><img  src="/_astro/auto-straighten.a4zBdjjl_1e1o2n.webp" alt="Auto straighten" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="measuring">Measuring</h3>
+<p>The <strong>Measure</strong> tool (<strong>I</strong>) drags a line across the canvas. A label beside the line and the
+<strong>Info</strong> panel read out its length, its angle (counterclockwise from pointing right, so a line
+rising to the right is positive) and how far it runs across (dx) and down (dy). Lengths are in the
+document’s pixels, or in inches, centimetres or millimetres at the resolution (ppi) you enter beside
+the unit, since a picture carries no resolution of its own.</p>
+<ul>
+<li>Drag either end to move it; click anywhere else, or press <strong>Esc</strong>, to clear the line.</li>
+<li>The ends catch on the canvas edges and centre lines, guides and layer edges while <strong>View &gt; Snap</strong>
+is on. Hold <strong>Ctrl</strong> to place them freely, and <strong>Shift</strong> to hold the line to 45° steps.</li>
+<li><strong>Straighten to this line</strong> turns the selected layer so the line is level, or upright when it is
+nearer upright, as one undoable step. The Straighten field carries on from the result.</li>
+</ul>
+<p>The line is only for looking: nothing about it is saved, and it goes when the canvas changes size.</p>
+<p><img  src="/_astro/measure-tool.CrDKZ1ob_wk7lW.webp" alt="Measure tool" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><strong>Image &gt; Perspective Crop</strong> puts four corners on the picture. Drag each onto a corner of something
+photographed at an angle, such as a page or a building’s face, and applying makes that shape the whole
+canvas, straightened.</p>
+<p><img  src="/_astro/perspective-crop.CaZbvWkD_Z1POxUh.webp" alt="Perspective crop" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>The <strong>Image</strong> menu rotates by quarter and half turns, flips horizontally or vertically, and changes the
+picture’s size:</p>
+<ul>
+<li><strong>Image Size</strong> resamples the whole picture to a new size.</li>
+<li><strong>Canvas Size</strong> adds or removes canvas around the picture without scaling it, and <strong>Trim</strong> crops to
+everything visible.</li>
+<li><strong>Resampling</strong> chooses the filter used for the preview and the export alike. Lanczos-3 is the
+default; nearest keeps hard pixel edges for pixel art.</li>
+</ul>
+<p><img  src="/_astro/image-size.CNFiYTYe_1ANXxh.webp" alt="Image size" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/canvas-size-and-trim.C9ah_PWr_Z1Fwc3U.webp" alt="Canvas size and trim" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/resampling-filter.scolM3vM_11AjFA.webp" alt="Resampling filter" loading="lazy" decoding="async" width="640" height="360"></p>
+<h2 id="saving-and-exporting">Saving and exporting</h2>
+<p><strong>File &gt; Save</strong> (Ctrl+S) writes an <code>.imagegui</code> project that keeps your layers, adjustments and edits,
+and links to your original images. <strong>Save As</strong> (Ctrl+Shift+S) saves under a new name, and <strong>Save
+Packaged Copy</strong> writes a project that carries its originals inside it, for moving to another machine.
+A project remembers its selection and straighten angle, so you pick up where you left off.</p>
+<p><img  src="/_astro/picking-up-where-you-left-off.BhEdHMAe_Z1rYvzs.webp" alt="Picking up where you left off" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="saved-versions">Saved versions</h3>
+<p>Each time you save over a project, the save it replaces is kept in a folder beside it, named after the
+project with <code>.versions</code> on the end (<code>Photo.imagegui.versions</code>). <strong>File &gt; Preferences &gt; Keep earlier
+saves</strong> sets how many: five unless you change it, and the oldest past that are deleted when you save.
+<strong>None</strong> stops keeping new ones without deleting those already kept.</p>
+<p><strong>File &gt; Versions</strong> lists the earlier saves of the open project, newest first, each with its thumbnail
+and the time it was saved. <strong>Open as Copy</strong> opens one as a new, untitled picture and leaves the project
+alone; saving it asks where. <strong>Restore</strong> replaces the open picture with that version as one step, so
+Ctrl+Z brings back what you had, and the next Save writes it over the project. Versions are earlier
+saves only: work you haven’t saved is protected by autosave and crash recovery instead.</p>
+<p><img  src="/_astro/saved-versions.BhfcmuX6_pCrKt.webp" alt="Saved versions" loading="lazy" decoding="async" width="464" height="404"></p>
+<p><strong>File &gt; Export</strong> writes the finished picture as PNG, JPEG, WebP, TIFF, PDF or SVG. It asks what size to write at (the
+picture’s own size, a percentage, or a long edge in pixels) and, for JPEG and WebP, a quality. Both
+are remembered for next time.</p>
+<p><img  src="/_astro/export-size.DY_kU_iR_Z2mAnWI.webp" alt="Export size" loading="lazy" decoding="async" width="559" height="576"></p>
+<p><img  src="/_astro/export-quality.1BvMRmL4_qvkPo.webp" alt="Export quality" loading="lazy" decoding="async" width="540" height="598"></p>
+<p>Beneath the options is a preview of the file: the picture as that format and quality will write it,
+at 1:1 in a window you can drag around, and how big the file will be. Both catch up a moment after
+you stop moving a control. <strong>Compare with original</strong> flips the window to the picture before
+encoding, which is the quickest way to find the lowest quality that still looks right. An export of
+up to two megapixels is encoded whole, so its size is exact; a larger one is previewed and measured
+from a smaller copy, and the size is marked as an estimate.</p>
+<p><img  src="/_astro/export-preview.DVbuwzls_1oVpsk.webp" alt="Export preview" loading="lazy" decoding="async" width="540" height="598"></p>
+<p>TIFF is written losslessly, LZW-compressed, so it asks only for a size. A PDF is one page titled after
+its file: either the picture’s size at a chosen number of pixels an inch, or A4, A3, A5, Letter, Legal
+or Tabloid turned to match the picture, which it fits inside or fills. The picture is stored in it as
+JPEG at the chosen quality, or losslessly.</p>
+<p><img  src="/_astro/export-as-pdf.CR6r0Ntd_Z27UutO.webp" alt="Export as PDF" loading="lazy" decoding="async" width="540" height="692"></p>
+<h3 id="dithered-gradients">Dithered gradients</h3>
+<p>Every export except SVG’s vectors is written at 8 bits a channel, 256 levels, and a smooth gradient
+that crosses only a few of them would show each as a flat band. So where the picture becomes 8 bits,
+in exports, on the canvas and when copying to the clipboard, each pixel between two levels takes the
+upper one as often as it lies towards it, in a fixed pattern finer than a level. Gradient fills,
+glows, vignettes and soft skies come out smooth, and a patch averages to the light it was meant to
+have. A colour that already sits exactly on a level, such as an untouched photo’s, is written exactly
+as it was, so dithering never adds noise to a picture that had nothing to lose.</p>
+<p>The pattern depends only on where a pixel is, so the same document exports to the same bytes every
+time, however it is split up to save memory. <strong>File &gt; Preferences &gt; Appearance &gt; Dither gradients on
+8-bit output</strong> turns it off; it is on unless you do.</p>
+<p><img  src="/_astro/dithered-gradients.C0qSW7ne_Z1MBOTt.webp" alt="Dithered gradients" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="exporting-as-svg">Exporting as SVG</h3>
+<p>Name the export <code>.svg</code> to write a vector file. Shape and text layers become real paths: text is
+converted to outlines, so the file needs none of its fonts, and keeps its coloured runs, underlines
+and strikethroughs. Fills, strokes with their dashes, caps, joins and miter limit, opacity, blend
+modes and groups become SVG attributes, and solid fill layers become rectangles. Everything else is
+embedded as a PNG of that layer at the export’s size, cropped to what it covers: photos, gradient and
+pattern fills, and any layer with adjustments, masks, effects or a perspective. So is a layer with
+others clipped to it, drawn together with them. A layer in a blend mode SVG doesn’t have, such as
+Linear Burn, depends on what is beneath it, so it is drawn as one picture with everything below it.</p>
+<p>The export options list each layer that will be drawn as a picture and why, before anything is
+written. The size you choose is the size the SVG is shown at; its coordinates stay in canvas pixels.
+SVG viewers blend translucent layers in sRGB where ImageGui blends in linear light, so translucent
+edges and blend modes can look slightly different from the canvas.</p>
+<p><img  src="/_astro/export-as-svg.9vfk4Lz3_1kH65v.webp" alt="Export as SVG" loading="lazy" decoding="async" width="643" height="592"></p>
+<p><strong>File &gt; Export Layers</strong> writes each top-level layer, or each selected one, to a file of its own. A
+document with <a href="#layer-comps">layer comps</a> can instead write each comp as the whole picture.</p>
+<p><img  src="/_astro/export-layers.DbbIctUW_Z13HlFz.webp" alt="Export layers" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="exporting-an-animation">Exporting an animation</h3>
+<p><strong>File &gt; Export Animation</strong> writes an animated GIF or WebP whose frames are your
+<a href="#layer-comps">layer comps</a>, in the order the panel lists them, or each layer at the top of the
+stack shown on its own, from the bottom up. Layers are used whether their eye is on or not, so a
+document can keep every frame but one hidden. Choose a file, then:</p>
+<ul>
+<li><strong>Format</strong>: GIF plays everywhere. Each frame gets a palette of its own of up to 256 colours, and a
+pixel is either clear or solid. WebP keeps every colour and soft edges, at the quality you choose,
+but holds every frame in memory until the file is written.</li>
+<li><strong>Size</strong>: the same choices as Export: the picture’s own size, a percentage, or a long edge.</li>
+<li><strong>Loop forever</strong>, or turn it off and say how many times the animation plays.</li>
+<li><strong>Timing</strong>: the field above the frame list sets every frame at once, and each frame’s own field
+changes just that one. GIF keeps time in hundredths of a second, so its delays round to the
+nearest 10 ms.</li>
+</ul>
+<p>Frames are rendered as Export renders the picture. <strong>Stop</strong> in the progress window abandons the
+export and writes nothing. Batch can’t write animations, since it works on image files, which have
+neither comps nor layers.</p>
+<p><img  src="/_astro/exporting-an-animation.nx_M9uwl_1UKv3i.webp" alt="Exporting an animation" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="exporting-several-files-at-once">Exporting several files at once</h3>
+<p><strong>File &gt; Export As Set</strong> asks for a folder, then writes every output of a set there in one go. Each
+output has its own format, quality, size and a suffix that goes between the picture’s name and the
+extension, so the set that comes with ImageGui writes <code>photo-web.jpg</code> at 2048 pixels on the long
+edge, <code>photo-print.tif</code> at full size and <code>photo-thumb.webp</code> at 512. Make new sets, duplicate, rename
+and edit them in the same window; <strong>Save Sets</strong> keeps your changes without exporting. Outputs of the
+same size share one rendering of the picture, and the window says how many renderings the set needs.
+In <strong>File &gt; Batch</strong>, choose an export set to write the whole set for every picture.</p>
+<p><img  src="/_astro/export-as-a-set.7NlLpujS_9ynOs.webp" alt="Export as a set" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h3 id="batches-and-the-command-line">Batches and the command line</h3>
+<p><strong>File &gt; Batch</strong> runs a set of pictures, or every picture directly inside a folder, through one of
+your adjustment presets and writes each one to an output folder as PNG, JPEG, WebP, TIFF, PDF or SVG,
+or as a whole export set. A saved project can be part of a batch too: it is written as it was saved,
+without the preset, and with <strong>Each artboard of a project</strong> ticked a project with artboards is written
+one picture per artboard. The same batch runs without a window from the command line:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">ImageGui</span><span style="color:#79B8FF"> --batch</span><span style="color:#79B8FF"> --out</span><span style="color:#9ECBFF"> web</span><span style="color:#79B8FF"> --preset</span><span style="color:#9ECBFF"> "Golden hour"</span><span style="color:#79B8FF"> --size</span><span style="color:#79B8FF"> 2048</span><span style="color:#79B8FF"> --format</span><span style="color:#9ECBFF"> jpg</span><span style="color:#79B8FF"> --quality</span><span style="color:#79B8FF"> 85</span><span style="color:#9ECBFF"> photos/</span></span>
+<span class="line"><span style="color:#B392F0">ImageGui</span><span style="color:#79B8FF"> --batch</span><span style="color:#79B8FF"> --out</span><span style="color:#9ECBFF"> delivery</span><span style="color:#79B8FF"> --set</span><span style="color:#9ECBFF"> "Web, print and thumbnail"</span><span style="color:#9ECBFF"> photos/</span></span></code></pre>
+<p><code>--format</code> is one of <code>png</code>, <code>jpg</code>, <code>webp</code>, <code>tif</code>, <code>pdf</code> or <code>svg</code>; without it each picture keeps its
+own format. <code>--size</code> is the long edge in pixels and <code>--percent</code> a percentage; neither enlarges.
+<code>--set</code> names an export set saved in the app (the name’s case doesn’t matter) and writes every
+output of it for each picture. A set chooses its own formats, qualities and sizes, so it can’t be
+combined with <code>--format</code>, <code>--quality</code>, <code>--size</code> or <code>--percent</code>. <code>--artboards each</code> writes each
+artboard of a project as a picture of its own; <code>--artboards whole</code>, the default, writes its whole
+canvas. The command exits with 0 when every picture was written, 1 when any failed, and 2 when the
+command line couldn’t be understood or names a preset or set that isn’t saved.</p>
+<p><img  src="/_astro/batch-processing.C2YCoVSG_ZNbwDU.webp" alt="Batch processing" loading="lazy" decoding="async" width="737" height="590"></p>
+<h2 id="undo-and-history">Undo and history</h2>
+<p><strong>Edit &gt; Undo</strong> (Ctrl+Z) and <strong>Redo</strong> (Ctrl+Y) step through every change, including each drag. <strong>View &gt;
+History</strong> lists the steps by name, marks the one the saved file holds, and jumps to any step in one
+click.</p>
+<p>Undo keeps the pixels of layers you delete, merge, rasterize or relink, so they can come back. The line
+at the top of History says how much memory that takes. <strong>File &gt; Preferences &gt; History memory limit</strong>
+(1 GB unless you change it) caps it: past the limit, the oldest steps are let go, and the first row
+becomes the oldest state kept rather than the picture as it was opened. The newest step is always kept,
+however large. If the step a save wrote is let go, the project reads as unsaved until you save again.</p>
+<p><img  src="/_astro/history.DkCI9SgH_ZYXHT4.webp" alt="History" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><strong>New Snapshot</strong>, at the top of History, keeps the picture as it is now under a name (type one in the
+field beside it, or leave it empty for <em>Snapshot 1</em>, <em>Snapshot 2</em>, …). Snapshots are listed above the
+steps. Click one to return to it: that’s one new step, so Ctrl+Z takes you back to where you were, and
+everything you did after the snapshot stays in the history. Right-click a snapshot to delete it.
+Snapshots last until you open another picture and aren’t saved with the project. They count toward the
+history memory limit, but they’re the last thing let go: the oldest steps go first.</p>
+<p><img  src="/_astro/history-snapshots.DXgx_dLV_Z2qImkx.webp" alt="History snapshots" loading="lazy" decoding="async" width="1440" height="900"></p>
+<h2 id="preferences">Preferences</h2>
+<p><strong>File &gt; Preferences</strong> holds settings that belong to you rather than to a document: how large the
+interface is drawn and in which colours, how often unsaved work is autosaved, how much memory undo may hold, how many earlier saves of a project are kept, whether a launch reopens what was open, how layer
+thumbnails are framed, the clipping overlay’s thresholds, and whether double-clicking an <code>.imagegui</code>
+project in your file manager opens it in ImageGui.</p>
+<p>The <strong>Appearance</strong> tab holds the interface size, the theme, and whether gradients are dithered where
+they become 8 bits (see <a href="#dithered-gradients">Dithered gradients</a>).</p>
+<p><strong>Interface size</strong> runs from 75% to 200% of the size your display’s DPI gives, which is 100%. It applies
+at once and is remembered; the <strong>Accessibility</strong> menu’s UI Scale sets the same thing. Menus, panels, the
+canvas’s handles and the distance a click can wander before it becomes a drag all grow together, and the
+canvas’s zoom is left alone.</p>
+<p><img  src="/_astro/interface-size.BQiF_RSu_ZEGchs.webp" alt="Interface size" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><strong>Theme</strong> is <strong>Dark</strong> (the default), <strong>Light</strong>, or <strong>Follow the system</strong>, which uses whichever your
+operating system is set to and changes with it while ImageGui runs. On Linux the system’s setting is read
+from GNOME’s <code>color-scheme</code>, or the GTK theme’s name. The space around the picture, the rulers and the
+guides change with the theme; marks drawn over the picture itself, such as selection outlines and
+handles, keep their black and white so they show on any image.</p>
+<p><img  src="/_astro/light-theme.PAcCBdYl_dxWCx.webp" alt="Light theme" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/autosave-interval.BAKy2x0h_Z1JzKEj.webp" alt="Autosave interval" loading="lazy" decoding="async" width="377" height="666"></p>
+<p><img  src="/_astro/thumbnails-framed-by-contents.CdL7zuFU_Z2g9Gjb.webp" alt="Thumbnails framed by contents" loading="lazy" decoding="async" width="376" height="880"></p>
+<p><img  src="/_astro/opening-projects-from-the-file-manager.DLf_9yBK_15mVxA.webp" alt="Opening projects from the file manager" loading="lazy" decoding="async" width="398" height="680"></p>
+<p>The <strong>Performance</strong> tab holds the <strong>Preview cache</strong>: how much of the evaluated picture ImageGui keeps
+so that a drag redraws only the layer and adjustments it changes. <strong>Automatic</strong>, the default, takes an
+eighth of your computer’s memory, never less than 512 MB nor more than 4 GB; a busy 24 MP picture
+needs about 700 MB at the 2048 px preview size. The line beneath says how much is held now. A smaller
+cache is applied at once, letting go of the least recently used results first.</p>
+<p><img  src="/_astro/preview-cache.DzDs6dGg_Z289xtE.webp" alt="Preview cache" loading="lazy" decoding="async" width="340" height="150"></p>
+<p>The <strong>Keyboard</strong> tab rebinds every menu shortcut and tool key: click a shortcut and press the new keys.
+The menus show whatever is bound, a chord two commands share is flagged on both rows, and <strong>Reset</strong> or
+<strong>Reset All</strong> puts the defaults back.</p>
+<p><img  src="/_astro/keyboard-shortcuts.Cx-yHdXy_Z2qbwiR.webp" alt="Keyboard shortcuts" loading="lazy" decoding="async" width="928" height="648"></p>
+<h2 id="keyboard-shortcuts">Keyboard shortcuts</h2>
+<p>These are the default shortcuts. Shortcuts that act on layers or the canvas are ignored while you are
+typing in a text field.</p>
+<p><strong>Help &gt; Keyboard Shortcuts</strong> (Ctrl+/) opens a window listing every command with the shortcut it has
+now, including any you have changed, grouped like the menus. Type in its search box to find a command
+by name, by menu or by its keys, such as <code>ctrl+j</code>. Each row’s <strong>Change…</strong> button opens Preferences
+on the Keyboard tab, already listening for the new keys.</p>
+<p><img  src="/_astro/keyboard-shortcuts-window.Cfqzhs9u_1m8tTt.webp" alt="Keyboard shortcuts window" loading="lazy" decoding="async" width="444" height="544"></p>
+<p><strong>Help &gt; Command Palette</strong> (Ctrl+Shift+P) finds any command by typing part of its name, such as
+<code>merge</code> or <code>drop sh</code>, and runs the highlighted one when you press Enter; the arrow keys move the
+highlight and a click runs a row too. It lists every item of every menu, so adjustments (under
+<strong>Layer &gt; New Adjustment</strong>), layer effects (switched on and off under <strong>Layer &gt; Layer Effects</strong>) and panels
+(the <strong>View</strong> menu) are all found the same way, along with the tools. Each row shows its shortcut, and a
+command that can’t run right now stays in the list, greyed, with the reason underneath.</p>
+<p><img  src="/_astro/command-palette.5zNcb8B2_GrgcL.webp" alt="Command palette" loading="lazy" decoding="async" width="584" height="464"></p>
+<!-- shortcuts:begin -->
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Shortcut</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>File</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>New</td>
+<td>Ctrl+N</td>
+</tr>
+<tr>
+<td>Open</td>
+<td>Ctrl+O</td>
+</tr>
+<tr>
+<td>Save</td>
+<td>Ctrl+S</td>
+</tr>
+<tr>
+<td>Save As</td>
+<td>Ctrl+Shift+S</td>
+</tr>
+<tr>
+<td><strong>Edit</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Undo</td>
+<td>Ctrl+Z</td>
+</tr>
+<tr>
+<td>Redo</td>
+<td>Ctrl+Y</td>
+</tr>
+<tr>
+<td>Paste as New Layer</td>
+<td>Ctrl+V</td>
+</tr>
+<tr>
+<td>Copy Adjustments</td>
+<td>Ctrl+Shift+C</td>
+</tr>
+<tr>
+<td>Paste Adjustments</td>
+<td>Ctrl+Shift+V</td>
+</tr>
+<tr>
+<td><strong>Layer</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Add Text Layer</td>
+<td>Ctrl+Shift+T</td>
+</tr>
+<tr>
+<td>New Group</td>
+<td>Ctrl+Shift+N</td>
+</tr>
+<tr>
+<td>Duplicate</td>
+<td>Ctrl+J</td>
+</tr>
+<tr>
+<td>Delete</td>
+<td>Delete</td>
+</tr>
+<tr>
+<td>Group</td>
+<td>Ctrl+G</td>
+</tr>
+<tr>
+<td>Ungroup</td>
+<td>Ctrl+Shift+G</td>
+</tr>
+<tr>
+<td>Clip to Layer Below</td>
+<td>Ctrl+Alt+G</td>
+</tr>
+<tr>
+<td>Merge Down</td>
+<td>Ctrl+E</td>
+</tr>
+<tr>
+<td>Move Up</td>
+<td>Ctrl+]</td>
+</tr>
+<tr>
+<td>Move Down</td>
+<td>Ctrl+[</td>
+</tr>
+<tr>
+<td><strong>Select</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>All</td>
+<td>Ctrl+A</td>
+</tr>
+<tr>
+<td>Deselect</td>
+<td>Ctrl+D</td>
+</tr>
+<tr>
+<td>Invert</td>
+<td>Ctrl+Shift+I</td>
+</tr>
+<tr>
+<td>Feather</td>
+<td>Shift+F6</td>
+</tr>
+<tr>
+<td><strong>View</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Zoom In</td>
+<td>Ctrl+=</td>
+</tr>
+<tr>
+<td>Zoom Out</td>
+<td>Ctrl+-</td>
+</tr>
+<tr>
+<td>Before/After</td>
+<td>\</td>
+</tr>
+<tr>
+<td>Rotate View</td>
+<td>R</td>
+</tr>
+<tr>
+<td>Show Clipping</td>
+<td>Shift+J</td>
+</tr>
+<tr>
+<td><strong>Tools</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Move</td>
+<td>V</td>
+</tr>
+<tr>
+<td>Marquee (press again for the ellipse)</td>
+<td>M</td>
+</tr>
+<tr>
+<td>Lasso (press again for the polygonal lasso)</td>
+<td>L</td>
+</tr>
+<tr>
+<td>Magic Wand (press again for Quick Selection)</td>
+<td>W</td>
+</tr>
+<tr>
+<td>Brush</td>
+<td>B</td>
+</tr>
+<tr>
+<td>Gradient</td>
+<td>G</td>
+</tr>
+<tr>
+<td>Clone Stamp</td>
+<td>S</td>
+</tr>
+<tr>
+<td>Spot Healing</td>
+<td>J</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>T</td>
+</tr>
+<tr>
+<td>Shape (press again for the next shape)</td>
+<td>U</td>
+</tr>
+<tr>
+<td>Pen</td>
+<td>P</td>
+</tr>
+<tr>
+<td>Direct Selection</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Note</td>
+<td>N</td>
+</tr>
+<tr>
+<td>Measure</td>
+<td>I</td>
+</tr>
+<tr>
+<td><strong>Help</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Keyboard Shortcuts</td>
+<td>Ctrl+/</td>
+</tr>
+<tr>
+<td>Command Palette</td>
+<td>Ctrl+Shift+P</td>
+</tr>
+</tbody>
+</table>
+<!-- shortcuts:end -->
+<p>While a tool or gesture is active:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arrow keys</td>
+<td>Nudge the selected layer a pixel; ten with Shift</td>
+</tr>
+<tr>
+<td>Shift (scaling a corner)</td>
+<td>Scale freely rather than in proportion</td>
+</tr>
+<tr>
+<td>Ctrl (dragging a layer)</td>
+<td>Drag without snapping</td>
+</tr>
+<tr>
+<td>Ctrl (dragging an edge)</td>
+<td>Skew the layer along that edge</td>
+</tr>
+<tr>
+<td>Ctrl+Shift (dragging a corner)</td>
+<td>Distort the layer’s perspective</td>
+</tr>
+<tr>
+<td>Shift / Alt / Shift+Alt (starting a selection)</td>
+<td>Add to / subtract from / intersect with the selection</td>
+</tr>
+<tr>
+<td>[ and ]</td>
+<td>Shrink or grow the brush</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Swap the brush between painting and erasing</td>
+</tr>
+<tr>
+<td>Ctrl+B / Ctrl+I / Ctrl+U</td>
+<td>Bold, italic or underline the selected text while editing it on the canvas</td>
+</tr>
+<tr>
+<td>Enter / Backspace (drawing a path)</td>
+<td>Finish the path open / take its last point back</td>
+</tr>
+<tr>
+<td>Alt (dragging a path’s handle)</td>
+<td>Move that handle alone</td>
+</tr>
+<tr>
+<td>Ctrl+Enter</td>
+<td>Finish editing text on the canvas</td>
+</tr>
+<tr>
+<td>Escape</td>
+<td>Cancel the gesture or text edit in progress</td>
+</tr>
+</tbody>
+</table>
+</article></main><footer class="site-footer" data-astro-cid-jo6i4kqk><div class="container footer-inner" data-astro-cid-jo6i4kqk><div data-astro-cid-jo6i4kqk><span class="wordmark mono" data-astro-cid-jo6i4kqk>ImageGui</span><p class="about" data-astro-cid-jo6i4kqk>Part of <a href="https://ktsu.dev" target="_blank" rel="noopener" data-astro-cid-jo6i4kqk>ktsu</a>, a family of open-source .NET libraries and developer tools, published on NuGet under the MIT license.</p></div><nav class="footer-links mono" data-astro-cid-jo6i4kqk><a href="https://github.com/ktsu-dev/ImageGui" target="_blank" rel="noopener" data-astro-cid-jo6i4kqk>GitHub</a><a href="https://ktsu.dev" target="_blank" rel="noopener" data-astro-cid-jo6i4kqk>ktsu.dev</a><a href="https://matthewedmondson.com" target="_blank" rel="noopener" data-astro-cid-jo6i4kqk>matthewedmondson.com</a></nav></div><div class="container" data-astro-cid-jo6i4kqk><p class="copy mono" data-astro-cid-jo6i4kqk>&copy; 2026 ktsu · MIT</p></div></footer></body></html>
