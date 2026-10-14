@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="How to use ImageGui by task: opening pictures, adjusting them, layers, text and shapes, selecting and masking, retouching, geometry, and exporting."><title>ImageGui User Guide</title><link rel="canonical" href="https://imagegui.net/guide/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="theme-color" content="#11111b" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#eff1f5" media="(prefers-color-scheme: light)"><meta property="og:type" content="website"><meta property="og:title" content="ImageGui User Guide"><meta property="og:description" content="How to use ImageGui by task: opening pictures, adjusting them, layers, text and shapes, selecting and masking, retouching, geometry, and exporting."><meta property="og:url" content="https://imagegui.net/guide/"><meta property="og:site_name" content="ImageGui"><meta name="twitter:card" content="summary"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"><!-- Visitor stats (Umami in the homelab, cookieless). Website id fixed in homelab terraform/umami.tf. --><script defer src="https://insights.ktsu.dev/script.js" data-website-id="69c7a4b1-4162-49c1-9128-68033db5e304" data-domains="imagegui.net" data-exclude-search="true"></script><link rel="stylesheet" href="/_astro/zoom.1JYyP-eL.css"><style>.layout[data-astro-cid-amid4ct5]{grid-template-columns:15rem minmax(0,1fr);gap:3.5rem;padding-block:3.5rem 5rem;display:grid}.toc[data-astro-cid-amid4ct5]{align-self:start;max-height:calc(100vh - 3rem);position:sticky;top:1.5rem;overflow-y:auto}.toc[data-astro-cid-amid4ct5] .eyebrow[data-astro-cid-amid4ct5]{margin-bottom:1rem;display:block}.toc[data-astro-cid-amid4ct5] ol[data-astro-cid-amid4ct5]{gap:.45rem;list-style:none;display:grid}.toc[data-astro-cid-amid4ct5] a[data-astro-cid-amid4ct5]{color:var(--dim);border-bottom:none;font-size:.85rem}.toc[data-astro-cid-amid4ct5] a[data-astro-cid-amid4ct5]:hover{color:var(--accent-3)}.toc[data-astro-cid-amid4ct5] .source[data-astro-cid-amid4ct5]{margin-top:1.75rem;font-size:.8rem}.prose[data-astro-cid-amid4ct5]{max-width:46rem}.prose[data-astro-cid-amid4ct5] h1{margin-bottom:1.25rem;font-size:clamp(1.9rem,4.5vw,2.6rem)}.prose[data-astro-cid-amid4ct5] h2{border-top:1px solid var(--line);margin-top:3.5rem;padding-top:1.5rem;scroll-margin-top:1rem}.prose[data-astro-cid-amid4ct5] h3{margin-top:2.25rem;scroll-margin-top:1rem;font-size:1.05rem}.prose[data-astro-cid-amid4ct5] p,.prose[data-astro-cid-amid4ct5] ul,.prose[data-astro-cid-amid4ct5] ol,.prose[data-astro-cid-amid4ct5] table,.prose[data-astro-cid-amid4ct5] pre{margin-bottom:1.1rem}.prose[data-astro-cid-amid4ct5] ul,.prose[data-astro-cid-amid4ct5] ol{padding-left:1.4rem}.prose[data-astro-cid-amid4ct5] li{margin-bottom:.35rem}.prose[data-astro-cid-amid4ct5] strong{color:var(--ink);font-weight:600}.prose[data-astro-cid-amid4ct5] code{background-color:var(--panel);border:1px solid var(--line);color:var(--body-bright);border-radius:4px;padding:.1rem .35rem;font-size:.85em}.prose[data-astro-cid-amid4ct5] pre{background-color:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:.85rem 1rem;overflow-x:auto}.prose[data-astro-cid-amid4ct5] pre code{background:0 0;border:none;padding:0}.prose[data-astro-cid-amid4ct5] img{background-color:var(--panel);border:1px solid var(--line);border-radius:var(--radius);max-width:100%;height:auto;margin:1.5rem 0;display:block}.prose[data-astro-cid-amid4ct5] table{border-collapse:collapse;width:100%;font-size:.88rem;display:block;overflow-x:auto}.prose[data-astro-cid-amid4ct5] th,.prose[data-astro-cid-amid4ct5] td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:.5rem .75rem}.prose[data-astro-cid-amid4ct5] th{font-family:var(--mono);color:var(--ink);border-bottom-color:var(--line-strong);font-weight:500}@media (width<=900px){.layout[data-astro-cid-amid4ct5]{grid-template-columns:minmax(0,1fr);gap:0}.toc[data-astro-cid-amid4ct5]{display:none}}
-</style></head><body><header class="bar" data-astro-cid-wpvy4v7s><div class="container bar-inner" data-astro-cid-wpvy4v7s><a class="wordmark mono" href="/" data-astro-cid-wpvy4v7s>ImageGui</a><nav class="links mono" data-astro-cid-wpvy4v7s><a href="/#intro" data-astro-cid-wpvy4v7s>Intro</a><a href="/gallery/" data-astro-cid-wpvy4v7s>Gallery</a><a href="/#status" data-astro-cid-wpvy4v7s>Status</a><a href="/guide/" data-astro-cid-wpvy4v7s>Guide</a></nav></div></header><main class="container layout" data-astro-cid-amid4ct5><aside class="toc" data-astro-cid-amid4ct5><p class="eyebrow" data-astro-cid-amid4ct5>User Guide</p><nav data-astro-cid-amid4ct5><ol data-astro-cid-amid4ct5><li data-astro-cid-amid4ct5><a href="#getting-started" data-astro-cid-amid4ct5>Getting started</a></li><li data-astro-cid-amid4ct5><a href="#opening-pictures-and-projects" data-astro-cid-amid4ct5>Opening pictures and projects</a></li><li data-astro-cid-amid4ct5><a href="#looking-at-the-picture" data-astro-cid-amid4ct5>Looking at the picture</a></li><li data-astro-cid-amid4ct5><a href="#adjusting-color-and-tone" data-astro-cid-amid4ct5>Adjusting color and tone</a></li><li data-astro-cid-amid4ct5><a href="#layers" data-astro-cid-amid4ct5>Layers</a></li><li data-astro-cid-amid4ct5><a href="#text" data-astro-cid-amid4ct5>Text</a></li><li data-astro-cid-amid4ct5><a href="#shapes" data-astro-cid-amid4ct5>Shapes</a></li><li data-astro-cid-amid4ct5><a href="#selecting-and-masking" data-astro-cid-amid4ct5>Selecting and masking</a></li><li data-astro-cid-amid4ct5><a href="#painting" data-astro-cid-amid4ct5>Painting</a></li><li data-astro-cid-amid4ct5><a href="#retouching" data-astro-cid-amid4ct5>Retouching</a></li><li data-astro-cid-amid4ct5><a href="#liquify" data-astro-cid-amid4ct5>Liquify</a></li><li data-astro-cid-amid4ct5><a href="#geometry-crop-straighten-turn-and-resize" data-astro-cid-amid4ct5>Geometry: crop, straighten, turn, and resize</a></li><li data-astro-cid-amid4ct5><a href="#saving-and-exporting" data-astro-cid-amid4ct5>Saving and exporting</a></li><li data-astro-cid-amid4ct5><a href="#making-game-assets" data-astro-cid-amid4ct5>Making game assets</a></li><li data-astro-cid-amid4ct5><a href="#versions-and-git" data-astro-cid-amid4ct5>Versions and git</a></li><li data-astro-cid-amid4ct5><a href="#working-with-blender" data-astro-cid-amid4ct5>Working with Blender</a></li><li data-astro-cid-amid4ct5><a href="#working-with-godot" data-astro-cid-amid4ct5>Working with Godot</a></li><li data-astro-cid-amid4ct5><a href="#undo-and-history" data-astro-cid-amid4ct5>Undo and history</a></li><li data-astro-cid-amid4ct5><a href="#preferences" data-astro-cid-amid4ct5>Preferences</a></li><li data-astro-cid-amid4ct5><a href="#keyboard-shortcuts" data-astro-cid-amid4ct5>Keyboard shortcuts</a></li></ol></nav><p class="source note" data-astro-cid-amid4ct5>The guide that comes with ImageGui, with screenshots its test harness takes of the running app.</p></aside><article class="prose" data-astro-cid-amid4ct5><!-- Copied from ImageGui's docs/user-guide.md by sync-gallery.mjs. Edit it there, not here. -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="How to use ImageGui by task: opening images, adjusting them, layers, text and shapes, selecting and masking, retouching, geometry, and exporting."><title>ImageGui User Guide</title><link rel="canonical" href="https://imagegui.net/guide/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="theme-color" content="#11111b" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#eff1f5" media="(prefers-color-scheme: light)"><meta property="og:type" content="website"><meta property="og:title" content="ImageGui User Guide"><meta property="og:description" content="How to use ImageGui by task: opening images, adjusting them, layers, text and shapes, selecting and masking, retouching, geometry, and exporting."><meta property="og:url" content="https://imagegui.net/guide/"><meta property="og:site_name" content="ImageGui"><meta name="twitter:card" content="summary"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"><!-- Visitor stats (Umami in the homelab, cookieless). Website id fixed in homelab terraform/umami.tf. --><script defer src="https://insights.ktsu.dev/script.js" data-website-id="69c7a4b1-4162-49c1-9128-68033db5e304" data-domains="imagegui.net" data-exclude-search="true"></script><link rel="stylesheet" href="/_astro/zoom.1JYyP-eL.css"><style>.layout[data-astro-cid-amid4ct5]{grid-template-columns:15rem minmax(0,1fr);gap:3.5rem;padding-block:3.5rem 5rem;display:grid}.toc[data-astro-cid-amid4ct5]{align-self:start;max-height:calc(100vh - 3rem);position:sticky;top:1.5rem;overflow-y:auto}.toc[data-astro-cid-amid4ct5] .eyebrow[data-astro-cid-amid4ct5]{margin-bottom:1rem;display:block}.toc[data-astro-cid-amid4ct5] ol[data-astro-cid-amid4ct5]{gap:.45rem;list-style:none;display:grid}.toc[data-astro-cid-amid4ct5] a[data-astro-cid-amid4ct5]{color:var(--dim);border-bottom:none;font-size:.85rem}.toc[data-astro-cid-amid4ct5] a[data-astro-cid-amid4ct5]:hover{color:var(--accent-3)}.toc[data-astro-cid-amid4ct5] .source[data-astro-cid-amid4ct5]{margin-top:1.75rem;font-size:.8rem}.prose[data-astro-cid-amid4ct5]{max-width:46rem}.prose[data-astro-cid-amid4ct5] h1{margin-bottom:1.25rem;font-size:clamp(1.9rem,4.5vw,2.6rem)}.prose[data-astro-cid-amid4ct5] h2{border-top:1px solid var(--line);margin-top:3.5rem;padding-top:1.5rem;scroll-margin-top:1rem}.prose[data-astro-cid-amid4ct5] h3{margin-top:2.25rem;scroll-margin-top:1rem;font-size:1.05rem}.prose[data-astro-cid-amid4ct5] p,.prose[data-astro-cid-amid4ct5] ul,.prose[data-astro-cid-amid4ct5] ol,.prose[data-astro-cid-amid4ct5] table,.prose[data-astro-cid-amid4ct5] pre{margin-bottom:1.1rem}.prose[data-astro-cid-amid4ct5] ul,.prose[data-astro-cid-amid4ct5] ol{padding-left:1.4rem}.prose[data-astro-cid-amid4ct5] li{margin-bottom:.35rem}.prose[data-astro-cid-amid4ct5] strong{color:var(--ink);font-weight:600}.prose[data-astro-cid-amid4ct5] code{background-color:var(--panel);border:1px solid var(--line);color:var(--body-bright);border-radius:4px;padding:.1rem .35rem;font-size:.85em}.prose[data-astro-cid-amid4ct5] pre{background-color:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:.85rem 1rem;overflow-x:auto}.prose[data-astro-cid-amid4ct5] pre code{background:0 0;border:none;padding:0}.prose[data-astro-cid-amid4ct5] img{background-color:var(--panel);border:1px solid var(--line);border-radius:var(--radius);max-width:100%;height:auto;margin:1.5rem 0;display:block}.prose[data-astro-cid-amid4ct5] table{border-collapse:collapse;width:100%;font-size:.88rem;display:block;overflow-x:auto}.prose[data-astro-cid-amid4ct5] th,.prose[data-astro-cid-amid4ct5] td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:.5rem .75rem}.prose[data-astro-cid-amid4ct5] th{font-family:var(--mono);color:var(--ink);border-bottom-color:var(--line-strong);font-weight:500}@media (width<=900px){.layout[data-astro-cid-amid4ct5]{grid-template-columns:minmax(0,1fr);gap:0}.toc[data-astro-cid-amid4ct5]{display:none}}
+</style></head><body><header class="bar" data-astro-cid-wpvy4v7s><div class="container bar-inner" data-astro-cid-wpvy4v7s><a class="wordmark mono" href="/" data-astro-cid-wpvy4v7s>ImageGui</a><nav class="links mono" data-astro-cid-wpvy4v7s><a href="/#intro" data-astro-cid-wpvy4v7s>Intro</a><a href="/gallery/" data-astro-cid-wpvy4v7s>Gallery</a><a href="/#status" data-astro-cid-wpvy4v7s>Status</a><a href="/guide/" data-astro-cid-wpvy4v7s>Guide</a></nav></div></header><main class="container layout" data-astro-cid-amid4ct5><aside class="toc" data-astro-cid-amid4ct5><p class="eyebrow" data-astro-cid-amid4ct5>User Guide</p><nav data-astro-cid-amid4ct5><ol data-astro-cid-amid4ct5><li data-astro-cid-amid4ct5><a href="#getting-started" data-astro-cid-amid4ct5>Getting started</a></li><li data-astro-cid-amid4ct5><a href="#opening-images-and-projects" data-astro-cid-amid4ct5>Opening images and projects</a></li><li data-astro-cid-amid4ct5><a href="#looking-at-the-image" data-astro-cid-amid4ct5>Looking at the image</a></li><li data-astro-cid-amid4ct5><a href="#adjusting-color-and-tone" data-astro-cid-amid4ct5>Adjusting color and tone</a></li><li data-astro-cid-amid4ct5><a href="#layers" data-astro-cid-amid4ct5>Layers</a></li><li data-astro-cid-amid4ct5><a href="#text" data-astro-cid-amid4ct5>Text</a></li><li data-astro-cid-amid4ct5><a href="#shapes" data-astro-cid-amid4ct5>Shapes</a></li><li data-astro-cid-amid4ct5><a href="#selecting-and-masking" data-astro-cid-amid4ct5>Selecting and masking</a></li><li data-astro-cid-amid4ct5><a href="#painting" data-astro-cid-amid4ct5>Painting</a></li><li data-astro-cid-amid4ct5><a href="#retouching" data-astro-cid-amid4ct5>Retouching</a></li><li data-astro-cid-amid4ct5><a href="#liquify" data-astro-cid-amid4ct5>Liquify</a></li><li data-astro-cid-amid4ct5><a href="#geometry-crop-straighten-turn-and-resize" data-astro-cid-amid4ct5>Geometry: crop, straighten, turn, and resize</a></li><li data-astro-cid-amid4ct5><a href="#saving-and-exporting" data-astro-cid-amid4ct5>Saving and exporting</a></li><li data-astro-cid-amid4ct5><a href="#making-game-assets" data-astro-cid-amid4ct5>Making game assets</a></li><li data-astro-cid-amid4ct5><a href="#versions-and-git" data-astro-cid-amid4ct5>Versions and git</a></li><li data-astro-cid-amid4ct5><a href="#working-with-blender" data-astro-cid-amid4ct5>Working with Blender</a></li><li data-astro-cid-amid4ct5><a href="#working-with-godot" data-astro-cid-amid4ct5>Working with Godot</a></li><li data-astro-cid-amid4ct5><a href="#undo-and-history" data-astro-cid-amid4ct5>Undo and history</a></li><li data-astro-cid-amid4ct5><a href="#preferences" data-astro-cid-amid4ct5>Preferences</a></li><li data-astro-cid-amid4ct5><a href="#keyboard-shortcuts" data-astro-cid-amid4ct5>Keyboard shortcuts</a></li></ol></nav><p class="source note" data-astro-cid-amid4ct5>The guide that comes with ImageGui, with screenshots its test harness takes of the running app.</p></aside><article class="prose" data-astro-cid-amid4ct5><!-- Copied from ImageGui's docs/user-guide.md by sync-gallery.mjs. Edit it there, not here. -->
 <h1 id="imagegui-user-guide">ImageGui user guide</h1>
-<p>This guide walks through ImageGui by task: opening a picture, adjusting it, working with layers, text,
+<p>This guide walks through ImageGui by task: opening an image, adjusting it, working with layers, text,
 and shapes, selecting and masking, painting, retouching, changing its geometry, checking it for
-accessibility, exporting it, taking it to and from Blender and Godot, and keeping its versions, in git or without it. The pictures come from the <a href="/gallery/">feature gallery</a>,
+accessibility, exporting it, taking it to and from Blender and Godot, and keeping its versions, in git or without it. The images come from the <a href="/gallery/">feature gallery</a>,
 which the test harness takes screenshots of the running application on every build of <code>main</code>, so they show the shell as it is today.</p>
 <p>Every edit in ImageGui is non-destructive. Adjustments, crops, turns, and masks are recorded as steps
 on top of your original files, which are never changed, and every step can be undone, edited later, or
@@ -11,8 +11,8 @@ switched off.</p>
 <p><img  src="/_astro/editing-a-photo.BxiOAqSo_2fuPn9.webp" alt="Editing a photo" loading="lazy" decoding="async" width="1440" height="900"></p>
 <ul>
 <li><a href="#getting-started">Getting started</a></li>
-<li><a href="#opening-pictures-and-projects">Opening pictures and projects</a></li>
-<li><a href="#looking-at-the-picture">Looking at the picture</a></li>
+<li><a href="#opening-images-and-projects">Opening images and projects</a></li>
+<li><a href="#looking-at-the-image">Looking at the image</a></li>
 <li><a href="#adjusting-color-and-tone">Adjusting color and tone</a></li>
 <li><a href="#layers">Layers</a></li>
 <li><a href="#text">Text</a></li>
@@ -39,13 +39,13 @@ step, and <strong>Help &gt; Take the Tour</strong> starts it again whenever you 
 opens the sample project first, so every part it points at is on screen.</p>
 <p><img  src="/_astro/the-first-run-tour.CPK5pn6m_oEdB.webp" alt="The first-run tour" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p><strong>Help &gt; Open Sample Project</strong>, also on the start screen, opens a small poster built to show the main
-features at once: a picture of hills at sunrise under a curve, vibrance, color grading, and a
+features at once: an image of hills at sunrise under a curve, vibrance, color grading, and a
 vignette; a cloud texture graph screened over the sky and masked away toward the horizon; a banner
 shape with a drop shadow and a stroke; a caption whose first word is set in a run of its own; and two
 artboards, one wide and one square. Select any layer to see how it was made. The sample opens
-untitled, carries its picture inside it, and is only saved if you save it.</p>
+untitled, carries its image inside it, and is only saved if you save it.</p>
 <p><img  src="/_astro/the-sample-project.CrhylMXw_Z2tqdDA.webp" alt="The sample project" loading="lazy" decoding="async" width="1440" height="900"></p>
-<h2 id="opening-pictures-and-projects">Opening pictures and projects</h2>
+<h2 id="opening-images-and-projects">Opening images and projects</h2>
 <p><strong>File &gt; Open</strong> (Ctrl+O) opens a PNG, JPEG, WebP, TIFF, OpenEXR, GIF, BMP, or ICO image, a camera raw photo (see
 <a href="#raw-photos">Raw photos</a>), a Photoshop file (<code>.psd</code> or <code>.psb</code>), or an <code>.imagegui</code> project. You can also name one when starting ImageGui (<code>ImageGui photo.jpg</code>). With
 nothing open, the canvas shows a start screen in its middle: <strong>New</strong>, <strong>Open</strong>, a reminder that you can
@@ -82,7 +82,7 @@ comp for each that shows it alone and remembers how long the frame shows. <stron
 then makes a frame of each comp at its own timing, so an edited animation goes back out as it came in.</p>
 <p><img  src="/_astro/opening-an-animation-as-layers.BNbgMl_U_1UPfSp.webp" alt="Opening an animation as layers" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p><strong>Edit &gt; Paste as New Layer</strong> (Ctrl+V) adds the image on the system clipboard as a layer at its own
-size, in the middle of the canvas, or opens it as a new picture when nothing is open. <strong>Edit &gt; Copy
+size, in the middle of the canvas, or opens it as a new image when nothing is open. <strong>Edit &gt; Copy
 Merged</strong> puts what the canvas shows on the clipboard, every layer together, cut to the selection when
 there is one.</p>
 <p><img  src="/_astro/copy-merged-and-paste.aXSq_Ef5_Em06V.webp" alt="Copy Merged and paste" loading="lazy" decoding="async" width="1440" height="900"></p>
@@ -90,7 +90,7 @@ there is one.</p>
 and several dropped at once are one undo step. With nothing open, or with Shift held, a dropped image
 or project opens instead, asking first about unsaved changes.</p>
 <p><img  src="/_astro/dropping-files.DmSMntxh_Z1dQDNP.webp" alt="Dropping files" loading="lazy" decoding="async" width="1440" height="900"></p>
-<p>Photos open the way they were taken: a picture the camera stored sideways is turned upright, and a
+<p>Photos open the way they were taken: an image the camera stored sideways is turned upright, and a
 wide-gamut color profile such as Display P3 is converted to sRGB.</p>
 <p><img  src="/_astro/photos-open-the-way-they-were-taken.Di_21mYM_41Kq7.webp" alt="Photos open the way they were taken" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p><strong>File &gt; Open Recent</strong> lists recent files with a thumbnail of each one beside it. A project carries its
@@ -104,12 +104,12 @@ it went, or opens the project without it so you can point the layer at its file 
 <p><img  src="/_astro/crash-recovery.DI09Rf70_JolIp.webp" alt="Crash recovery" loading="lazy" decoding="async" width="520" height="160"></p>
 <p>If ImageGui ever closes because of an error, it also writes a report to a dated file in its data folder
 (<code>Logs</code> in the folder <strong>Preferences</strong> names, beside the log file): the error, the versions in use, the
-picture’s size and layer count, and the names of the last steps you took. It holds no pixels and no
+image’s size and layer count, and the names of the last steps you took. It holds no pixels and no
 folder names, and nothing is ever sent anywhere. The next launch says so once and offers to open the
 folder or copy the report, so you can share it if you want to report the problem.</p>
 <p><img  src="/_astro/crash-reports.uSkennjk_Zyjsrz.webp" alt="Crash reports" loading="lazy" decoding="async" width="535" height="210"></p>
 <p>ImageGui starts on the start screen. To pick up where you left off instead, choose <strong>Reopen what was
-open</strong> under <strong>On launch</strong> in Preferences: the project or picture that was open when ImageGui last
+open</strong> under <strong>On launch</strong> in Preferences: the project or image that was open when ImageGui last
 closed opens again at the zoom and scroll you left it at. A file named when starting ImageGui, or one
 opened from the file manager, comes first, and unsaved work from a crash is offered back as above
 rather than reopened silently.</p>
@@ -129,7 +129,7 @@ nothing.</p>
 <strong>Cloudy</strong>, <strong>Shade</strong>, <strong>Tungsten</strong>, <strong>Fluorescent</strong>, or <strong>Flash</strong>); or <strong>Custom</strong>.</li>
 <li><strong>Temperature</strong> and <strong>Tint</strong> always show the white the photo is balanced to, whichever choice made it,
 so you can start from a preset and fine-tune it. Moving either makes the white balance Custom. A higher
-temperature makes the picture warmer, and a positive tint makes it more magenta. The numbers mean what
+temperature makes the image warmer, and a positive tint makes it more magenta. The numbers mean what
 they mean in other raw developers.</li>
 <li>The pick button beside <strong>White Balance</strong> sets the temperature and tint from a spot on the canvas that
 should be gray or white. Click it, then click the spot; Esc cancels. It measures the photo itself, so
@@ -142,23 +142,23 @@ color.</li>
 <p>Under them are the camera, lens, and exposure, and the <strong>Info</strong> panel lists them with the date the photo
 was taken. Exports wait for a raw layer to finish developing, so a file never goes out with the quick draft.</p>
 <p><img  src="/_astro/developing-a-raw-photo.RqlCjvBK_1H11pI.webp" alt="Developing a raw photo" loading="lazy" decoding="async" width="1440" height="900"></p>
-<h2 id="looking-at-the-picture">Looking at the picture</h2>
+<h2 id="looking-at-the-image">Looking at the image</h2>
 <p><strong>View &gt; Zoom In</strong> (Ctrl+=) and <strong>Zoom Out</strong> (Ctrl+-) step through fixed scales; <strong>Fit</strong>, <strong>50%</strong>,
 <strong>100%</strong>, and <strong>200%</strong> jump straight to one. Scrolling over the canvas zooms too.</p>
 <p><img  src="/_astro/zoom.YBPckjAC_Z1m3vSG.webp" alt="Zoom" loading="lazy" decoding="async" width="1092" height="897"></p>
-<p>The <strong>status bar</strong> under the canvas shows the picture’s name, with a * while it has unsaved changes,
-its size in pixels, the zoom, the pointer’s position in the picture’s own pixels, the git branch when
+<p>The <strong>status bar</strong> under the canvas shows the image’s name, with a * while it has unsaved changes,
+its size in pixels, the zoom, the pointer’s position in the image’s own pixels, the git branch when
 the project is in a repository (see <a href="#committing-a-project">Committing a project</a>), and a one-line hint
 for the chosen tool. Click the zoom for a list of presets, or type a percentage such as 150 and press
 Enter.</p>
 <p><img  src="/_astro/status-bar.rS_EQ8Hh_ZH4ewU.webp" alt="Status bar" loading="lazy" decoding="async" width="1088" height="260"></p>
-<p>While you work, the canvas shows a preview of the picture held to the <strong>Preview size</strong> set in Preferences, so
-edits stay quick on large pictures. Zoomed in past that preview’s own pixels, the canvas renders just
-the part you can see at the screen’s scale, up to the picture’s own pixels, as soon as you stop
+<p>While you work, the canvas shows a preview of the image held to the <strong>Preview size</strong> set in Preferences, so
+edits stay quick on large images. Zoomed in past that preview’s own pixels, the canvas renders just
+the part you can see at the screen’s scale, up to the image’s own pixels, as soon as you stop
 panning or zooming. While you drag, the last render stays where it belongs and the enlarged preview
-fills in around it. A few adjustments, such as lens correction, need the whole picture to render any
-part of it; on a picture too large to render whole at that size, the canvas keeps the enlarged
-preview and shows a <strong>Preview</strong> badge in its corner. Exports always use the full picture.</p>
+fills in around it. A few adjustments, such as lens correction, need the whole image to render any
+part of it; on an image too large to render whole at that size, the canvas keeps the enlarged
+preview and shows a <strong>Preview</strong> badge in its corner. Exports always use the full image.</p>
 <p>From 600% each pixel is drawn as a flat square, and <strong>View &gt; Show Pixel Grid</strong> draws a line around each.
 With <strong>View &gt; Pixel Art Display</strong> on, pixels are flat squares from just above 100%; see
 <a href="#making-game-assets">Making game assets</a>.</p>
@@ -166,26 +166,26 @@ With <strong>View &gt; Pixel Art Display</strong> on, pixels are flat squares fr
 <p><img  src="/_astro/pixel-grid.DN4tRoeX_n5X7Q.webp" alt="Pixel grid" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p>The View menu also opens these panels:</p>
 <ul>
-<li><strong>Navigator</strong>: the whole picture small, with a rectangle you drag to pan.</li>
+<li><strong>Navigator</strong>: the whole image small, with a rectangle you drag to pan.</li>
 <li><strong>Info</strong>: the position and color under the pointer, and while you edit an adjustment, the color
 entering and leaving it.</li>
-<li><strong>Histogram</strong>: the finished picture’s histogram, per channel or luminance, with clipping, for the
-whole picture or the selection only. Pick the channel from the tabs along its top, as in levels and
+<li><strong>Histogram</strong>: the finished image’s histogram, per channel or luminance, with clipping, for the
+whole image or the selection only. Pick the channel from the tabs along its top, as in levels and
 curves. The graph grows with the window, so drag its edge for a larger one.</li>
-<li><strong>Show Clipping</strong> (Shift+J): tints the canvas where the picture has clipped, blue where every channel is
-black and red where any channel is at white. It only marks the screen, never the picture, and
+<li><strong>Show Clipping</strong> (Shift+J): tints the canvas where the image has clipped, blue where every channel is
+black and red where any channel is at white. It only marks the screen, never the image, and
 follows drags live. Clicking either clipping readout in the histogram turns it on or off, and
 Preferences can widen its thresholds to warn of pixels that are nearly clipped.</li>
 <li><strong>Show Accessibility Issues</strong>: outlines in red the text and shapes that fail the contrast check. See
 <a href="#checking-accessibility">Checking accessibility</a>.</li>
 <li><strong>History</strong>: every edit by name (see <a href="#undo-and-history">Undo and history</a>).</li>
-<li><strong>Before/After</strong>: compare with the picture before its adjustments and effects, alone, side by side,
+<li><strong>Before/After</strong>: compare with the image before its adjustments and effects, alone, side by side,
 or split by a divider. Backslash (\) toggles it.</li>
 <li><strong>Onion Skin</strong>: while you draw an animation, show the frame before the current one tinted red and
 the frame after it tinted blue, wherever they differ from it, at an opacity you choose. Alt+, and
 Alt+. step back and forward a frame. See <a href="#exporting-an-animation">Exporting an animation</a>.</li>
 <li><strong>Rotate View</strong> (R): turn the canvas on screen, as a painter turns the paper, without changing the
-picture. Drag round the canvas to turn it; hold Shift to turn in 15° steps. Double-click or press
+image. Drag round the canvas to turn it; hold Shift to turn in 15° steps. Double-click or press
 Esc to put it upright, or choose <strong>Reset Rotation</strong>. The status bar’s zoom shows the angle, and every
 tool, guide, and readout follows the turn.</li>
 <li><strong>Proof</strong>: show the canvas as seen with protanopia, deuteranopia, or tritanopia, at a severity you
@@ -194,7 +194,7 @@ shows: a badge marks it while it’s on, and exports are untouched. See
 <a href="#checking-accessibility">Checking accessibility</a>.</li>
 <li><strong>Rulers</strong>: pixel rulers to drag guides out of. Dragged layers snap to guides, and <strong>Snap</strong> turns
 snapping off.</li>
-<li><strong>Trim Sheet Strips</strong>: name the strips the horizontal guides cut the picture into, see their UVs,
+<li><strong>Trim Sheet Strips</strong>: name the strips the horizontal guides cut the image into, see their UVs,
 and export them. See <a href="#laying-out-a-trim-sheet">Laying out a trim sheet</a>.</li>
 </ul>
 <p>Panels open as tabs beside <strong>Layers</strong> in the right column, never over the canvas: <strong>History</strong>,
@@ -216,29 +216,29 @@ follows the Layers panel’s rows.</p>
 <p><img  src="/_astro/rotating-the-view.CaBZl7E6_Z1ehYWv.webp" alt="Rotating the view" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p><img  src="/_astro/rulers-and-guides.lqw8FlOH_1IJarc.webp" alt="Rulers and guides" loading="lazy" decoding="async" width="1088" height="754"></p>
 <h3 id="working-in-aces">Working in ACES</h3>
-<p>A picture works in one of two spaces. <strong>Linear sRGB</strong>, the default, is how every picture has always
+<p>An image works in one of two spaces. <strong>Linear sRGB</strong>, the default, is how every image has always
 worked: display light, with anything brighter than white clipped where tones are shaped. <strong>ACEScg</strong> is
 the ACES working space that film, visual effects and game studios share: scene light, where a highlight
 keeps its value however far above white it is, shown through an output transform (see
 <a href="#viewing-through-aces">Viewing through ACES</a>).</p>
-<p><strong>Image &gt; Color Management</strong> chooses the working space, and for an ACEScg picture the display and view it
-is shown through. Changing the working space converts every color the picture stores, in paint strokes,
+<p><strong>Image &gt; Color Management</strong> chooses the working space, and for an ACEScg image the display and view it
+is shown through. Changing the working space converts every color the image stores, in paint strokes,
 fill colors and gradients, shapes, text and character styles, layer effects, Photo Filter and Gradient
-Map, so the picture keeps its colors. The whole change is one step in the history. Curves, Levels and
-Blend If keep their points as they are: in an ACEScg picture they work on ACEScct, the grading encoding,
-rather than on sRGB. <strong>File &gt; New</strong> can make an ACEScg picture from the start, and remembers the space
+Map, so the image keeps its colors. The whole change is one step in the history. Curves, Levels and
+Blend If keep their points as they are: in an ACEScg image they work on ACEScct, the grading encoding,
+rather than on sRGB. <strong>File &gt; New</strong> can make an ACEScg image from the start, and remembers the space
 last chosen.</p>
-<p>In an ACEScg picture, the inspector shows each image layer’s <strong>Input Transform</strong>, which says what its
+<p>In an ACEScg image, the inspector shows each image layer’s <strong>Input Transform</strong>, which says what its
 pixels are:</p>
 <ul>
-<li><strong>sRGB Texture</strong>, for photos and 8-bit images. Converting a picture to ACEScg gives its 8-bit layers
+<li><strong>sRGB Texture</strong>, for photos and 8-bit images. Converting an image to ACEScg gives its 8-bit layers
 this one.</li>
 <li><strong>Inverse Output Transform</strong>, for logos, interface art and graphics that must look on screen exactly as
 they were drawn.</li>
 <li><strong>ACES2065-1</strong>, <strong>ACEScg</strong> and <strong>Linear Rec.709</strong>, for float files such as EXRs.</li>
 </ul>
 <p>Color fields still show and take sRGB colors, as a picker always does, and the swatches and recent colors
-are the same ones every picture shares. Their popup adds the <strong>ACEScg</strong> values the picture stores, where
+are the same ones every image shares. Their popup adds the <strong>ACEScg</strong> values the image stores, where
 a light brighter than white is typed as a value above 1. Picking a color from the canvas takes the working
 value under the pointer as it is.</p>
 <p><img  src="/_astro/color-management.CxL9gwNK_ZdQr29.webp" alt="Color Management" loading="lazy" decoding="async" width="421" height="202"></p>
@@ -251,10 +251,10 @@ display’s gamut, the way a grading suite shows ACES footage.</li>
 <li><strong>Un-tone-mapped</strong> converts the working values to the display without tone mapping, so anything above
 1 clips. Use it to check what the pixels actually hold.</li>
 </ul>
-<p><strong>View &gt; Display</strong> picks the screen the picture is fitted to: <strong>sRGB</strong> for an ordinary computer screen,
+<p><strong>View &gt; Display</strong> picks the screen the image is fitted to: <strong>sRGB</strong> for an ordinary computer screen,
 <strong>Display P3</strong> for a wide-gamut screen set to that mode, or <strong>Rec.709</strong> for video at gamma 2.4. Both
 choices are saved with the document and are one step in the history, so Ctrl+Z puts the last one back.</p>
-<p>Everything that shows the picture goes through the same output: the canvas, the second view,
+<p>Everything that shows the image goes through the same output: the canvas, the second view,
 thumbnails, the Histogram, the clipping overlay, the accessibility checks, and Edit &gt; Copy Merged. The
 Info panel and the color samplers read out what the screen shows, and Info adds an <strong>ACEScg</strong> row with
 the working value under the pointer, unclamped. The status bar names the working space and view, such
@@ -270,66 +270,66 @@ output. Export as OpenEXR to keep the scene light itself (see
 <a href="#exporting-openexr-files">Exporting OpenEXR files</a>).</p>
 <p><img  src="/_astro/exporting-from-acescg.DNNYzfe-_1Xd9ua.webp" alt="Exporting from ACEScg" loading="lazy" decoding="async" width="564" height="603"></p>
 <h3 id="a-second-view">A second view</h3>
-<p><strong>Window &gt; New View</strong> opens a second window onto the same picture, so you can work close in on the
-canvas and watch the whole picture beside it. It opens fitted to the picture, floating over the
+<p><strong>Window &gt; New View</strong> opens a second window onto the same image, so you can work close in on the
+canvas and watch the whole image beside it. It opens fitted to the image, floating over the
 canvas’s right side, and you can drag it anywhere or dock it beside a panel.</p>
 <p>The second view has its own zoom, scroll, turn, and proof. Scroll over it to zoom, pan it as you pan
 the canvas, and use <strong>Fit</strong> and <strong>100%</strong> along its top. Tick <strong>Rotate</strong> to turn it by dragging, as
 <strong>Rotate View</strong> turns the canvas, and pick a proof from the list beside it to proof this view alone,
-so the canvas can show the picture as it is next to it. Zoomed in past the preview, it renders its own
-part of the picture at full resolution, just as the canvas does.</p>
-<p>Both views show one picture with one history, so every edit shows in both. The tools work in
+so the canvas can show the image as it is next to it. Zoomed in past the preview, it renders its own
+part of the image at full resolution, just as the canvas does.</p>
+<p>Both views show one image with one history, so every edit shows in both. The tools work in
 whichever view has focus: click in the second view to select, paint, or move there, and click back on
 the canvas to work there again. The other view keeps showing the selection. <strong>Window &gt; Close View</strong>,
 or the window’s close button, closes it, and nothing is lost.</p>
 <p><img  src="/_astro/a-second-view.B8K33RNT_ZRAyV8.webp" alt="A second view" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h3 id="color-samplers">Color samplers</h3>
-<p>A color sampler is a point on the picture whose color stays on show while you work. Press <strong>I</strong>
+<p>A color sampler is a point on the image whose color stays on show while you work. Press <strong>I</strong>
 twice to choose the <strong>Sampler</strong> (the first press is the Measure tool). A click with it picks the
 color under the pointer into your recent colors; <strong>Shift-click</strong> pins a sampler there instead, up to
 eight. Each is a numbered target. Drag one to move it, and <strong>Alt-click</strong> it to delete it.</p>
 <p>The <strong>Info</strong> panel lists the samplers under <strong>Samplers</strong>, each with a swatch and its value as RGB,
 hex, HSL, or Oklch, whichever you choose above the list. A value follows a drag live from the
-preview, then is read again from the full-size picture once the preview settles, and its tooltip
+preview, then is read again from the full-size image once the preview settles, and its tooltip
 says which you are looking at. A sampler reads the composite unless you choose one layer for it in
 its row; it then reads that layer with its own adjustments, but without the layers above it. The
 Sampler’s options can make new samplers read the selected layer, and clear them all.</p>
 <p><strong>Curves</strong> and <strong>Levels</strong> mark where each sampler’s color enters them, one line per channel on the
 RGB tab, so you can see which part of the graph the color goes through. <strong>Show samplers</strong> in either
 editor turns the marks off. <strong>View &gt; Show Samplers</strong> hides or shows the targets; the Sampler shows
-them while it is chosen. Samplers are saved with the project and move with the picture through
-crops, turns, and Canvas Size, but they are never drawn into the picture.</p>
+them while it is chosen. Samplers are saved with the project and move with the image through
+crops, turns, and Canvas Size, but they are never drawn into the image.</p>
 <p><img  src="/_astro/color-samplers.CJxLE6ya_23fJA3.webp" alt="Color samplers" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h3 id="notes-on-the-canvas">Notes on the canvas</h3>
-<p>Notes are reminders pinned to a spot on the picture, such as “fix this edge” or “client wants
+<p>Notes are reminders pinned to a spot on the image, such as “fix this edge” or “client wants
 warmer”. Choose the <strong>Note</strong> tool (N), click where the note belongs, type it, and press Enter;
 Ctrl+Enter starts a new line, and Escape drops it. Each note is a numbered pin. Hover a pin to read
 its note, click it to edit or delete it, and drag it to move it.</p>
 <p><strong>View &gt; Notes</strong> lists every note by its first line. Click one to highlight its pin and edit its text
 below the list. <strong>View &gt; Show Notes</strong> hides or shows the pins; the Note tool shows them while it is
-chosen. Notes are saved with the project and move with the picture through crops, turns, and Canvas
-Size, but they are never drawn into the picture, so no export has them in it.</p>
+chosen. Notes are saved with the project and move with the image through crops, turns, and Canvas
+Size, but they are never drawn into the image, so no export has them in it.</p>
 <p><img  src="/_astro/canvas-notes.D6jb1Rzv_1rSATr.webp" alt="Canvas notes" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h3 id="checking-accessibility">Checking accessibility</h3>
-<p>ImageGui checks whether the pictures you make can be seen and read by everyone who will look at them.
+<p>ImageGui checks whether the images you make can be seen and read by everyone who will look at them.
 The checks never stop you saving or exporting anything; they say what they found and leave the choice
 to you.</p>
 <h4 id="the-accessibility-panel">The Accessibility panel</h4>
 <p><strong>View &gt; Accessibility</strong> opens a panel, docked beside Layers like Histogram and Info, that checks the
-picture while it is open. Nothing runs while it is closed. The checks read the picture the canvas
+image while it is open. Nothing runs while it is closed. The checks read the image the canvas
 shows, so opacity, blend modes, effects, adjustments above a layer and the photo behind it all count,
-and they run again whenever the picture changes.</p>
-<p>At the top, choose the level the picture is held to. <strong>AA</strong> asks 4.5:1 contrast for text and 3:1 for
+and they run again whenever the image changes.</p>
+<p>At the top, choose the level the image is held to. <strong>AA</strong> asks 4.5:1 contrast for text and 3:1 for
 large text, which is what most sites and laws ask for; <strong>AAA</strong> asks 7:1 and 4.5:1. <strong>Display scale</strong>
-says how big the picture is shown: 2x for a picture made at twice the size it appears, as for
+says how big the image is shown: 2x for an image made at twice the size it appears, as for
 high-density screens, so a 40-pixel heading counts as the 20 pixels a reader sees. It is the same
 setting as the one under <strong>View &gt; Proof</strong>. Text is large from
 24 CSS pixels, or 18.66 if it is bold. <strong>Smallest text</strong> is the size below which text is reported as
 too small to read whatever its contrast. The level and the display scale are saved with the document; the
 smallest size is a preference.</p>
-<p>Under them are the picture’s <strong>description</strong>, the alt text a screen reader reads out, and an optional
+<p>Under them are the image’s <strong>description</strong>, the alt text a screen reader reads out, and an optional
 long description for everything a sighted reader gets from it, such as a chart’s numbers. Each is one
-history entry when you leave the field. Text in the picture that the description doesn’t repeat is
+history entry when you leave the field. Text in the image that the description doesn’t repeat is
 listed under the fields, since a screen reader can’t read it from the pixels, and <strong>Add to
 Description</strong> adds it to the end.</p>
 <p>Every export carries the description in the file, where screen readers, content management systems, and
@@ -356,9 +356,9 @@ needs no contrast; the document remembers it, and <strong>Include all</strong> b
 <p>The checks read the preview, which is quick but can be too coarse for small text. <strong>Check at Full
 Size</strong> renders each layer’s surroundings at the document’s own size instead, with progress and a
 <strong>Cancel</strong> button. The panel says which of the two its numbers came from, and goes back to the preview
-when the picture changes.</p>
+when the image changes.</p>
 <p><img  src="/_astro/checking-accessibility.CV9rK0gh_Za2jGz.webp" alt="Checking accessibility" loading="lazy" decoding="async" width="1440" height="900"></p>
-<h4 id="describing-a-picture-as-you-export-it">Describing a picture as you export it</h4>
+<h4 id="describing-an-image-as-you-export-it">Describing an image as you export it</h4>
 <p><strong>Export</strong>, <strong>Export Layers</strong>, <strong>Export Animation</strong>, and <strong>Export As Set</strong> each have a <strong>Description</strong>
 field above their format choice, so you can write the alt text when you are about to publish rather
 than remembering to open the Accessibility panel first. It is the same description the panel edits:
@@ -366,17 +366,17 @@ typing there changes the document, it is one history entry named “Edit Descrip
 field, and it is saved with the project. Canceling the export keeps what you typed, and Undo takes it
 back. The field changes the document’s description only; an artboard with one of its own still carries
 that.</p>
-<p>Leaving the field empty is fine. Empty, it says “Describe the picture for people who can’t see it”. If
-your pictures never go on the web, turn off <strong>Suggest a description when exporting</strong> in
+<p>Leaving the field empty is fine. Empty, it says “Describe the image for people who can’t see it”. If
+your images never go on the web, turn off <strong>Suggest a description when exporting</strong> in
 <strong>Preferences &gt; General</strong> and the field stays blank.</p>
-<p><img  src="/_astro/describing-a-picture-as-you-export-it.CJFP5v7R_2eGKWh.webp" alt="Describing a picture as you export it" loading="lazy" decoding="async" width="564" height="616"></p>
+<p><img  src="/_astro/describing-an-image-as-you-export-it.CJFP5v7R_7YU63.webp" alt="Describing an image as you export it" loading="lazy" decoding="async" width="564" height="616"></p>
 <h4 id="showing-issues-on-the-canvas">Showing issues on the canvas</h4>
-<p><strong>View &gt; Show Accessibility Issues</strong> outlines in red every part of the picture’s text and shapes that
+<p><strong>View &gt; Show Accessibility Issues</strong> outlines in red every part of the image’s text and shapes that
 fails the contrast check, so you can see what to fix without reading through the panel. It runs the
 same checks as <strong>View &gt; Accessibility</strong>, and works with the panel closed. The outlines follow a layer
-while you drag it, and the picture is checked again once you let go, so moving text onto a darker or
-lighter part of the picture shows straight away whether it reads there. Like the panel, it changes
-nothing in the picture, and exports never show it.</p>
+while you drag it, and the image is checked again once you let go, so moving text onto a darker or
+lighter part of the image shows straight away whether it reads there. Like the panel, it changes
+nothing in the image, and exports never show it.</p>
 <p><img  src="/_astro/showing-accessibility-issues.8woTt2p0_Z1vtG2V.webp" alt="Showing accessibility issues" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h4 id="proofing-for-color-vision-and-low-vision">Proofing for color vision and low vision</h4>
 <p><strong>View &gt; Proof</strong> shows the canvas as someone with a color vision deficiency sees it:</p>
@@ -386,15 +386,15 @@ The <strong>Severity</strong> slider under them sets how strong the deficiency i
 dichromacy; lower settings show protanomaly, deuteranomaly, and tritanomaly, which are far more
 common. The badge on the canvas names what you’re seeing, such as “Deuteranomaly, 60%”.</li>
 <li><strong>Grayscale</strong> shows luminance alone, as grayscale print or a monochrome display does.</li>
-<li><strong>Blurred</strong> shows the picture as someone with 20/200 acuity sees it, the usual line for low
+<li><strong>Blurred</strong> shows the image as someone with 20/200 acuity sees it, the usual line for low
 vision. Small text that turns to a smudge here needs to be larger or bolder. The blur is sized for
-the picture’s display size: if it will be shown at half its pixel size, as a 2x asset is, set
+the image’s display size: if it will be shown at half its pixel size, as a 2x asset is, set
 <strong>Display scale</strong> under it to 2. The display scale is saved with the document, and the flash check
 in Export Animation reads it too.</li>
 </ul>
 <p>The simulations use the Machado, Oliveira, and Fernandes (2009) model in linear light, and the blur
 is a Gaussian whose width at half its height is the detail 20/200 acuity just resolves. Like every
-proof, they change only the canvas: exports, the histogram, and the readouts see the picture as it
+proof, they change only the canvas: exports, the histogram, and the readouts see the image as it
 is.</p>
 <p><img  src="/_astro/color-blindness-proofing.DMeS4ztp_l4CrT.webp" alt="Color-blindness proofing" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p><img  src="/_astro/low-vision-proofing.D7jp0e_d_ZBNgJt.webp" alt="Low vision proofing" loading="lazy" decoding="async" width="1440" height="900"></p>
@@ -408,7 +408,7 @@ them small, so the check is quick, and shows one line above <strong>Export</stro
 that is within the limit, or, in red, how many times a second the worst second flashes and between
 which frames. The line follows the options as you change them: the frames, the size, the timing of
 every frame, and whether the animation loops, since a looping animation also changes from its last
-frame back to its first. A small picture can’t flash, since all of it is less than a quarter of the
+frame back to its first. A small image can’t flash, since all of it is less than a quarter of the
 field. Transparent pixels are judged as they would look on a white page.</p>
 <p><img  src="/_astro/checking-an-animation-for-flashing.BwoQVa8R_Z2cm0LA.webp" alt="Checking an animation for flashing" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h4 id="checking-from-the-command-line">Checking from the command line</h4>
@@ -416,7 +416,7 @@ field. Transparent pixels are judged as they would look on a white page.</p>
 drifted below AA from going out:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">ImageGui</span><span style="color:#79B8FF"> --check</span><span style="color:#9ECBFF"> banner.imagegui</span></span>
 <span class="line"><span style="color:#B392F0">ImageGui</span><span style="color:#79B8FF"> --check</span><span style="color:#9ECBFF"> banner.imagegui</span><span style="color:#79B8FF"> --level</span><span style="color:#9ECBFF"> AAA</span><span style="color:#79B8FF"> --scale</span><span style="color:#79B8FF"> 2</span><span style="color:#79B8FF"> --json</span></span></code></pre>
-<p>It opens a project or a picture, renders it at full size, and prints one line for each finding,
+<p>It opens a project or an image, renders it at full size, and prints one line for each finding,
 then a line counting them:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>pass   Shape "Logo": 5.2:1 at worst, needs 3.0:1 (graphics)</span></span>
 <span class="line"><span>fail   Text "Headline": 2.4:1 at worst, needs 4.5:1 (AA, normal text); 30% of it passes</span></span>
@@ -475,16 +475,16 @@ you then drag left or right to adjust.</p>
 <p><img  src="/_astro/color-by-hue-band.DttgOwlE_1B9kM2.webp" alt="Color by hue band" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p><img  src="/_astro/color-balance.CL_tpgcD_Z2m32Xl.webp" alt="Color balance" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p><strong>Color grading</strong> has a wheel each for the shadows, midtones, and highlights, and a global wheel for the
-whole picture. Push a wheel’s handle toward the color to add; how far from the center is how strong
+whole image. Push a wheel’s handle toward the color to add; how far from the center is how strong
 the tint is, and the slider under the wheel brightens or darkens that range. Double-click the wheel or
 its slider to reset it. <strong>Blending</strong> sets how far the ranges overlap, and <strong>Balance</strong> leans them
 toward the shadows or the highlights.</p>
 <p><img  src="/_astro/color-grading.CTpYxQg2_eDEXj.webp" alt="Color grading" loading="lazy" decoding="async" width="1440" height="900"></p>
-<p><strong>Match Color</strong> moves a layer’s colors toward another picture’s, so one shot takes on the mood of
+<p><strong>Match Color</strong> moves a layer’s colors toward another image’s, so one shot takes on the mood of
 another. It matches the average and the spread of lightness and of color, so a warm, contrasty
-source makes the layer warm and contrasty while its picture stays where it was. Pick the <strong>Source</strong>
+source makes the layer warm and contrasty while its image stays where it was. Pick the <strong>Source</strong>
 from the document’s layers, read through their adjustments (a hidden layer works too), or use
-<strong>Match an image file…</strong> to measure a picture on disk. With a layer as the source, <strong>Measure
+<strong>Match an image file…</strong> to measure an image on disk. With a layer as the source, <strong>Measure
 Selection</strong> measures it only inside the canvas selection, such as a face or the sky. <strong>Luminance</strong>
 and <strong>Color Intensity</strong> brighten or darken and strengthen or mute the result, <strong>Fade</strong> lets the
 original show through, and <strong>Neutralize</strong> takes out a color cast, with or without a source.</p>
@@ -508,8 +508,8 @@ writes, so 128 in red becomes 128 in alpha, and an inverted channel exports as 2
 In an ACEScg document, where an export goes through the view, a color crosses into alpha as its linear
 value.</p>
 <p><img  src="/_astro/swapping-channels.C5IIiBOq_o3emV.webp" alt="Swapping channels" loading="lazy" decoding="async" width="1440" height="900"></p>
-<p><strong>Debayer</strong> turns a gray mosaic, the picture a camera sensor records before its colors are filled in,
-into a color picture. Each pixel holds what one photosite saw through its red, green, or blue filter,
+<p><strong>Debayer</strong> turns a gray mosaic, the image a camera sensor records before its colors are filled in,
+into a color image. Each pixel holds what one photosite saw through its red, green, or blue filter,
 and <strong>Pattern</strong> names how those filters are laid out: <strong>RGGB</strong>, <strong>BGGR</strong>, <strong>GRBG</strong>, or <strong>GBRG</strong>,
 named by the mosaic’s top-left two by two, or Fujifilm’s six by six <strong>X-Trans</strong>, whose <strong>Column
 offset</strong> and <strong>Row offset</strong> move the tile when the mosaic wasn’t cut where it starts. <strong>Method</strong>
@@ -542,15 +542,15 @@ deepening the sky; dragged left, it adds haze instead.</p>
 <p><strong>Lens correction</strong> removes barrel or pincushion distortion, the red/cyan and blue/yellow fringes
 toward the corners, and the darkening a lens leaves in them, centered on the layer. Correcting barrel
 distortion pulls the middle of each side in and leaves transparent edges; <strong>Auto Scale</strong> enlarges the
-picture just enough to crop them away.</p>
+image just enough to crop them away.</p>
 <p><img  src="/_astro/lens-correction.BOndR4n7_1Czl6r.webp" alt="Lens correction" loading="lazy" decoding="async" width="1440" height="900"></p>
-<p><strong>Make seamless</strong> blends a picture’s opposite edges into each other so it tiles without a visible seam,
-for textures, patterns and backgrounds. Each edge is mixed with the picture’s own middle, which is what
-sits across the join once the picture repeats, so the joins disappear and everything further in than
+<p><strong>Make seamless</strong> blends an image’s opposite edges into each other so it tiles without a visible seam,
+for textures, patterns and backgrounds. Each edge is mixed with the image’s own middle, which is what
+sits across the join once the image repeats, so the joins disappear and everything further in than
 <strong>Blend width</strong> stays exactly as it was. A wider blend hides a strong seam better; a narrower one leaves
-more of the picture untouched. <strong>Across</strong> and <strong>Down</strong> choose which pair of edges is blended, and the
+more of the image untouched. <strong>Across</strong> and <strong>Down</strong> choose which pair of edges is blended, and the
 <strong>Tiled preview</strong> shows the result with its joins in the middle, repeated along the edges you blend. It repeats the layer’s own
-frame, which for a picture filling the canvas is the canvas. Mask it like any adjustment to keep
+frame, which for an image filling the canvas is the canvas. Mask it like any adjustment to keep
 something near an edge, and lower its opacity to blend less.</p>
 <p><img  src="/_astro/make-seamless.DzphiC9y_Z2p1LQQ.webp" alt="Make Seamless" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p><img  src="/_astro/invert-and-posterize.C0wjTROp_176f14.webp" alt="Invert and posterize" loading="lazy" decoding="async" width="1440" height="900"></p>
@@ -570,7 +570,7 @@ adds contrast on its own. A mask has only an opacity, which fades how much of it
 adjustment copies just that one. <strong>Paste Adjustments</strong> (Ctrl+Shift+V) adds them to every selected
 layer.</p>
 <p><img  src="/_astro/copy-and-paste-adjustments.H01IqUGT_2oX399.webp" alt="Copy and paste adjustments" loading="lazy" decoding="async" width="348" height="880"></p>
-<p>To keep a stack for later, or for other pictures, save it with <strong>Layer &gt; Presets &gt; Save
+<p>To keep a stack for later, or for other images, save it with <strong>Layer &gt; Presets &gt; Save
 Stack as Preset</strong>, or right-click one adjustment and <strong>Save as Preset</strong>. Presets apply from the same
 menu or from the inspector’s <strong>Presets</strong> list. Saving a whole stack can include the layer’s effects
 too; applying such a preset replaces each layer’s effects with them.</p>
@@ -591,9 +591,9 @@ Dragging the gap under it keeps it at the height you choose, and ImageGui rememb
 <p><img  src="/_astro/layers.CwScnQU5_Z12i0Ih.webp" alt="Layers" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p>From the <strong>Layer</strong> menu, which groups its commands into submenus:</p>
 <ul>
-<li><strong>New</strong> adds a layer: <strong>Image Layer</strong> places another picture on the canvas, <strong>Text Layer</strong>
+<li><strong>New</strong> adds a layer: <strong>Image Layer</strong> places another image on the canvas, <strong>Text Layer</strong>
 (Ctrl+Shift+T) adds text, <strong>Fill Layer</strong> adds a solid color, a gradient, a pattern or a texture graph,
-<strong>Shape</strong> adds a shape in the middle of the picture, <strong>Paint Layer</strong> an empty layer to paint color on
+<strong>Shape</strong> adds a shape in the middle of the image, <strong>Paint Layer</strong> an empty layer to paint color on
 (see <a href="#painting">Painting</a>), and <strong>Group</strong> (Ctrl+Shift+N) an empty group.
 <strong>Artboard</strong> is there too.</li>
 <li><strong>Duplicate</strong> (Ctrl+J) and <strong>Delete</strong> (Delete) sit at the top of the menu.</li>
@@ -601,7 +601,7 @@ Dragging the gap under it keeps it at the height you choose, and ImageGui rememb
 line layers up with the canvas or each other, and <strong>Link Layers</strong> and <strong>Unlink Layers</strong>.</li>
 <li><strong>Combine</strong> holds <strong>Group</strong> (Ctrl+G) and <strong>Ungroup</strong> (Ctrl+Shift+G), <strong>Clip to Layer Below</strong>
 (Ctrl+Alt+G), which shows a layer only where the one beneath it is, and <strong>Merge Down</strong>,
-<strong>Combine Shapes</strong> and <strong>Flatten Image</strong>. Ungrouping keeps the picture: the group’s position,
+<strong>Combine Shapes</strong> and <strong>Flatten Image</strong>. Ungrouping keeps the image: the group’s position,
 perspective, and visibility go onto each layer in it, and a group holding one layer hands that layer
 its blend mode, opacity, effects, and adjustments too. When something can’t be moved exactly, such
 as a mesh warp or an adjustment over several layers, Ungroup is unavailable and its tooltip says what
@@ -682,7 +682,7 @@ drawn, up to 4096 pixels, so the canvas stays quick when zoomed out and an expor
 A fixed size keeps the same detail at every zoom, up to 8192 pixels.</li>
 </ul>
 <p>The texture is rendered once and shared by every part of an export, and it’s saved inside the
-project. SVG export embeds it as a picture.</p>
+project. SVG export embeds it as an image.</p>
 <p><img  src="/_astro/texture-graph-fills.CMarRGTk_2bNUu7.webp" alt="Texture graph fills" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h4 id="the-texture-graph-editor">The texture graph editor</h4>
 <p><strong>Edit graph…</strong> in the Fill panel, <strong>Edit Texture Graph…</strong> in a layer’s right-click menu, or
@@ -804,13 +804,13 @@ editor the <strong>Add node</strong> menu lists the <strong>Input</strong> categ
 for.</p>
 <ul>
 <li><strong>Image nodes</strong> are the Image node and every node it feeds. They carry a colored band across the
-top and work at the picture’s own pixels, so a blur or an emboss there is as sharp as the photo.
+top and work at the image’s own pixels, so a blur or an emboss there is as sharp as the photo.
 Their previews are drawn over a small copy of what is beneath, and are approximate: the canvas is
 the real preview.</li>
 <li><strong>Lengths</strong>, such as a blur’s radius, are a fraction of the layer’s height, so a filter looks the
 same at the preview’s size and at the export’s.</li>
 <li><strong>Tile nodes</strong>, the rest, render as one seamless tile, as in a fill, and the filter lays that tile
-over the picture where an image node reads it. <strong>Mapping</strong>, <strong>Tile size</strong>, <strong>Scale</strong>, <strong>Angle</strong>, and
+over the image where an image node reads it. <strong>Mapping</strong>, <strong>Tile size</strong>, <strong>Scale</strong>, <strong>Angle</strong>, and
 <strong>Offset</strong> in the inspector place it, and <strong>Seed</strong> with <strong>Re-roll</strong> gives every noise in it a new
 seed.</li>
 <li><strong>A link from an image node into a node that only makes tiles</strong>, such as <strong>Transform</strong> or a
@@ -851,7 +851,7 @@ under another name keeps it as a project of its own.</p>
 <p><img  src="/_astro/placing-a-project.wmUhdqTP_ceQYz.webp" alt="Placing a project" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h3 id="replacing-a-layers-contents">Replacing a layer’s contents</h3>
 <p><strong>Layer &gt; Replace Contents…</strong>, also on a layer’s right-click menu in the Layers panel, puts another
-file in place of an image layer’s picture or a placed project’s. Everything else about the layer
+file in place of an image layer’s image or a placed project’s. Everything else about the layer
 stays: its name, placement, perspective and mesh warp, adjustments, masks, effects, locks, and links.
 It’s one undo step, and saved versions and git diffs list it as a change of the layer’s original.</p>
 <p>A file the same size as the old contents takes their place exactly. When it’s a different size,
@@ -867,7 +867,7 @@ are locked can’t have its contents replaced.</p>
 <p><strong>Layer &gt; Convert to Embedded Document</strong> turns the selected layers into one embedded project, the same
 kind of layer an embedded <strong>File &gt; Place</strong> makes. The layers must share a group. Their copies go into a
 project of their own whose canvas is just big enough to hold what they draw, in the canvas’s own
-pixels, and the new layer is placed where they were, so the picture doesn’t move. It sits where the top
+pixels, and the new layer is placed where they were, so the image doesn’t move. It sits where the top
 selected layer was and takes that layer’s name. Images inside are packaged with it, so it never needs
 their files. <strong>Layer &gt; Edit Contents…</strong> opens it to change the layers themselves.</p>
 <p>What travels with the layers: their locks; a link between two of them, which goes inside; a link to a
@@ -877,7 +877,7 @@ one of the layers’ transparency is baked into pixels first, as deleting the la
 text following a path on the other side of the boundary keeps the path where it is.</p>
 <p><strong>Layer &gt; Expand Embedded Document</strong> puts the layers back where they were. If the embedded layer
 carries nothing of its own beyond where it’s placed, its layers come out loose; otherwise they come out
-in a group that keeps its adjustments, effects, blending, opacity and transform, so the picture stays
+in a group that keeps its adjustments, effects, blending, opacity and transform, so the image stays
 the same. A locked embedded layer has to be unlocked first. Converting and expanding are one undo step
 each.</p>
 <p><img  src="/_astro/converting-layers-to-an-embedded-document.DeUZNOLo_1axjv4.webp" alt="Converting layers to an embedded document" loading="lazy" decoding="async" width="1440" height="900"></p>
@@ -965,7 +965,7 @@ perspective and placement, so moving, scaling, or distorting a warped layer carr
 Each drag is one undo step. A position-locked layer can’t be warped, and a layer inside a warped group
 is warped with its group. Text is typed straight while it is edited on the canvas, and a warped shape
 can’t have its points edited or be combined until the warp is removed. A layer’s masks and limits
-bend with it, so a mask stays on the part of the picture it was made for, and a selection turned into a
+bend with it, so a mask stays on the part of the image it was made for, and a selection turned into a
 mask or limit while the layer is warped lands where it was drawn. A vector mask can’t be drawn on a
 warped layer, but one it already has bends with it.</p>
 <p><img  src="/_astro/warp.D8XmHcWQ_25qWMM.webp" alt="Warp" loading="lazy" decoding="async" width="1088" height="741"></p>
@@ -1036,10 +1036,10 @@ adjustments, and text are the same in every comp. <a href="#exporting-an-animati
 play the comps as the frames of a GIF or WebP.</p>
 <p><img  src="/_astro/layer-comps.sbdp1HBD_Z2bp36i.webp" alt="Layer comps" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h3 id="artboards">Artboards</h3>
-<p>An artboard is a named rectangle of the canvas that exports as a picture of its own, so one project
+<p>An artboard is a named rectangle of the canvas that exports as an image of its own, so one project
 can hold every size of a social post or every icon of a set. <strong>Layer &gt; New &gt; Artboard</strong> asks for a name,
 a size (type one, or pick a common social or icon size), and a background: white, black, a color, or
-transparent. The first artboard takes the canvas, so the picture becomes the first of the set; each
+transparent. The first artboard takes the canvas, so the image becomes the first of the set; each
 later one goes to the right of the last, and the canvas grows to hold it.</p>
 <p>Whatever sits on an artboard belongs to it: a layer at the top of the stack belongs to the artboard
 its middle is in. Each artboard’s background is a fill layer at the bottom of the stack, named after
@@ -1072,7 +1072,7 @@ symbol, is drawn in the first installed font that has it instead of as an empty 
 the project carries, then the emoji, symbol, and CJK fonts each platform installs (Segoe UI Emoji and
 Symbol, Apple Symbols, the Noto families, DejaVu Sans, and others). The caret and wrapping measure it
 in that font, and <strong>Save as Package</strong> carries the fallback font along with the text’s own. Color
-emoji fonts that hold only pictures are skipped, because text is drawn from outlines.</p>
+emoji fonts that hold only images are skipped, because text is drawn from outlines.</p>
 <p><img  src="/_astro/font-fallback.twH35AUh_ZLyDUI.webp" alt="Font fallback" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p>Select some of the text while editing it and a bar floats over it. Its first row sets the selection’s
 bold and italic faces (Ctrl+B, Ctrl+I), size, color, and font. Its second row underlines it (Ctrl+U)
@@ -1154,7 +1154,7 @@ While you edit warped text on the canvas it is shown straight, so the caret sits
 bends again when you finish. A warped paragraph’s handles scale it rather than resize its box.</p>
 <p><img  src="/_astro/warped-text.BbthvP53_Z2tLNL2.webp" alt="Warped text" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h3 id="finding-and-replacing-text">Finding and replacing text</h3>
-<p><strong>Edit &gt; Find and Replace</strong> (Ctrl+H) searches the text of every text layer in the picture, including
+<p><strong>Edit &gt; Find and Replace</strong> (Ctrl+H) searches the text of every text layer in the image, including
 text in groups, boxed text, text on a path, and every styled run. Type what to find, and choose <strong>Match
 case</strong> to tell capitals apart, <strong>Whole words</strong> to skip matches inside longer words, or <strong>Regular
 expression</strong> to search with a .NET regular expression, where <code>^</code> and <code>$</code> match at the start and end of
@@ -1174,7 +1174,7 @@ locked, or whose fonts aren’t installed, is left as it is, and the window name
 <p>While you edit text on the canvas, words the dictionary doesn’t know are underlined with a wavy red
 line. The check runs in the background as you type, so it never slows typing down. Right-click an
 underlined word for suggestions: choosing one types it over the word, so Ctrl+Z inside the edit takes it
-back. <strong>Add to Dictionary</strong> counts the word as spelled right from then on, in every picture, and
+back. <strong>Add to Dictionary</strong> counts the word as spelled right from then on, in every image, and
 <strong>Ignore</strong> passes over it until ImageGui closes. Words with digits in them, words in capitals, and web
 and email addresses aren’t checked.</p>
 <p><strong>Edit &gt; Check Spelling</strong> (F7) steps through the misspelled words in every text layer, from the top
@@ -1187,7 +1187,7 @@ window says so at the end.</p>
 <p>ImageGui comes with English (US) and English (UK) dictionaries. <strong>Preferences &gt; General</strong> sets the
 language and turns the underlines off, and lists the words you’ve added so you can remove one. The
 inspector’s <strong>Spelling</strong> combo gives one text layer its own language, or tells ImageGui not to check it.
-That choice stays with ImageGui rather than in the picture, so the same file opened on another computer
+That choice stays with ImageGui rather than in the image, so the same file opened on another computer
 follows that computer’s Preferences.</p>
 <p><img  src="/_astro/checking-spelling.Bn_AtQge_Z2bUa6E.webp" alt="Checking spelling" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h3 id="text-on-a-path">Text on a path</h3>
@@ -1230,7 +1230,7 @@ text keeps the outline where it last was, in the same step, so undoing the delet
 shape as a layer of its own. Press U again to move to the next shape, or pick one from the strip beside the tools, which
 also sets the fill, the stroke, the corner radius, the polygon’s number of sides, and the star’s points
 and inner radius for the next shape you draw. Hold Shift to draw a square or a circle, or to keep a line to 45 degrees; hold Alt to draw out
-from the center. <strong>Layer &gt; New &gt; Shape</strong> adds one in the middle of the picture instead.</p>
+from the center. <strong>Layer &gt; New &gt; Shape</strong> adds one in the middle of the image instead.</p>
 <p><img  src="/_astro/shape-layers.DMMPqgmP_ZptRSf.webp" alt="Shape layers" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p>A shape is drawn from its outline, so it stays sharp however far you scale it. The inspector’s
 <strong>Shape</strong> section changes its fill (a color or none) and stroke (a color and a width, or none)
@@ -1299,7 +1299,7 @@ thumbnail beside the outline list to pick one. The library starts with arrows, a
 thought bubbles, a star burst, a heart, a check, a cross, a ring, and a badge, and it also offers the
 Font Awesome icons ImageGui’s own buttons use. Drag to draw the shape stretched to fit, hold Shift to
 keep its own proportions, or hold Alt to draw out from the center. <strong>Layer &gt; New &gt; Shape &gt; Custom
-Shape</strong> adds the chosen one in the middle of the picture.</p>
+Shape</strong> adds the chosen one in the middle of the image.</p>
 <p><img  src="/_astro/custom-shapes.BpT7VPf8_2rIsra.webp" alt="Custom shapes" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p>A custom shape becomes an ordinary path layer with the fill and stroke from the strip, so it stays
 sharp at any size, the Direct Selection tool can reshape it, and a project holding one opens the same
@@ -1316,7 +1316,7 @@ and fills, strokes, and colors are left behind. <strong>Export Custom Shapes</st
 an SVG file, one symbol each, which imports back as the same shapes.</p>
 <p><img  src="/_astro/saving-a-custom-shape.ChwAR9f0_227GTf.webp" alt="Saving a custom shape" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h2 id="selecting-and-masking">Selecting and masking</h2>
-<p>A selection decides which part of the picture a mask or an adjustment covers. Choose a selection tool
+<p>A selection decides which part of the image a mask or an adjustment covers. Choose a selection tool
 from the tool strip over the canvas, where each tool’s name sits under its icon. Under the strip, a row
 shows the chosen tool’s name and its options, so the canvas stays put as you switch tools. Only a
 window too narrow for every name makes the names give way to icons alone, shown as tooltips instead:</p>
@@ -1482,17 +1482,17 @@ nearby patch whose surroundings best match the stroke’s, copies it, and shifts
 color so it meets the edge of the stroke, matching both the level and the gradient there.</li>
 </ul>
 <p>Both have a size, set with <strong>[</strong> and <strong>]</strong> as well as the slider, and a hardness: a soft brush blends
-its edge into the picture. A stroke reads the layer as the adjustments beneath its Retouch leave it,
+its edge into the image. A stroke reads the layer as the adjustments beneath its Retouch leave it,
 and each stroke reads what the strokes before it painted.</p>
 <p><img  src="/_astro/clone-and-spot-removal.B5VF4sLV_1qlrAP.webp" alt="Clone and Spot Removal" loading="lazy" decoding="async" width="1088" height="874"></p>
 <h3 id="content-aware-fill">Content-Aware Fill</h3>
 <p>For something too big to paint out, select it and choose <strong>Edit &gt; Content-Aware Fill</strong>. ImageGui fills
-the selection on the selected image layer from the rest of the layer: it searches the picture for the
+the selection on the selected image layer from the rest of the layer: it searches the image for the
 patches that best continue what surrounds the hole, first on a small copy and then on finer ones, and
 copies them in, so texture carries on through the fill rather than being smeared across it. Where what
 it copies is lit a little differently from the edge of the selection, as sky beside a glow is, the
 copy’s level is bent to meet the edge, so no seam shows.</p>
-<p>The dialog previews the fill before you commit to it. Each <strong>Seed</strong> searches the picture its own way,
+<p>The dialog previews the fill before you commit to it. Each <strong>Seed</strong> searches the image its own way,
 so if the fill copied something you don’t want, <strong>Re-roll</strong> searches again. To keep it from copying
 a particular area, save a selection over that area first (<strong>Select &gt; Save Selection</strong>) and pick it under
 <strong>Don’t copy from</strong>. The selection can be feathered or soft: the fill blends in where it is.</p>
@@ -1500,7 +1500,7 @@ a particular area, save a selection over that area first (<strong>Select &gt; Sa
 and the seed, so the layer’s own pixels are never changed. Change the seed from the inspector later,
 switch the fill off, or undo it. An export fills the same way the preview does, at full size. A layer
 whose pixels are locked can’t be filled.</p>
-<p>The fill looks at the whole layer, so on a very large picture it is one of the slower things on a
+<p>The fill looks at the whole layer, so on a very large image it is one of the slower things on a
 layer’s stack, a second or so on a 24-megapixel photo with a large hole.</p>
 <p><img  src="/_astro/content-aware-fill.CZlVHMeG_ZLhR4k.webp" alt="Content-Aware Fill" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h2 id="liquify">Liquify</h2>
@@ -1533,7 +1533,7 @@ doesn’t move anything.</li>
 <li><strong>Color</strong> mode pushes by the graph’s red channel across and its green channel down, so each pixel
 can move in a different direction.</li>
 </ul>
-<p>The amounts are in canvas pixels, so a preview and a full-size export move the picture the same
+<p>The amounts are in canvas pixels, so a preview and a full-size export move the image the same
 distance. A pixel pushed in from beyond the layer’s edge is transparent, so keep the amounts small
 near the edges of a photo. Like every adjustment it can be faded, blended, limited to a mask, and
 switched off.</p>
@@ -1570,10 +1570,10 @@ golden ratio, a golden spiral, diagonals, triangles, and a fine grid. Shift+O fl
 triangles round, and the choice is remembered for the next crop.</p>
 <p><img  src="/_astro/crop-overlays.CCo2T6hq_23S88a.webp" alt="Crop overlays" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p><strong>Straighten</strong> turns the selected layer by an angle. <strong>Draw horizon</strong> lets you draw a line along
-something that should be level, and turns the picture to match.</p>
+something that should be level, and turns the image to match.</p>
 <p><img  src="/_astro/leveling-the-horizon.7-fKIH3v_Z2lGCit.webp" alt="Leveling the horizon" loading="lazy" decoding="async" width="1440" height="900"></p>
-<p><strong>Auto</strong>, beside the Straighten field, finds the strongest near-level or upright line in the picture
-and levels it in one undo step, which the field can then fine-tune. A picture with no clear line is
+<p><strong>Auto</strong>, beside the Straighten field, finds the strongest near-level or upright line in the image
+and levels it in one undo step, which the field can then fine-tune. An image with no clear line is
 left alone, and the panel says so.</p>
 <p><img  src="/_astro/auto-straighten.BoSqVpyx_jXDpc.webp" alt="Auto straighten" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h3 id="measuring">Measuring</h3>
@@ -1581,7 +1581,7 @@ left alone, and the panel says so.</p>
 <strong>Info</strong> panel read out its length, its angle (counterclockwise from pointing right, so a line
 rising to the right is positive), and how far it runs across (dx) and down (dy). Lengths are in the
 document’s pixels, or in inches, centimeters, or millimeters at the resolution (ppi) you enter beside
-the unit, since a picture carries no resolution of its own.</p>
+the unit, since an image carries no resolution of its own.</p>
 <ul>
 <li>Drag either end to move it; click anywhere else, or press <strong>Esc</strong>, to clear the line.</li>
 <li>The ends catch on the canvas edges and center lines, guides, and layer edges while <strong>View &gt; Snap</strong>
@@ -1591,15 +1591,15 @@ nearer upright, as one undoable step. The Straighten field carries on from the r
 </ul>
 <p>The line is only for looking: nothing about it is saved, and it goes when the canvas changes size.</p>
 <p><img  src="/_astro/measure-tool.Dz-nfW0i_1M6YNr.webp" alt="Measure tool" loading="lazy" decoding="async" width="1440" height="900"></p>
-<p><strong>Image &gt; Perspective Crop</strong> puts four corners on the picture. Drag each onto a corner of something
+<p><strong>Image &gt; Perspective Crop</strong> puts four corners on the image. Drag each onto a corner of something
 photographed at an angle, such as a page or a building’s face, and applying makes that shape the whole
 canvas, straightened.</p>
 <p><img  src="/_astro/perspective-crop.BlpNj73v_21Yi1C.webp" alt="Perspective crop" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p>The <strong>Image</strong> menu rotates by quarter and half turns, flips horizontally or vertically, and changes the
-picture’s size:</p>
+image’s size:</p>
 <ul>
-<li><strong>Image Size</strong> resamples the whole picture to a new size, with the filter it uses chosen beside it.</li>
-<li><strong>Canvas Size</strong> adds or removes canvas around the picture without scaling it, and <strong>Trim</strong> crops to
+<li><strong>Image Size</strong> resamples the whole image to a new size, with the filter it uses chosen beside it.</li>
+<li><strong>Canvas Size</strong> adds or removes canvas around the image without scaling it, and <strong>Trim</strong> crops to
 everything visible.</li>
 <li><strong>Resampling</strong> chooses the filter used for the preview and the export alike. Lanczos-3 is the
 default; nearest keeps hard pixel edges for pixel art.</li>
@@ -1615,44 +1615,44 @@ A project remembers its selection and straighten angle, so you pick up where you
 <p><img  src="/_astro/picking-up-where-you-left-off.BKxDfapQ_V2pur.webp" alt="Picking up where you left off" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p>Each save over a project keeps the one it replaces as a saved version; see
 <a href="#saved-versions">Saved versions</a>.</p>
-<p><strong>File &gt; Export</strong> writes the finished picture as PNG, JPEG, WebP, TIFF, TGA, PDF, SVG, OpenEXR, or a layered Photoshop file. An ACEScg picture is written as the canvas shows it; see <a href="#viewing-through-aces">Viewing through ACES</a>. It asks what size to write at (the
-picture’s own size, a percentage, or a long edge in pixels) and, for JPEG and WebP, a quality. Both
+<p><strong>File &gt; Export</strong> writes the finished image as PNG, JPEG, WebP, TIFF, TGA, PDF, SVG, OpenEXR, or a layered Photoshop file. An ACEScg image is written as the canvas shows it; see <a href="#viewing-through-aces">Viewing through ACES</a>. It asks what size to write at (the
+image’s own size, a percentage, or a long edge in pixels) and, for JPEG and WebP, a quality. Both
 are remembered for next time.</p>
 <p><img  src="/_astro/export-size.BEEQLIbw_gJvwE.webp" alt="Export size" loading="lazy" decoding="async" width="564" height="640"></p>
 <p><img  src="/_astro/export-quality.CtJZcw9a_JPfhe.webp" alt="Export quality" loading="lazy" decoding="async" width="564" height="662"></p>
-<p>Beneath the options is a preview of the file: the picture as that format and quality will write it,
+<p>Beneath the options is a preview of the file: the image as that format and quality will write it,
 fitted so the whole of it shows, and how big the file will be. Both catch up a moment after you stop
 moving a control. <strong>Actual pixels</strong> shows the preview one pixel to one pixel instead, in a window you
 can drag around, which is where compression shows. <strong>Compare with original</strong> flips the preview to the
-picture before encoding, which is the quickest way to find the lowest quality that still looks right. An export of
+image before encoding, which is the quickest way to find the lowest quality that still looks right. An export of
 up to two megapixels is encoded whole, so its size is exact; a larger one is previewed and measured
 from a smaller copy, and the size is marked as an estimate.</p>
 <p><img  src="/_astro/export-preview.BCkK3sJm_1QRH4r.webp" alt="Export preview" loading="lazy" decoding="async" width="564" height="662"></p>
 <p>TIFF is written losslessly, LZW-compressed, so it asks only for a size. A PDF is one page titled after
-its file: either the picture’s size at a chosen number of pixels an inch, or A4, A3, A5, Letter, Legal,
-or Tabloid turned to match the picture, which it fits inside or fills. The picture is stored in it as
+its file: either the image’s size at a chosen number of pixels an inch, or A4, A3, A5, Letter, Legal,
+or Tabloid turned to match the image, which it fits inside or fills. The image is stored in it as
 JPEG at the chosen quality, or losslessly.</p>
 <p><img  src="/_astro/export-as-pdf.03tWWvEJ_Znx7C4.webp" alt="Export as PDF" loading="lazy" decoding="async" width="564" height="756"></p>
 <h3 id="replacing-files">Replacing files</h3>
 <p>Exporting to a file that already exists asks first, naming it; <strong>Cancel</strong> writes nothing. Export
 Layers, Export As Set and Export Animation ask the same way, once for every file they would replace.
-The picture a document is made from is never replaced: a linked project keeps only your edits and
+The image a document is made from is never replaced: a linked project keeps only your edits and
 the path of each original, so exporting over one would lose the pixels every edit applies to, in the
 project and in every saved version of it. Exporting over an original, or over the project’s own
 file, is refused, and nothing is written.</p>
 <p><img  src="/_astro/replacing-a-file.CW9VJZMo_1ONsuM.webp" alt="Replacing a file" loading="lazy" decoding="async" width="377" height="226"></p>
 <h3 id="dithered-gradients">Dithered gradients</h3>
 <p>Every export except SVG’s vectors is written at 8 bits a channel, 256 levels, and a smooth gradient
-that crosses only a few of them would show each as a flat band. So where the picture becomes 8 bits,
+that crosses only a few of them would show each as a flat band. So where the image becomes 8 bits,
 in exports, on the canvas, and when copying to the clipboard, each pixel between two levels takes the
 upper one as often as it lies toward it, in a fixed pattern finer than a level. Gradient fills,
 glows, vignettes, and soft skies come out smooth, and a patch averages to the light it was meant to
 have. A color that already sits exactly on a level, such as an untouched photo’s, is written exactly
-as it was, so dithering never adds noise to a picture that had nothing to lose.</p>
+as it was, so dithering never adds noise to an image that had nothing to lose.</p>
 <p>The pattern depends only on where a pixel is, so the same document exports to the same bytes every
 time, however it is split up to save memory. <strong>File &gt; Preferences &gt; Appearance &gt; Dither gradients on
 8-bit output</strong> turns it off; it is on unless you do. It applies to what leaves ImageGui: exports, batch
-runs, export sets and the export preview. Pictures ImageGui keeps inside a project, such as a merged,
+runs, export sets and the export preview. Images ImageGui keeps inside a project, such as a merged,
 flattened or pasted layer, a new pattern, or the project’s thumbnail, are never dithered, so the setting
 can’t change what a project holds. Copying to the clipboard isn’t dithered either, so pasting back what
 you copied gives the same pixels whatever the setting.</p>
@@ -1667,8 +1667,8 @@ modes, and groups become SVG attributes, and solid fill layers become rectangles
 embedded as a PNG of that layer at the export’s size, cropped to what it covers: photos, gradient and
 pattern fills, and any layer with adjustments, masks, effects, or a perspective. So is a layer with
 others clipped to it, drawn together with them. A layer in a blend mode SVG doesn’t have, such as
-Linear Burn, depends on what is beneath it, so it is drawn as one picture with everything below it.</p>
-<p>The export options list each layer that will be drawn as a picture and why, before anything is
+Linear Burn, depends on what is beneath it, so it is drawn as one image with everything below it.</p>
+<p>The export options list each layer that will be drawn as an image and why, before anything is
 written. The size you choose is the size the SVG is shown at; its coordinates stay in canvas pixels.
 SVG viewers blend translucent layers in sRGB where ImageGui blends in linear light, so translucent
 edges and blend modes can look slightly different from the canvas.</p>
@@ -1686,16 +1686,16 @@ Where a layer’s effects were drawn from its masked shape, or its mask adds to 
 the pixels carry the mask and the Photoshop mask is kept, switched off, so it isn’t applied twice.
 Blend If ranges are left out.</p>
 <p>The export options list every layer whose pixels carry something, and why, before anything is written.
-The file also holds the flattened picture, so viewers that don’t read layers still show it, and it is
+The file also holds the flattened image, so viewers that don’t read layers still show it, and it is
 written at the size you choose, up to 30,000 pixels a side. Export As Set can include a PSD output,
 which is drawn layer by layer and so is counted as a rendering of its own.</p>
 <p><img  src="/_astro/export-as-a-layered-photoshop-file.Dx5orPRG_ZOXG4t.webp" alt="Export as a layered Photoshop file" loading="lazy" decoding="async" width="564" height="710"></p>
 <p><strong>File &gt; Export Layers</strong> writes each top-level layer, or each selected one, to a file of its own. A
-document with <a href="#layer-comps">layer comps</a> can instead write each comp as the whole picture.</p>
+document with <a href="#layer-comps">layer comps</a> can instead write each comp as the whole image.</p>
 <p><img  src="/_astro/export-layers.C4-qk2jU_Zw58E4.webp" alt="Export layers" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h3 id="exporting-openexr-files">Exporting OpenEXR files</h3>
 <p>Choose a name ending in <code>.exr</code> in <strong>File &gt; Export</strong> to write an OpenEXR file. It is written in float
-straight from the document, never through an 8-bit picture, so a highlight brighter than white leaves
+straight from the document, never through an 8-bit image, so a highlight brighter than white leaves
 ImageGui as bright as it is. The export options ask two more things:</p>
 <ul>
 <li><strong>Color space</strong>: <strong>ACES2065-1</strong>, the space studios hand EXR files to each other in, unless you
@@ -1706,7 +1706,7 @@ meant (see <a href="#working-with-blender">Working with Blender</a>).</li>
 hold, or <strong>Float (32-bit)</strong>, which keeps everything at twice the size.</li>
 </ul>
 <p>Both are remembered for the next export. <strong>Export As Set</strong> has an <strong>EXR</strong> output with the same two
-choices, and <strong>Batch</strong> writes EXR too, keeping an EXR picture as EXR when it writes each picture’s own
+choices, and <strong>Batch</strong> writes EXR too, keeping an EXR image as EXR when it writes each image’s own
 format.</p>
 <p><img  src="/_astro/exporting-openexr-files.B908N9wH_GBDEq.webp" alt="Exporting OpenEXR files" loading="lazy" decoding="async" width="564" height="718"></p>
 <h3 id="exporting-an-animation">Exporting an animation</h3>
@@ -1717,7 +1717,7 @@ document can keep every frame but one hidden. Choose a file, then:</p>
 <ul>
 <li><strong>Format</strong>: GIF plays everywhere. Each frame gets a palette of its own of up to 256 colors, and a
 pixel is either clear or solid. WebP keeps every color and soft edges, at the quality you choose.</li>
-<li><strong>Size</strong>: the same choices as Export: the picture’s own size, a percentage, or a long edge.</li>
+<li><strong>Size</strong>: the same choices as Export: the image’s own size, a percentage, or a long edge.</li>
 <li><strong>Loop forever</strong>, or turn it off and say how many times the animation plays.</li>
 <li><strong>Timing</strong>: the field above the frame list sets every frame at once, and each frame’s own field
 changes just that one. GIF keeps time in hundredths of a second, so its delays round to the
@@ -1726,92 +1726,92 @@ nearest 10 ms.</li>
 <p>To draw the frames, turn on <strong>View &gt; Onion Skin</strong>. It shows the frame before the current one tinted
 red and the frame after it tinted blue, wherever they differ from it, so you can place each drawing
 against its neighbors; set how strongly they show in the same submenu. Only the canvas shows them,
-never the picture or an export. <strong>Previous Frame</strong> (Alt+,) and <strong>Next Frame</strong> (Alt+.) step through
+never the image or an export. <strong>Previous Frame</strong> (Alt+,) and <strong>Next Frame</strong> (Alt+.) step through
 the frames, wrapping around at the ends. With comps as frames, each step applies the next comp; with
 layers, it shows the next layer alone and selects it. Either is one step in the history.</p>
 <p><img  src="/_astro/animating-with-onion-skin.BcPbkfXx_Z248855.webp" alt="Animating with onion skin" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p>While the options are open, the animation is
 <a href="#flashing-in-animations">checked for flashing</a> and the result shown above <strong>Export</strong>.</p>
-<p>Frames are rendered as Export renders the picture. <strong>Stop</strong> in the progress window abandons the
+<p>Frames are rendered as Export renders the image. <strong>Stop</strong> in the progress window abandons the
 export and writes nothing. Batch can’t write animations, since it works on image files, which have
 neither comps nor layers.</p>
 <p><img  src="/_astro/exporting-an-animation.1cQ2kGUn_Z2wD9VP.webp" alt="Exporting an animation" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h3 id="exporting-several-files-at-once">Exporting several files at once</h3>
 <p><strong>File &gt; Export As Set</strong> asks for a folder, then writes every output of a set there in one go. Each
-output has its own format, quality, size, and a suffix that goes between the picture’s name and the
+output has its own format, quality, size, and a suffix that goes between the image’s name and the
 extension, so the set that comes with ImageGui writes <code>photo-web.jpg</code> at 2048 pixels on the long
 edge, <code>photo-print.tif</code> at full size, and <code>photo-thumb.webp</code> at 512. Make new sets, duplicate, rename,
 and edit them in the same window; <strong>Save Sets</strong> keeps your changes without exporting. Outputs of the
-same size share one rendering of the picture, and the window says how many renderings the set needs.
-In <strong>File &gt; Batch</strong>, choose an export set to write the whole set for every picture.</p>
+same size share one rendering of the image, and the window says how many renderings the set needs.
+In <strong>File &gt; Batch</strong>, choose an export set to write the whole set for every image.</p>
 <p><img  src="/_astro/export-as-a-set.BuQVvXub_ZHcsX4.webp" alt="Export as a set" loading="lazy" decoding="async" width="1440" height="900"></p>
-<p>When the picture is saved as a project, the list also says whether each file already in the folder
+<p>When the image is saved as a project, the list also says whether each file already in the folder
 is <strong>up to date</strong> (exported from this project as it stands, with the same format, size, and quality),
 <strong>stale</strong>, or <strong>not written yet</strong>. <strong>Export Stale</strong> writes only the files that aren’t up to date and
 leaves the rest alone, so refreshing a set after a small change doesn’t rewrite every file. It is
-off for a picture that isn’t saved as a project, or when <strong>Leave out project details in exports</strong> is
+off for an image that isn’t saved as a project, or when <strong>Leave out project details in exports</strong> is
 on, since then the files carry nothing to compare.</p>
 <p><img  src="/_astro/exporting-only-what-changed.CgWp9KrU_Z1GBTW3.webp" alt="Exporting only what changed" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h3 id="batches-and-the-command-line">Batches and the command line</h3>
-<p><strong>File &gt; Batch</strong> runs a set of pictures, or every picture directly inside a folder, through one of
+<p><strong>File &gt; Batch</strong> runs a set of images, or every image directly inside a folder, through one of
 your adjustment presets and writes each one to an output folder as PNG, JPEG, WebP, TIFF, TGA, PDF, SVG,
 or OpenEXR, or as a whole export set. A saved project can be part of a batch too: it is written as it was saved,
 without the preset, and with <strong>Each artboard of a project</strong> ticked a project with artboards is written
-one picture per artboard. A batch never writes over one of its pictures or over an original a project
+one image per artboard. A batch never writes over one of its images or over an original a project
 in it links to; those are numbered apart instead. When files it would write are already in the output
 folder, it asks once before it starts: <strong>Replace</strong> them all, or <strong>Keep both</strong> and number the new
-pictures apart. The same batch runs without a window from the command line, where files already in
+images apart. The same batch runs without a window from the command line, where files already in
 the output folder are replaced, so running it again refreshes what it wrote last time:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">ImageGui</span><span style="color:#79B8FF"> --batch</span><span style="color:#79B8FF"> --out</span><span style="color:#9ECBFF"> web</span><span style="color:#79B8FF"> --preset</span><span style="color:#9ECBFF"> "Golden hour"</span><span style="color:#79B8FF"> --size</span><span style="color:#79B8FF"> 2048</span><span style="color:#79B8FF"> --format</span><span style="color:#9ECBFF"> jpg</span><span style="color:#79B8FF"> --quality</span><span style="color:#79B8FF"> 85</span><span style="color:#9ECBFF"> photos/</span></span>
 <span class="line"><span style="color:#B392F0">ImageGui</span><span style="color:#79B8FF"> --batch</span><span style="color:#79B8FF"> --out</span><span style="color:#9ECBFF"> delivery</span><span style="color:#79B8FF"> --set</span><span style="color:#9ECBFF"> "Web, print and thumbnail"</span><span style="color:#9ECBFF"> photos/</span></span></code></pre>
-<p><code>--format</code> is one of <code>png</code>, <code>jpg</code>, <code>webp</code>, <code>tif</code>, <code>tga</code>, <code>pdf</code>, <code>svg</code>, or <code>exr</code>; without it each picture keeps its
+<p><code>--format</code> is one of <code>png</code>, <code>jpg</code>, <code>webp</code>, <code>tif</code>, <code>tga</code>, <code>pdf</code>, <code>svg</code>, or <code>exr</code>; without it each image keeps its
 own format. A TGA file is written uncompressed unless <code>--tga-compression rle</code> says otherwise. An OpenEXR file is written in ACES2065-1 with half floats unless <code>--exr-space</code> (<code>aces2065-1</code>,
 <code>acescg</code>, or <code>linear-rec709</code>) or <code>--exr-precision</code> (<code>half</code> or <code>float</code>) says otherwise, and an EXR
-picture written as EXR is worked on in ACEScg, so none of its highlights are clipped on the way through. <code>--size</code> is the long edge in pixels and <code>--percent</code> a percentage; neither enlarges. <code>--scale</code> (2 to 16)
-writes each picture a whole number of times its size, every pixel a hard square.
+image written as EXR is worked on in ACEScg, so none of its highlights are clipped on the way through. <code>--size</code> is the long edge in pixels and <code>--percent</code> a percentage; neither enlarges. <code>--scale</code> (2 to 16)
+writes each image a whole number of times its size, every pixel a hard square.
 <code>--set</code> names an export set saved in the app (the name’s case doesn’t matter) and writes every
-output of it for each picture. A set chooses its own formats, qualities, and sizes, so it can’t be
+output of it for each image. A set chooses its own formats, qualities, and sizes, so it can’t be
 combined with <code>--format</code>, <code>--quality</code>, <code>--size</code>, <code>--percent</code>, <code>--scale</code>, <code>--exr-space</code>, <code>--exr-precision</code>, or <code>--tga-compression</code>. <code>--artboards each</code> writes each
-artboard of a project as a picture of its own; <code>--artboards whole</code>, the default, writes its whole
+artboard of a project as an image of its own; <code>--artboards whole</code>, the default, writes its whole
 canvas; <code>--artboard "name"</code> writes just the artboard of that exact name, and fails for a project
-without one. The command exits with 0 when every picture was written, 1 when any failed, and 2 when the
+without one. The command exits with 0 when every image was written, 1 when any failed, and 2 when the
 command line couldn’t be understood or names a preset or set that isn’t saved.</p>
 <p><img  src="/_astro/batch-processing.kt9ATAJF_Z1Qke5d.webp" alt="Batch processing" loading="lazy" decoding="async" width="544" height="562"></p>
 <h3 id="batch-graphs">Batch graphs</h3>
 <p>When one pass through a preset isn’t enough, a batch can be drawn as a graph. <strong>File &gt; Batch Graphs &gt;
-New Batch Graph</strong> opens one: pictures come in at the <strong>Input</strong> node, flow left to right along the
+New Batch Graph</strong> opens one: images come in at the <strong>Input</strong> node, flow left to right along the
 links through steps such as <strong>Apply Preset</strong>, <strong>Resize</strong>, and <strong>Watermark</strong>, and are written by output
 nodes such as <strong>Export</strong>, <strong>Export Set</strong>, and <strong>Save Project</strong>, each writing its own files. An output
 pin linked to several nodes gives each of them its own copy, and an input takes as many links as
 reach it, so one graph can write a full-size TIFF, a JPEG for the web, and a watermarked proof of
-every picture in one run.</p>
+every image in one run.</p>
 <p><strong>Add node</strong> in the editor’s toolbar, or dragging a link into empty space, adds a node; a link dragged
 from a pin to a pin joins them, and Delete removes what is selected. Each node says on its face what
 it’s set to, and the panel beside the canvas shows the selected node’s settings. A node that can’t
 run yet says why on the node itself, and the line above the canvas says whether the whole graph is
 ready to run.</p>
-<p>The editor has an undo history of its own, apart from the picture’s: <strong>Undo</strong> and <strong>Redo</strong> in its
-toolbar, or Ctrl+Z and Ctrl+Y while the canvas has the keyboard, never touch the open picture, and
-the editor stays open as pictures are opened and closed. <strong>Save</strong> keeps the graph in your library,
+<p>The editor has an undo history of its own, apart from the image’s: <strong>Undo</strong> and <strong>Redo</strong> in its
+toolbar, or Ctrl+Z and Ctrl+Y while the canvas has the keyboard, never touch the open image, and
+the editor stays open as images are opened and closed. <strong>Save</strong> keeps the graph in your library,
 which <strong>File &gt; Batch Graphs</strong> lists so it can be opened again; <strong>Save to file…</strong> writes it as an
 <code>.imagegui-batch</code> file anywhere, and <strong>Open Batch Graph…</strong> opens one. Closing the editor with changes
 unsaved asks whether to save them first.</p>
 <p><img  src="/_astro/batch-graphs.DHg1YiZp_1Dn7HI.webp" alt="Batch graphs" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h4 id="previewing-a-batch-graph">Previewing a batch graph</h4>
 <p>A batch graph shows what it will do before you run it. <strong>Samples…</strong> in the editor takes up to
-eight pictures to try the graph on, added one at a time or from a folder, and the graph runs over
-them without writing anything. Each node then shows how many pictures reached it and a thumbnail of
+eight images to try the graph on, added one at a time or from a folder, and the graph runs over
+them without writing anything. Each node then shows how many images reached it and a thumbnail of
 the first one it sends on, and each output node lists the files it would write, under the names the
 batch will give them and numbered apart as the batch numbers them. A failure shows on the node it
-happened at. Hovering over a thumbnail says the size the picture would be written at.</p>
+happened at. Hovering over a thumbnail says the size the image would be written at.</p>
 <p>The preview runs again whenever a node or link changes; moving a node doesn’t count. The samples are
 shared by every open editor and kept until ImageGui closes; they aren’t saved with the graph. Because
 the preview is the batch itself with nothing written, what it shows is what the batch does. <strong>Run
-again</strong> in the Samples list runs it over the same pictures again, for a sample or a watermark that
+again</strong> in the Samples list runs it over the same images again, for a sample or a watermark that
 changed on disk.</p>
 <p><img  src="/_astro/previewing-a-batch-graph.BteTK7e3_2ryhsg.webp" alt="Previewing a batch graph" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h2 id="making-game-assets">Making game assets</h2>
-<p>ImageGui has tools for the pictures games are built from: sprites, tiles, and the textures an engine reads.</p>
+<p>ImageGui has tools for the images games are built from: sprites, tiles, and the textures an engine reads.</p>
 <h3 id="drawing-pixel-art">Drawing pixel art</h3>
 <p>The <strong>Pixel</strong> tool (the pencil in other editors) paints whole pixels: every pixel it touches is fully covered and none is half
 covered, so the edges stay hard for sprites, tiles and icons. Press B with the Brush chosen, or click
@@ -1843,13 +1843,13 @@ with a swatch showing what it will hold:</p>
 <ul>
 <li><strong>Source</strong> is a layer or group, a layer comp, or <strong>Constant</strong>. A layer or group is read whether or
 not it is visible, with its own adjustments, masks, and effects. A layer comp is read as the whole
-picture that comp shows.</li>
+image that comp shows.</li>
 <li><strong>Read</strong> chooses what of the source goes in the channel: its <strong>Luminance</strong>, or its own red, green,
 blue, or alpha.</li>
 <li><strong>Invert</strong> turns the values over, so a roughness layer can be written as smoothness.</li>
 <li><strong>Value</strong> is the constant, for a constant channel. For a layer or comp, it is labelled <strong>If
 missing</strong> and is what the channel holds where the source is transparent, and everywhere when the
-source isn’t in the picture.</li>
+source isn’t in the image.</li>
 </ul>
 <p><strong>Fill from a preset</strong> sets all four rows for one engine’s layout. The sets that come with ImageGui
 include one output for each:</p>
@@ -1902,7 +1902,7 @@ include one output for each:</p>
 <p>A source is found by the layer it was picked from first, so renaming the layer doesn’t lose it, and
 then by its name, in any case. That is what lets one set, or a batch, write textures for many
 projects: name the layers AO, Roughness, and Metallic in each, and the presets find them. When a
-channel’s source isn’t in a picture, the channel holds its <strong>If missing</strong> value and the export
+channel’s source isn’t in an image, the channel holds its <strong>If missing</strong> value and the export
 still goes ahead, with a note saying which channel had nothing to read. <strong>File &gt; Batch</strong> and the
 command line list the same notes.</p>
 <p><img  src="/_astro/packing-channels.C9SiawPk_Za4bWv.webp" alt="Packing channels" loading="lazy" decoding="async" width="1440" height="900"></p>
@@ -1920,8 +1920,8 @@ as half or <strong>Full float</strong>. In the engine, read a packed texture as 
 <li>Drag a swatch to reorder the palette. The order matters: it is the order of the indices an indexed PNG
 writes.</li>
 <li>Click a swatch to hand its color to the Brush. Its hex code and its index show under the grid.</li>
-<li><strong>From picture…</strong> replaces the palette with colors chosen from what the canvas shows, up to the count
-you ask for, by median cut, as a GIF’s colors are chosen. A picture that already has that many colors
+<li><strong>From image…</strong> replaces the palette with colors chosen from what the canvas shows, up to the count
+you ask for, by median cut, as a GIF’s colors are chosen. An image that already has that many colors
 or fewer keeps exactly the ones it has.</li>
 <li><strong>Import…</strong> and <strong>Export…</strong> read and write GIMP palettes (.gpl), plain hex lists (.hex), JASC
 palettes (.pal), and Adobe swatch exchange files (.ase). Exporting picks the format from the file’s
@@ -1939,9 +1939,9 @@ remembered between sessions. It does nothing while the palette is empty.</p>
 palette</strong>. The file then holds the palette in its own order, and each pixel holds its color’s index, so
 an engine that looks colors up by index finds them where the palette put them. Pixels less than half
 opaque are written transparent, through one extra entry after the palette’s own; a palette of 256
-colors has no room for it, so a picture with transparent pixels needs 255 colors or fewer.</p>
-<p>If the picture uses a color the palette doesn’t have, the export stops and names a few of them, so
-nothing is quietly changed. Paint with <strong>Lock to palette</strong> on to keep the picture in its palette, or
+colors has no room for it, so an image with transparent pixels needs 255 colors or fewer.</p>
+<p>If the image uses a color the palette doesn’t have, the export stops and names a few of them, so
+nothing is quietly changed. Paint with <strong>Lock to palette</strong> on to keep the image in its palette, or
 turn on <strong>Dither colors outside the palette</strong>, which draws each one as a pattern of the palette’s
 colors with the same ordered dither the other exports use. Exporting at another size blends
 neighboring pixels into new colors, so it usually needs dither too. <strong>× N, nearest</strong> repeats each pixel’s index
@@ -1949,15 +1949,15 @@ without blending, so it keeps the palette.</p>
 <p><img  src="/_astro/exporting-an-indexed-png.Cgnyq_mP_1bbWX3.webp" alt="Exporting an indexed PNG" loading="lazy" decoding="async" width="564" height="686"></p>
 <h3 id="whole-pixel-scaling">Whole-pixel scaling</h3>
 <p>Pixel art is drawn small and shipped large. In <strong>Export</strong>, <strong>Export Set</strong>, and <strong>Batch</strong>, the size
-option <strong>× N, nearest</strong> writes the picture a whole number of times its size, from 2 to 16, with each
+option <strong>× N, nearest</strong> writes the image a whole number of times its size, from 2 to 16, with each
 pixel repeated into an N × N square. Nothing is resampled, so a 32 px sprite exported at × 4 is a
-128 px picture whose pixels are exactly the sprite’s, edges included. Dithering, when it’s on, is
+128 px image whose pixels are exactly the sprite’s, edges included. Dithering, when it’s on, is
 worked out on the original pixels, so its pattern scales with them rather than turning into noise
 inside each square. A size that would pass 65,536 px on the long edge writes the canvas’s own size,
 and the export options say so. From the command line, <code>--scale 4</code> does the same in a batch.</p>
 <p><strong>View &gt; Pixel Art Display</strong> draws the canvas with nearest sampling above 100%, so pixels are crisp
 squares at any zoom instead of soft ones until 600%. It changes only what you see; exports and the
-picture are untouched, and the pixel grid still waits for 600%.</p>
+image are untouched, and the pixel grid still waits for 600%.</p>
 <p><strong>Image &gt; Image Size</strong> offers the resampling filter beside the new size. When the new size is a
 whole multiple of the old one, it suggests <strong>Nearest</strong> so every pixel becomes a hard square, and it
 warns when Nearest is chosen at a scale that isn’t whole, where some pixels come out wider than
@@ -1978,7 +1978,7 @@ resizing one, since both leave normals that are too short.</li>
 <li><strong>Strength</strong> makes the bumps stronger or flatter. 1 leaves them as they are, and 0 makes the map
 flat.</li>
 <li><strong>Flip Green</strong> inverts the green channel. Blender, Godot, Unity, and glTF read OpenGL normal maps,
-with green pointing up the picture; Unreal reads DirectX ones, with green pointing down. ImageGui
+with green pointing up the image; Unreal reads DirectX ones, with green pointing down. ImageGui
 makes OpenGL normal maps, so add Flip Green when the map is for Unreal.</li>
 </ul>
 <p>To lay fine detail, such as a fabric weave or pores, over a normal map, put the detail normal map on
@@ -1997,15 +1997,15 @@ same at every size. See <a href="#texture-graph-fills">Texture graph fills</a>.<
 <h3 id="exporting-tga-files">Exporting TGA files</h3>
 <p>Choose a name ending in <code>.tga</code> in <strong>File &gt; Export</strong>, or pick <strong>TGA</strong> in <strong>Export Layers</strong>, <strong>Export
 As Set</strong>, or <strong>Batch</strong>, to write a Truevision TGA file, which Unity, Unreal, and Godot all import.
-A picture with no transparency is written as 24-bit color, with no alpha channel for an engine to
-treat as one. A picture with any transparency is written as 32-bit color with its alpha as it is,
+An image with no transparency is written as 24-bit color, with no alpha channel for an engine to
+treat as one. An image with any transparency is written as 32-bit color with its alpha as it is,
 not premultiplied. Rows are stored from the top, which every current reader follows.</p>
 <p>The options ask one more thing: <strong>Compress (RLE)</strong>. Run-length encoding makes flat areas, such as
 masks and UI art, much smaller, and the three engines read it. It’s off unless you turn it on,
 because an uncompressed file is the one every tool reads. The choice is remembered for the next
 export, and each TGA output of an export set keeps its own. From the command line, <code>--format tga</code>
 writes TGA and <code>--tga-compression rle</code> compresses it.</p>
-<p>TGA has nowhere to keep metadata, so a TGA export carries no picture description and doesn’t say
+<p>TGA has nowhere to keep metadata, so a TGA export carries no image description and doesn’t say
 which project or version it came from. <strong>Export As Set</strong> can’t tell whether a TGA output is up to
 date, so it always marks one <strong>stale</strong>, and <strong>Export Stale</strong> writes it again every time. <code>--check-exports</code>
 skips TGA files. Export a PNG beside it when you need to trace a file back to its project. ImageGui
@@ -2031,8 +2031,8 @@ TGA. Unreal only reimports a file that changes on disk when <strong>Auto Reimpor
 directories.</li>
 </ul>
 <p>Each target writes an export set, named after the project. <strong>Texture (PNG)</strong> and <strong>Texture (TGA)</strong>
-write one file at the picture’s size, and every set from <strong>File &gt; Export As Set</strong> is offered as well.
-<strong>Subfolder</strong> puts the files in a folder under the target: <code>{name}</code> stands for the picture’s name, and
+write one file at the image’s size, and every set from <strong>File &gt; Export As Set</strong> is offered as well.
+<strong>Subfolder</strong> puts the files in a folder under the target: <code>{name}</code> stands for the image’s name, and
 <code>{artboard}</code> writes each artboard on its own into a folder of its own, so <code>UI/{artboard}</code> gives each
 button and panel its own texture.</p>
 <p>Every save writes every target, whether or not <strong>Update exports when this project is saved</strong> is on. A
@@ -2048,7 +2048,7 @@ engine’s project.</p>
 <p><img  src="/_astro/exporting-into-a-game-engine.CH8pjF-q_ZPnux0.webp" alt="Exporting into a game engine" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h3 id="exporting-a-sprite-sheet">Exporting a sprite sheet</h3>
 <p><strong>File &gt; Export Sprite Sheet</strong> asks where to write the sheet, then lays every frame out on one
-picture (or several, when they don’t fit) and writes a file beside it that tells a game engine where
+image (or several, when they don’t fit) and writes a file beside it that tells a game engine where
 each frame is. Choose the frames from:</p>
 <ul>
 <li><strong>Each layer</strong>, with each top-level layer as a frame, as Export Animation takes them.</li>
@@ -2058,8 +2058,8 @@ and an idle loop’s in one called “idle”, and one sheet holds both. Layers 
 left out, so a background layer doesn’t become a frame.</li>
 <li><strong>Each layer comp</strong>, with each comp as a frame.</li>
 <li><strong>Each artboard</strong>, with each artboard as a frame.</li>
-<li><strong>Picture files</strong>, with each picture you add as a frame. Use <strong>Add pictures</strong> for single files or
-<strong>Add folder</strong> for every PNG, JPEG, WebP, GIF, and BMP picture in a folder.</li>
+<li><strong>Image files</strong>, with each image you add as a frame. Use <strong>Add images</strong> for single files or
+<strong>Add folder</strong> for every PNG, JPEG, WebP, GIF, and BMP image in a folder.</li>
 </ul>
 <p>With <strong>Same frames as Export Animation</strong> ticked, the sheet uses the frames an animation export of
 the document would, in the same order and with the same frame lengths.</p>
@@ -2088,7 +2088,7 @@ outlined, and the dialog says what it will write before you export.</p>
 <h3 id="laying-out-a-trim-sheet">Laying out a trim sheet</h3>
 <p>A trim sheet is a texture of horizontal strips, each repeating across, that a modeler maps long thin
 faces onto: a band of brushed metal, a row of bolts, a stripe of hazard paint. ImageGui cuts the
-picture into strips with guides.</p>
+image into strips with guides.</p>
 <p>Turn on <strong>View &gt; Rulers</strong> and drag guides down from the top ruler wherever one strip ends and the next
 begins. Then choose <strong>View &gt; Trim Sheet Strips</strong>. The canvas labels each strip with its name, and the
 <strong>Trim Sheet</strong> panel lists them from the top with the rows each one covers and its V range. U always
@@ -2099,12 +2099,12 @@ with the project, and renaming is one undo step. The top strip’s name places a
 A strip you haven’t named is called “Strip” and its number.</p>
 <p>Tick <strong>V counts up from the bottom</strong> for Blender, Unity, and OpenGL, which count V from the bottom
 of a texture. Leave it clear for Unreal, Godot, and DirectX, which count it from the top.</p>
-<p><strong>Export</strong> (or <strong>File &gt; Export Trim Sheet</strong>) writes the picture as a PNG, the strips as metadata in
+<p><strong>Export</strong> (or <strong>File &gt; Export Trim Sheet</strong>) writes the image as a PNG, the strips as metadata in
 the format you pick under <strong>Metadata</strong> (the same formats as a sprite sheet), and a CSV with one row
 per strip: <code>name,x,y,width,height,u0,v0,u1,v1</code>, pixels from the top-left, then the UV rectangle with V
 counted the way the checkbox says. TexturePacker JSON also carries each strip’s UVs. The CSV reads
 straight into a spreadsheet or a script for Blender’s or Unreal’s trim workflow.</p>
-<p>To make every strip tile across, add <strong>Make seamless</strong> to the layer. On a picture with two or more
+<p>To make every strip tile across, add <strong>Make seamless</strong> to the layer. On an image with two or more
 strips, its inspector offers <strong>Across only, per strip</strong>, which turns off <strong>Down</strong>. Blending across mixes
 each row only with itself, so every strip repeats on its own and no strip’s color creeps over a
 border into the next.</p>
@@ -2114,7 +2114,7 @@ border into the next.</p>
 fit whatever it holds. 9-slice margins say how: the four corners stay their own size, the top and
 bottom edges stretch across, the left and right edges stretch down, and the middle fills the rest.</p>
 <p>Choose <strong>Layer &gt; Slice Margins…</strong> and turn on <strong>Slice this artboard</strong>, or <strong>Slice the canvas</strong> when
-the picture has no artboards. Each artboard has margins of its own; the list at the top of the panel
+the image has no artboards. Each artboard has margins of its own; the list at the top of the panel
 picks which one you’re editing, and starts at the artboard of the selected layer. New margins start at
 a quarter of the shorter side. Type the four numbers, in pixels in from each edge, or drag the lines
 on the canvas:</p>
@@ -2141,10 +2141,10 @@ Paste them into the <code>NinePatchRect</code> node in a <code>.tscn</code> file
 <code>texture_margin_*</code> lines of a style box, for a <code>.tres</code> or a theme. To have ImageGui write the whole
 style box, see <a href="#a-ui-frame-as-a-godot-style-box">A UI frame as a Godot style box</a>.</li>
 </ul>
-<p>When you export a sliced picture, <strong>File &gt; Export</strong> offers <strong>Write the slice margins</strong>, which writes
-<code>button.slice.json</code> beside <code>button.png</code> with the picture’s size and its <code>border</code> (<code>left</code>, <code>top</code>,
+<p>When you export a sliced image, <strong>File &gt; Export</strong> offers <strong>Write the slice margins</strong>, which writes
+<code>button.slice.json</code> beside <code>button.png</code> with the image’s size and its <code>border</code> (<code>left</code>, <code>top</code>,
 <code>right</code>, and <code>bottom</code>, the names TexturePacker and Unity use) at the size you exported at. For a PNG
-it also offers <strong>Also write a nine-patch</strong>, which writes <code>button.9.png</code>: the picture with a
+it also offers <strong>Also write a nine-patch</strong>, which writes <code>button.9.png</code>: the image with a
 one-pixel border whose black marks say which rows and columns stretch, the format Android, libGDX,
 and Defold read. Exporting each artboard writes each one’s own margins beside it.</p>
 <p>A sprite sheet carries the margins too. In <strong>File &gt; Export Sprite Sheet</strong>, each sliced artboard, or
@@ -2157,15 +2157,15 @@ format 14.</p>
 <p>ImageGui keeps every earlier state of your work within reach. There are three kinds:</p>
 <ul>
 <li><strong>Saved versions</strong>, which ImageGui keeps beside a project each time you save over it.</li>
-<li><strong>Commits</strong>, when the project or picture is in a git repository.</li>
-<li><strong>Snapshots</strong> from the History panel, which last as long as the picture stays open.</li>
+<li><strong>Commits</strong>, when the project or image is in a git repository.</li>
+<li><strong>Snapshots</strong> from the History panel, which last as long as the image stays open.</li>
 </ul>
-<p>The <a href="#the-versions-panel">Versions panel</a> lists all three, <a href="#comparing-pictures">Compare Images</a> sets
+<p>The <a href="#the-versions-panel">Versions panel</a> lists all three, <a href="#comparing-images">Compare Images</a> sets
 any two side by side, and <a href="#bringing-back-one-layer-from-a-version">Restore from Version</a> brings back a
 single layer. Working alone without git, that’s all there is to it: read <a href="#saved-versions">Saved versions</a>
 and <a href="#the-versions-panel">The Versions panel</a>.</p>
 <p>When your projects live in a git repository, ImageGui sets git up to show a project’s changes as text,
-compare pictures in a window, and merge projects layer by layer. It commits a project together with
+compare images in a window, and merge projects layer by layer. It commits a project together with
 the files it depends on, helps you settle a merge’s conflicts, and checks that your exports still match
 their project. It doesn’t push, pull, or switch branches; use your git client for those. The worked
 example below runs through the whole cycle once, and the sections after it cover each part in full.</p>
@@ -2179,7 +2179,7 @@ example below runs through the whole cycle once, and the sections after it cover
 <li><a href="#setting-up-a-repository">Setting up a repository</a></li>
 <li><a href="#committing-a-project">Committing a project</a></li>
 <li><a href="#reading-what-changed-in-a-project-in-git">Reading what changed in a project, in git</a></li>
-<li><a href="#using-imagegui-as-gits-diff-tool-for-pictures">Using ImageGui as git’s diff tool for pictures</a></li>
+<li><a href="#using-imagegui-as-gits-diff-tool-for-images">Using ImageGui as git’s diff tool for images</a></li>
 <li><a href="#merging-projects-in-git">Merging projects in git</a></li>
 <li><a href="#resolving-merge-conflicts">Resolving merge conflicts</a></li>
 <li><a href="#checking-that-exports-are-up-to-date">Checking that exports are up to date</a></li>
@@ -2193,7 +2193,7 @@ merged, and has its exports brought up to date.</p>
 <h4 id="1-set-up-the-repository">1. Set up the repository</h4>
 <p>ImageGui works inside a repository but doesn’t make one, so first run <code>git init</code> in the poster’s
 folder. Then open <code>poster.imagegui</code> and choose <strong>File &gt; Git &gt; Set Up This Repository</strong>. The window
-lists the <code>.gitattributes</code> lines and git settings it will write; press <strong>Set up</strong>. From now on <code>git diff</code> opens projects and pictures in ImageGui, <code>git log -p</code> shows a project’s changes as text, and <code>git merge</code> merges projects by layer.</p>
+lists the <code>.gitattributes</code> lines and git settings it will write; press <strong>Set up</strong>. From now on <code>git diff</code> opens projects and images in ImageGui, <code>git log -p</code> shows a project’s changes as text, and <code>git merge</code> merges projects by layer.</p>
 <p>Commit <code>.gitattributes</code> with your git client (<code>git add .gitattributes</code>, then <code>git commit -m "Set up ImageGui"</code>), so everyone who clones the repository gets its lines. git doesn’t copy settings into a
 clone, so each person runs Set Up once on their own clone; the Versions panel offers it when it’s
 missing.</p>
@@ -2222,7 +2222,7 @@ of “Sky”, though, to different values, so that one setting is a conflict:</p
 <p>git marks the project conflicted and stops before committing the merge.</p>
 <h4 id="5-resolve-the-conflict">5. Resolve the conflict</h4>
 <p>Open <code>poster.imagegui</code>. A banner over the canvas counts one conflict, and the <strong>Resolve Conflicts</strong>
-panel lists <code>Sky / opacity</code> with the picture under each choice. The project shows 0.6 for now, <code>main</code>’s
+panel lists <code>Sky / opacity</code> with the image under each choice. The project shows 0.6 for now, <code>main</code>’s
 value. Choose <strong>Use Theirs</strong> to take 0.8 from <code>brighter</code>, then <strong>Mark resolved</strong>, which saves the
 project and runs <code>git add</code> on it. Finish the merge with <code>git commit</code> in your git client.</p>
 <h4 id="6-check-the-exports">6. Check the exports</h4>
@@ -2244,8 +2244,8 @@ saves</strong> sets how many: five unless you change it, and the oldest past tha
 <strong>None</strong> stops keeping new ones without deleting those already kept.</p>
 <p><strong>File &gt; Versions</strong> lists the earlier saves of the open project in the <a href="#the-versions-panel">Versions panel</a>,
 newest first, each with its thumbnail and the time it was saved. <strong>Open as copy</strong> opens one as a new,
-untitled picture and leaves the project alone; saving it asks where. <strong>Restore</strong> replaces the open
-picture with that version as one step, so Ctrl+Z brings back what you had, and the next Save writes it
+untitled image and leaves the project alone; saving it asks where. <strong>Restore</strong> replaces the open
+image with that version as one step, so Ctrl+Z brings back what you had, and the next Save writes it
 over the project. Versions are earlier saves only: work you haven’t saved is protected by autosave and
 crash recovery instead.</p>
 <p>Right-click a saved version to <strong>Name</strong> it (“Sent to client”) or <strong>Pin</strong> it. A pinned version is never
@@ -2269,31 +2269,31 @@ answering leaves the repository unanswered until ImageGui starts again. <strong>
 repositories</strong> sets what happens without asking (<strong>Ask</strong>, <strong>Don’t keep saved versions</strong>, or <strong>Keep
 saved versions</strong>) and lists the repositories you’ve answered for, each with <strong>Forget</strong>.</p>
 <p><img  src="/_astro/saved-versions-in-a-git-repository.DGRnNkCR_Z1aQJUf.webp" alt="Saved versions in a git repository" loading="lazy" decoding="async" width="577" height="206"></p>
-<h3 id="comparing-pictures">Comparing pictures</h3>
-<p><strong>File &gt; Compare Images</strong> shows two pictures, or two projects as they render, against each other. It
+<h3 id="comparing-images">Comparing images</h3>
+<p><strong>File &gt; Compare Images</strong> shows two images, or two projects as they render, against each other. It
 opens with the current file on the after side; choose the before side, or press <strong>Last Commit</strong> to
 compare the file with the version git last committed. That reads the committed file through the
-repository’s filters, so pictures kept in Git LFS work too.</p>
-<p>The pictures pan and zoom together, and the keys 1 to 4 switch between the four ways of showing them:</p>
+repository’s filters, so images kept in Git LFS work too.</p>
+<p>The images pan and zoom together, and the keys 1 to 4 switch between the four ways of showing them:</p>
 <ul>
 <li><strong>Side by side</strong> puts them next to each other.</li>
 <li><strong>Swipe</strong> lays one over the other with a divider to drag across.</li>
-<li><strong>Onion skin</strong> fades the after picture over the before, at the opacity you choose.</li>
+<li><strong>Onion skin</strong> fades the after image over the before, at the opacity you choose.</li>
 <li><strong>Difference</strong> shows where they differ.</li>
 </ul>
-<p><img  src="/_astro/comparing-two-pictures.DUb8715R_Zvzbtk.webp" alt="Comparing two pictures" loading="lazy" decoding="async" width="1176" height="744"></p>
+<p><img  src="/_astro/comparing-two-images.DUb8715R_Z1p20za.webp" alt="Comparing two images" loading="lazy" decoding="async" width="1176" height="744"></p>
 <p>A change of a level or two can’t be seen by eye, so Difference is built to find it. <strong>Highlight</strong>
-dims the picture to gray and paints every changed pixel magenta, and <strong>Exaggerate</strong> multiplies each
+dims the image to gray and paints every changed pixel magenta, and <strong>Exaggerate</strong> multiplies each
 difference, up to 255 times, until the faintest one is at full strength. <strong>Absolute</strong> shows the
 difference itself on black instead. <strong>Ignore up to</strong> treats differences of that many levels or
-fewer as none, which hides the noise a JPEG re-save leaves. The line under the picture counts the
-changed pixels, gives the largest difference, and says where the changes lie. Pictures of different
+fewer as none, which hides the noise a JPEG re-save leaves. The line under the image counts the
+changed pixels, gives the largest difference, and says where the changes lie. Images of different
 sizes are lined up at their top-left corners, and the extra area counts as changed.</p>
 <p><img  src="/_astro/exaggerating-subtle-differences.CytFfBxX_1zVGKf.webp" alt="Exaggerating subtle differences" loading="lazy" decoding="async" width="1176" height="744"></p>
-<p>When both sides are projects, a <strong>Changes</strong> list sits beside the pictures. It lists every difference
+<p>When both sides are projects, a <strong>Changes</strong> list sits beside the images. It lists every difference
 in the recipe, grouped by layer: a layer added, removed, moved or renamed, an adjustment added or one
 of its settings changed, an effect, a mask, a guide, a comp. Hover over a change to outline the part
-of the picture it can affect on both sides, and click it to zoom there. When the recipes are the
+of the image it can affect on both sides, and click it to zoom there. When the recipes are the
 same, the list says so. Any difference left in the pixels then comes from an original image that
 changed on disk since the project was saved, which the list names, or from how the two were rendered.
 Layers are followed by the id each project file keeps for them. Files saved before ImageGui kept
@@ -2303,10 +2303,10 @@ those ids are matched by layer name instead, and the list says so.</p>
 <p>Every earlier state of the open file is in one <strong>Versions</strong> panel, newest first, each row with its
 kind’s icon, a thumbnail, and when it was made:</p>
 <ul>
-<li>the <strong>Working copy</strong>, at the top when the picture differs from its last save or commit;</li>
+<li>the <strong>Working copy</strong>, at the top when the image differs from its last save or commit;</li>
 <li><strong>Saved</strong> versions of a project, from its <code>.versions</code> folder (see <a href="#saved-versions">Saved versions</a>);</li>
 <li><strong>Commits</strong> that changed the file, when it’s in a git repository, with who made each one;</li>
-<li><strong>Snapshots</strong> from the History panel, for as long as the picture stays open.</li>
+<li><strong>Snapshots</strong> from the History panel, for as long as the image stays open.</li>
 </ul>
 <p>A checkbox for each kind above the list hides or shows it. The panel appears by itself for a file
 that has saved versions or commits; <strong>File &gt; Versions</strong> opens it for any file, and <strong>View &gt; Versions</strong>
@@ -2317,8 +2317,8 @@ demand.</p>
 the older on the left, whatever their kinds: a commit against a snapshot, a saved version against the
 working copy. With one chosen, Compare sets it against the working copy. Double-click a row to see what
 it changed since the row below it. <strong>Open as copy</strong> opens the chosen version as a new, untitled
-picture, and <strong>Restore</strong> puts it in place of the open picture as one step you can undo; both work for
-saved versions, snapshots, and commits. A commit of a plain picture, such as a PNG kept in git, opens or
+image, and <strong>Restore</strong> puts it in place of the open image as one step you can undo; both work for
+saved versions, snapshots, and commits. A commit of a plain image, such as a PNG kept in git, opens or
 restores with its pixels carried inside the document, so saving it as a project keeps that version
 rather than pointing back at the file as it is now.</p>
 <p>Each row of a project’s versions also says what it changed from the row below it among the kinds
@@ -2333,22 +2333,22 @@ so the walk stops at the first of them and the panel says so.</p>
 <p><img  src="/_astro/what-each-version-changed.D-z1ZpFr_Z1spMOT.webp" alt="What each version changed" loading="lazy" decoding="async" width="484" height="444"></p>
 <p>A version that isn’t a file of its own, such as a snapshot or unsaved changes, is written to a
 temporary folder to be compared or opened, and that folder goes when ImageGui closes. Commits are read
-through the repository’s filters, so pictures in Git LFS work, and the panel follows a file back
+through the repository’s filters, so images in Git LFS work, and the panel follows a file back
 through renames.</p>
 <p><img  src="/_astro/git-history.C6g0pCiV_CgPCT.webp" alt="Git history" loading="lazy" decoding="async" width="352" height="326"></p>
 <h3 id="bringing-back-one-layer-from-a-version">Bringing back one layer from a version</h3>
 <p><strong>Layer &gt; Restore from Version</strong> shows an earlier version’s layers, top first as the Layers panel
-lists them, each with a thumbnail, a mark, and the thumbnail of the picture’s layer it was. The mark
+lists them, each with a thumbnail, a mark, and the thumbnail of the image’s layer it was. The mark
 says whether that layer is the <strong>Same</strong> as in the version, <strong>Differs</strong> (it, or something inside it, has
-changed since), or is <strong>Not in picture</strong>. The window opens on the newest saved version, commit or
+changed since), or is <strong>Not in image</strong>. The window opens on the newest saved version, commit or
 snapshot; choose another from <strong>Version</strong> at the top, or right-click a row in the Versions panel and
 choose <strong>Restore Layers</strong> to open it on that one.</p>
 <p>Choose a layer, then:</p>
 <ul>
-<li><strong>Replace</strong> puts the version’s layer in place of the picture’s layer it was, keeping its place in the
-stack, as one step you can undo. A layer that’s locked, or that the picture no longer has, can’t be
+<li><strong>Replace</strong> puts the version’s layer in place of the image’s layer it was, keeping its place in the
+stack, as one step you can undo. A layer that’s locked, or that the image no longer has, can’t be
 replaced.</li>
-<li><strong>Add</strong> brings in a copy as a new layer above the selected one, leaving the picture’s own as it is.</li>
+<li><strong>Add</strong> brings in a copy as a new layer above the selected one, leaving the image’s own as it is.</li>
 </ul>
 <p>Either way the layer draws where it did in the version, and brings the original images, fonts and text
 styles it uses. A version saved before layers kept their ids can only have its layers added.</p>
@@ -2364,11 +2364,11 @@ and fonts keep the same names from one save to the next however you reorder them
 small change, and the project’s description is stored uncompressed so git keeps each save as a small
 difference rather than a whole new file. Outside a repository a project is saved as before.</p>
 <h3 id="setting-up-a-repository">Setting up a repository</h3>
-<p><strong>File &gt; Git &gt; Set Up This Repository</strong> makes git open the repository’s projects and pictures in
+<p><strong>File &gt; Git &gt; Set Up This Repository</strong> makes git open the repository’s projects and images in
 ImageGui. It lists every line it will write before writing any of it, and writes only when you choose
 <strong>Set up</strong>:</p>
 <ul>
-<li><code>.gitattributes</code> lines sending projects (<code>*.imagegui diff=imagegui merge=imagegui</code>) and every picture type ImageGui
+<li><code>.gitattributes</code> lines sending projects (<code>*.imagegui diff=imagegui merge=imagegui</code>) and every image type ImageGui
 opens (<code>*.png diff=imagegui-picture</code>, and so on) to ImageGui. Lines already in the file are left
 alone, and lines that are already in effect aren’t added again. New ones go at the end, under a
 <code># ImageGui</code> comment.</li>
@@ -2379,9 +2379,9 @@ window, <code>diff.imagegui.textconv</code> and <code>diff.imagegui-picture.text
 <code>git difftool -t imagegui</code> opens the window too, and <code>merge.imagegui.driver</code>, so <code>git merge</code> merges
 projects by layer (see below). They go in the repository’s
 own settings unless <strong>Write to my global git settings</strong> is ticked.</li>
-<li>With <strong>Keep pictures in Git LFS</strong> ticked, <code>git lfs track</code> for the picture types. It’s offered only
-when Git LFS is installed, and only for pictures: projects are small and stay in plain git, where
-ImageGui can show their changes. It applies to pictures added from then on.</li>
+<li>With <strong>Keep images in Git LFS</strong> ticked, <code>git lfs track</code> for the image types. It’s offered only
+when Git LFS is installed, and only for images: projects are small and stay in plain git, where
+ImageGui can show their changes. It applies to images added from then on.</li>
 </ul>
 <p>Setting up a repository that’s already set up writes nothing. The same setup runs without a window:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">ImageGui</span><span style="color:#79B8FF"> --git-setup</span><span style="color:#E1E4E8"> [folder] [--global] [--lfs] [--dry-run]</span></span></code></pre>
@@ -2429,37 +2429,37 @@ other lists, then the originals, masks and fonts it uses. A mask or an original 
 rather than its pixels, so a repainted mask is one changed line, and no line names a folder, so two
 people’s clones of one repository show the same text. Selecting something, or ImageGui redrawing the
 thumbnail, changes nothing here.</p>
-<p>Pictures get one line: their format, size and a hash of their pixels, so a picture saved again
+<p>Images get one line: their format, size and a hash of their pixels, so an image saved again
 without a changed pixel shows no change at all. A file kept in Git LFS is fetched with <code>git lfs</code>
 first; without <code>git-lfs</code> installed, the first line says so and the pointer is shown instead.</p>
 <p>If <code>diff.imagegui.command</code> is set too, plain <code>git diff</code> opens the comparison window as before and
 <code>git diff --no-ext-diff</code> shows the text. git runs <code>--textconv</code> once for each version of each file,
 so it reads only what it prints: it opens no window, looks for no original and loads no font.</p>
-<h3 id="using-imagegui-as-gits-diff-tool-for-pictures">Using ImageGui as git’s diff tool for pictures</h3>
+<h3 id="using-imagegui-as-gits-diff-tool-for-images">Using ImageGui as git’s diff tool for images</h3>
 <p><code>ImageGui --diff old.png new.png</code> opens a window showing just the comparison, which closes with
 Escape. That makes it a difftool for git. <a href="#setting-up-a-repository">Setting up a repository</a> registers
 it for you; to do it by hand instead, with <code>ImageGui</code> on your <code>PATH</code>, run once:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> config</span><span style="color:#79B8FF"> --global</span><span style="color:#9ECBFF"> difftool.imagegui.cmd</span><span style="color:#9ECBFF"> 'ImageGui --diff "$LOCAL" "$REMOTE" --name "$MERGED"'</span></span></code></pre>
-<p>Then <code>git difftool -t imagegui -- art/logo.png</code> compares the working copy of the picture with the
-last commit, and <code>git difftool -t imagegui main -- art/</code> steps through every changed picture under
+<p>Then <code>git difftool -t imagegui -- art/logo.png</code> compares the working copy of the image with the
+last commit, and <code>git difftool -t imagegui main -- art/</code> steps through every changed image under
 <code>art/</code> one window at a time. Add <code>git config --global diff.tool imagegui</code> to make it the default for
 <code>git difftool</code>.</p>
-<p>To have plain <code>git diff</code> open pictures in ImageGui, register it as a diff driver and mark which files
+<p>To have plain <code>git diff</code> open images in ImageGui, register it as a diff driver and mark which files
 use it in the repository’s <code>.gitattributes</code>:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">git</span><span style="color:#9ECBFF"> config</span><span style="color:#79B8FF"> --global</span><span style="color:#9ECBFF"> diff.imagegui.command</span><span style="color:#9ECBFF"> "ImageGui --diff"</span></span></code></pre>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>*.png diff=imagegui</span></span>
 <span class="line"><span>*.jpg diff=imagegui</span></span>
 <span class="line"><span>*.imagegui diff=imagegui</span></span></code></pre>
 <p>git passes its usual seven arguments to the driver and ImageGui reads the two files and the path
-from them. An added or deleted picture is shown against nothing. <code>git log -p</code> uses the driver too
+from them. An added or deleted image is shown against nothing. <code>git log -p</code> uses the driver too
 when given <code>--ext-diff</code>.</p>
 <p>Given <code>--out</code>, the comparison runs without a window and writes the Difference view to a file, for
 scripts and checks:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">ImageGui</span><span style="color:#79B8FF"> --diff</span><span style="color:#9ECBFF"> before.png</span><span style="color:#9ECBFF"> after.png</span><span style="color:#79B8FF"> --out</span><span style="color:#9ECBFF"> difference.png</span><span style="color:#79B8FF"> --exaggerate</span><span style="color:#79B8FF"> 16</span><span style="color:#79B8FF"> --tolerance</span><span style="color:#79B8FF"> 2</span></span></code></pre>
 <p><code>--style</code> is <code>highlight</code> (the default) or <code>absolute</code>, <code>--exaggerate</code> runs from 1 to 255, and
 <code>--tolerance</code> is the Ignore up to level, from 0 to 254. It prints the same summary the window shows
-and exits with 0 when the pictures match within the tolerance, 1 when they differ, and 2 when a
-picture couldn’t be read or the command line couldn’t be understood.</p>
+and exits with 0 when the images match within the tolerance, 1 when they differ, and 2 when an
+image couldn’t be read or the command line couldn’t be understood.</p>
 <p>When both files are projects, it first prints the Changes list, one change a line, then the pixel
 summary. Two projects whose recipes differ exit with 1 even when their pixels match, as after renaming
 a layer:</p>
@@ -2493,7 +2493,7 @@ branch’s in the project, and lists them for git:</p>
 <span class="line"><span>Open it in ImageGui to resolve them, or run git mergetool -t imagegui.</span></span></code></pre>
 <p>git then marks the file conflicted. The project still opens, showing your branch’s choices, and
 <a href="#resolving-merge-conflicts">Resolving merge conflicts</a> settles them. Everything else in it is
-merged, and its thumbnail is drawn again from the merged picture.</p>
+merged, and its thumbnail is drawn again from the merged image.</p>
 <p>Only projects saved by this version of ImageGui can be merged, since an older file has no way to tell
 which layer on one branch is which on the other. git keeps your branch’s file and marks it conflicted,
 with a sentence asking you to save both versions in ImageGui and commit before merging. Projects kept
@@ -2503,7 +2503,7 @@ in Git LFS merge the same way, with <code>git-lfs</code> installed.</p>
 <p>A project a merge left conflicts in opens with a banner over the canvas counting them, and the
 <strong>Resolve Conflicts</strong> panel open beside it. <strong>File &gt; Git &gt; Resolve Conflicts</strong> opens the panel again.
 Each conflict names what it is about, such as <code>Sky / opacity</code>, says what happened to it, and shows the
-picture under each choice:</p>
+image under each choice:</p>
 <ul>
 <li><strong>Use Ours</strong> keeps your branch’s choice, which is what the project already shows.</li>
 <li><strong>Use Theirs</strong> takes the other branch’s: its value, its order, the group it moved the layer into,
@@ -2529,7 +2529,7 @@ file resolved; with any left, it stays conflicted.</p>
 path relative to the export, the project’s fingerprint and the ImageGui version that rendered it.
 A PNG keeps them in text chunks, JPEG, WebP, TIFF and Photoshop files in XMP, a PDF in its keywords and XMP, and an
 SVG in its <code>&lt;metadata&gt;</code>. Nothing in them depends on the date, the computer or where the folders are,
-so exporting the same project twice still writes the same bytes. A picture that isn’t saved as a
+so exporting the same project twice still writes the same bytes. An image that isn’t saved as a
 project gets none.</p>
 <p><img  src="/_astro/exports-that-know-their-project.ClZDxUC9_Z1NNpCR.webp" alt="Exports that know their project" loading="lazy" decoding="async" width="457" height="810"></p>
 <p>The fingerprint is a hash of the recipe: every layer, adjustment, mask and the hash of every
@@ -2565,7 +2565,7 @@ export’s fingerprint) and compares those two, with the <strong>Changes</strong
 version can’t be found, the window says which export it was for.</p>
 <p><img  src="/_astro/comparing-the-projects-behind-two-exports.Dl-PZyNL_Z1ToNoH.webp" alt="Comparing the projects behind two exports" loading="lazy" decoding="async" width="1176" height="744"></p>
 <h2 id="working-with-blender">Working with Blender</h2>
-<p>ImageGui and Blender hand pictures to each other as OpenEXR files, which keep light brighter than white,
+<p>ImageGui and Blender hand images to each other as OpenEXR files, which keep light brighter than white,
 and as ordinary PNG files for textures. Both apps name the color space a file is in, so most files come
 across with the right colors on their own. An add-on lets Blender send a texture to ImageGui
 and pick up each save, and the rest of this chapter covers the settings that keep colors right.</p>
@@ -2576,7 +2576,7 @@ and pick up each save, and the rest of this chapter covers the settings that kee
 <li><a href="#opening-a-render-with-its-passes">Opening a render with its passes</a></li>
 <li><a href="#selecting-by-cryptomatte">Selecting by Cryptomatte</a></li>
 <li><a href="#placing-a-render-and-following-new-renders">Placing a render and following new renders</a></li>
-<li><a href="#bringing-an-imagegui-picture-into-blender">Bringing an ImageGui picture into Blender</a></li>
+<li><a href="#bringing-an-imagegui-image-into-blender">Bringing an ImageGui image into Blender</a></li>
 <li><a href="#textures-and-data-maps">Textures and data maps</a></li>
 <li><a href="#exporting-a-material">Exporting a material</a></li>
 </ul>
@@ -2593,7 +2593,7 @@ of a selected <strong>Image Texture</strong> node in the Shader Editor, and an <
 <ul>
 <li><strong>Edit in ImageGui</strong> opens the texture in ImageGui. When the texture is an export of an ImageGui
 project, ImageGui opens that project instead, so you edit the layers rather than the flattened
-picture. If the image is packed into the .blend, or has never been saved, Blender offers to save it
+image. If the image is packed into the .blend, or has never been saved, Blender offers to save it
 beside the .blend first, since ImageGui needs a file to open. Changes painted in Blender are saved
 first too.</li>
 <li><strong>New Texture in ImageGui</strong> asks for a name and a size, makes a blank PNG beside the .blend, puts it
@@ -2627,7 +2627,7 @@ than overwritten; Blender’s system console says so.</p>
 </table>
 <p>ImageGui chooses in <strong>Image &gt; Color Management</strong> (see <a href="#working-in-aces">Working in ACES</a>). Blender 5
 chooses for each blend file in Render Properties, under <strong>Color Management &gt; Working Space</strong>. Blender 4
-always works in Linear Rec.709, so pair it with a linear sRGB picture, or with an ACEScg picture whose
+always works in Linear Rec.709, so pair it with a linear sRGB image, or with an ACEScg image whose
 EXR files you bring across as described below.</p>
 <p>Pick ACEScg for renders, lighting, and anything brighter than white, and linear sRGB for textures that
 only ever need display colors.</p>
@@ -2636,7 +2636,7 @@ only ever need display colors.</p>
 depth, which is what ImageGui holds an EXR in anyway. Use <strong>Float (Full)</strong> for data such as depth or
 position, where half loses precision. Leave the codec at <strong>ZIP</strong>, Blender’s default; ImageGui reads
 None, RLE, ZIPS, ZIP, and PIZ, but not the lossy DWAA, DWAB, B44, or Pxr24. Save as <strong>OpenEXR</strong> for
-one picture, or as <strong>OpenEXR MultiLayer</strong> to bring in every pass as a layer (see
+one image, or as <strong>OpenEXR MultiLayer</strong> to bring in every pass as a layer (see
 <a href="#opening-a-render-with-its-passes">Opening a render with its passes</a>).</p>
 <p>What happens to the colors depends on the version of Blender:</p>
 <ul>
@@ -2651,19 +2651,19 @@ a color tag</strong> to the same space before opening the file.</li>
 <p>Each layer made from a file that names no color space keeps that choice as its own <strong>Input
 Transform</strong>, which the project saves. So a project looks the same on every machine, whatever that
 machine’s preference says. To fix a layer that came in with the wrong one, select it in an ACEScg
-picture and pick the right space under <strong>Input Transform</strong> in the inspector.</p>
+image and pick the right space under <strong>Input Transform</strong> in the inspector.</p>
 <p><img  src="/_astro/exr-files-without-a-color-tag.BZFxK-3w_2aK48K.webp" alt="EXR files without a color tag" loading="lazy" decoding="async" width="457" height="810"></p>
 <h3 id="opening-a-render-with-its-passes">Opening a render with its passes</h3>
 <p>Save a render from Blender as <strong>OpenEXR MultiLayer</strong> and <strong>File &gt; Open</strong> brings in every pass as a
 layer, whether Blender wrote one part per pass (its default) or all the passes in one part. Each view
 layer becomes a group, and inside it:</p>
 <ul>
-<li><strong>Combined</strong> sits on top and is the only thing showing, so the picture opens looking like the render.</li>
+<li><strong>Combined</strong> sits on top and is the only thing showing, so the image opens looking like the render.</li>
 <li><strong>Rebuild from passes</strong>, hidden, puts Combined back together from the light passes: each component’s
 direct and indirect light added up and multiplied by its color pass, then diffuse, glossy,
 transmission, volume, emission, and environment added together, the same sum Cycles and EEVEE make.
-Hide Combined and show this group, and the picture is the same to within the file’s precision, so
-you can grade the glossy light on its own or turn down the transmission and see the whole picture
+Hide Combined and show this group, and the image is the same to within the file’s precision, so
+you can grade the glossy light on its own or turn down the transmission and see the whole image
 change with it. Rendering with denoising on changes Combined but not the passes, so the rebuild then
 shows the render before denoising.</li>
 <li><strong>Other passes</strong>, hidden, holds the color passes the rebuild doesn’t use, such as Ambient Occlusion.</li>
@@ -2674,7 +2674,7 @@ every channel, ready to drive a mask or an adjustment.</li>
 </ul>
 <p>Every pass is kept inside the project at the precision the render was saved in, so the project no
 longer needs the render file. The document works in ACEScg, as any OpenEXR file does. A render from Blender 4,
-which names no color space, takes <strong>Files without a color tag</strong> from Preferences, as a single picture
+which names no color space, takes <strong>Files without a color tag</strong> from Preferences, as a single image
 does.</p>
 <p><img  src="/_astro/opening-a-blender-render.DUVIHzQ7_1vzVLs.webp" alt="Opening a Blender render" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h3 id="selecting-by-cryptomatte">Selecting by Cryptomatte</h3>
@@ -2691,7 +2691,7 @@ render again, the layer takes the new frame within about a second, as one step o
 undo takes back. Grade the render once, and every new render comes in already graded. <strong>Every pass</strong>
 places all the passes as one group, laid out as opening the file lays them out, with the rebuild
 composed for the document’s working space. A group of passes is a copy and doesn’t follow the file.</p>
-<h3 id="bringing-an-imagegui-picture-into-blender">Bringing an ImageGui picture into Blender</h3>
+<h3 id="bringing-an-imagegui-image-into-blender">Bringing an ImageGui image into Blender</h3>
 <p>Export as OpenEXR (see <a href="#exporting-openexr-files">Exporting OpenEXR files</a>) and load the file in an
 Image Texture node, or in Blender’s Image Editor.</p>
 <ul>
@@ -2705,12 +2705,12 @@ Linear Rec.709, so set the Image Texture’s <strong>Color Space</strong> to <st
 which is the one Blender 5 reads for spaces other than ACES2065-1.</p>
 <h3 id="textures-and-data-maps">Textures and data maps</h3>
 <p>A color texture, such as a base color or albedo map, can be a PNG. Leave its <strong>Color Space</strong> in Blender
-at <strong>sRGB</strong>. Export it from a linear sRGB picture, or, from an ACEScg picture, set <strong>View &gt; View
-Transform</strong> to <strong>Un-tone-mapped</strong> first, so the PNG holds the picture’s colors rather than the tone-mapped
+at <strong>sRGB</strong>. Export it from a linear sRGB image, or, from an ACEScg image, set <strong>View &gt; View
+Transform</strong> to <strong>Un-tone-mapped</strong> first, so the PNG holds the image’s colors rather than the tone-mapped
 look that suits a finished image.</p>
 <p>Roughness, metallic, normal, height, and ambient occlusion maps hold numbers rather than colors. In
 Blender, set the <strong>Color Space</strong> of each one’s Image Texture node to <strong>Non-Color</strong>, so Blender reads
-the values as written instead of converting them. In ImageGui, paint them in a linear sRGB picture,
+the values as written instead of converting them. In ImageGui, paint them in a linear sRGB image,
 where the gray you pick is the number Blender reads: 50% gray, 128 out of 255, is a roughness of 0.5.</p>
 <h3 id="exporting-a-material">Exporting a material</h3>
 <p><strong>Layer &gt; Export Material…</strong>, or <strong>Export material…</strong> on the graph editor’s toolbar, writes every
@@ -2725,8 +2725,8 @@ outputs of the same map are numbered apart. In Blender, select a Principled BSDF
 Ctrl+Shift+T (<strong>Add Principled Setup</strong>), and pick every file in the folder: Node Wrangler links each
 one to the right input, with the normal map through a Normal Map node and the height through a
 Displacement node.</p>
-<p>Only base color is a picture. It goes to its file through the document’s display and view, as any
-8-bit export does, and Blender reads it as sRGB, so in an ACEScg picture set <strong>View &gt; View Transform</strong>
+<p>Only base color is an image. It goes to its file through the document’s display and view, as any
+8-bit export does, and Blender reads it as sRGB, so in an ACEScg image set <strong>View &gt; View Transform</strong>
 to <strong>Un-tone-mapped</strong> first, as <a href="#textures-and-data-maps">Textures and data maps</a> explains. Every other map is data and is written exactly as
 the graph computes it, without any color management, so the same graph gives the same bytes whatever
 the document’s working space or display. Set those maps to <strong>Non-Color</strong> in Blender, which Node
@@ -2753,11 +2753,11 @@ the files of a set written by <strong>Export As Set</strong> that it would call 
 size, quality, and, for OpenEXR, color space and precision. A file you’ve deleted isn’t written again,
 and neither is one that a different project has exported to since. The writing happens after the save,
 so the save itself never waits for it, and each file is written beside the old one and renamed over
-it, so a program reading it never sees half a picture. If a file can’t be written, ImageGui says which
+it, so a program reading it never sees half an image. If a file can’t be written, ImageGui says which
 and why.</p>
 <p><img  src="/_astro/updating-exports-when-the-project-is-saved.CdKBk-Yh_ZdqLqI.webp" alt="Updating exports when the project is saved" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h2 id="working-with-godot">Working with Godot</h2>
-<p>ImageGui writes the files Godot reads beside the pictures it exports into a Godot project, so a
+<p>ImageGui writes the files Godot reads beside the images it exports into a Godot project, so a
 texture arrives in the editor ready to use. A folder is in a Godot project when it, or a folder above
 it, holds <code>project.godot</code>. A material refers to its maps by their <code>res://</code> paths in that project. A
 sprite sheet’s resources name the page and each other relative to themselves instead, so they work
@@ -2783,14 +2783,14 @@ Settings</strong>, where you can search for ImageGui and change it.</p>
 <p>The plugin adds two commands to the right-click menu of Godot’s <strong>FileSystem</strong> dock:</p>
 <ul>
 <li><strong>Edit in ImageGui</strong>, on PNG, JPEG, WebP, TGA, and OpenEXR files and on ImageGui projects, opens them
-in ImageGui. When a picture is an export of an ImageGui project, ImageGui opens that project instead,
-so you edit the layers rather than the flattened picture.</li>
+in ImageGui. When an image is an export of an ImageGui project, ImageGui opens that project instead,
+so you edit the layers rather than the flattened image.</li>
 <li><strong>New Texture in ImageGui</strong>, on a folder, asks for a name and a size, makes a blank PNG in the folder,
 and opens it in ImageGui.</li>
 </ul>
 <p>Godot normally notices a changed file only when its window gets focus again. While you edit, the plugin
 checks the files you’ve opened this way about once a second and reimports any that changed, so the
-editor’s viewport updates while ImageGui still has focus. It does the same for every picture in the
+editor’s viewport updates while ImageGui still has focus. It does the same for every image in the
 folder of a project you’ve opened from Godot, which is how an export the project rewrites on save shows
 up in Godot, and it brings a new export there into Godot too.</p>
 <h3 id="exporting-a-material-for-godot">Exporting a material for Godot</h3>
@@ -2836,7 +2836,42 @@ Godot 4.3 or later, the material has each map in its slot:</p>
 used. Normal maps are OpenGL style, which is what Godot expects, unless the Height to Normal node is
 set to DirectX. <strong>Godot import settings</strong>, on by default, tells Godot how to import each map before it
 first does (see <a href="#import-settings-for-godot">Import settings for Godot</a>).</p>
-<p>When the folder isn’t in a Godot project, the option is off and the dialog says why. The material is
+<p><strong>Pack ORM texture</strong>, under Godot material, packs ambient occlusion, roughness and metallic into one
+texture, <code>&lt;name&gt;_orm.png</code>, and makes the material an <code>ORMMaterial3D</code> that reads it. The channels follow
+Godot’s ORM layout, the same as the <strong>ORM (Godot)</strong> preset in
+<a href="#packing-channels">channel packing</a>:</p>
+<table>
+<thead>
+<tr>
+<th>Channel</th>
+<th>Holds</th>
+<th>When the graph has no such map</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Red</td>
+<td>Ambient occlusion</td>
+<td>1, no occlusion</td>
+</tr>
+<tr>
+<td>Green</td>
+<td>Roughness</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>Blue</td>
+<td>Metallic</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<p>The three maps aren’t written on their own as well, so the options list the packed texture in their
+place, saying what each channel holds. Each channel holds exactly the values its map’s own file would,
+written as data at the bit depth the other data maps take. Its import settings read roughness from the
+green channel for Godot’s roughness limiter. A graph with none of the three maps writes the plain
+material.</p>
+<p>When the folder isn’t in a Godot project, the options are off and the dialog says why. The material is
 written only once every map has been, so it never names a file that isn’t there.</p>
 <p><img  src="/_astro/exporting-a-material-for-godot.DD_ysRP6_Qoqgs.webp" alt="Exporting a material for Godot" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h3 id="sprite-sheets-and-tile-sets">Sprite sheets and tile sets</h3>
@@ -2858,8 +2893,8 @@ every tile keeps the cell’s full size. A sheet of several pages has an atlas s
 <p>Godot 4.3 and later open all three as they are.</p>
 <h3 id="using-a-project-in-godot">Using a project in Godot</h3>
 <p>With the plugin enabled, an <code>.imagegui</code> project inside a Godot project is imported as a texture, so it
-can go anywhere a picture can: on a sprite, in a material, or in a theme. Godot asks ImageGui to export
-the project, the same way <strong>File &gt; Batch</strong> would, and keeps the picture it writes. Saving the project
+can go anywhere an image can: on a sprite, in a material, or in a theme. Godot asks ImageGui to export
+the project, the same way <strong>File &gt; Batch</strong> would, and keeps the image it writes. Saving the project
 in ImageGui imports it again when you return to Godot.</p>
 <p>Select the project in Godot’s FileSystem dock and open the <strong>Import</strong> dock to choose how it’s stored,
 then press <strong>Reimport</strong>:</p>
@@ -2883,12 +2918,12 @@ ImageGui.” When some of the people working on the game won’t have ImageGui, 
 Godot project instead, and keep the <code>.imagegui</code> project outside it, or tell Godot to skip it by putting
 an empty file named <code>.gdignore</code> in its folder.</p>
 <h3 id="a-ui-frame-as-a-godot-style-box">A UI frame as a Godot style box</h3>
-<p>When you export a <a href="#slicing-a-ui-frame">sliced</a> picture into a Godot project, <strong>File &gt; Export</strong> offers
-<strong>Also write a Godot style box</strong>, which writes a <code>StyleBoxTexture</code> beside the picture: <code>button.png</code>
+<p>When you export a <a href="#slicing-a-ui-frame">sliced</a> image into a Godot project, <strong>File &gt; Export</strong> offers
+<strong>Also write a Godot style box</strong>, which writes a <code>StyleBoxTexture</code> beside the image: <code>button.png</code>
 gets <code>button.tres</code>. ImageGui remembers the choice. Outside a Godot project the option is off, and the
 dialog says why. It’s offered for the formats Godot imports as textures: PNG, JPEG, WebP, TGA,
 OpenEXR, BMP, and SVG.</p>
-<p>The style box draws the exported picture with its <strong>Texture Margins</strong> set to the slice margins, at the
+<p>The style box draws the exported image with its <strong>Texture Margins</strong> set to the slice margins, at the
 size you exported at, so in Godot it behaves like the stretch preview. Its <strong>Axis Stretch</strong> follows
 the preview’s choice: <strong>Stretch</strong> stretches the edges and middle, and <strong>Tile</strong> repeats them at their
 own size. Drop the <code>.tres</code> on a button’s or panel’s style in the Inspector, or into a theme. Exporting
@@ -2908,7 +2943,7 @@ imports it:</p>
 </thead>
 <tbody>
 <tr>
-<td>A normal map: a picture with a Normal Map adjustment, or Export Material’s normal map</td>
+<td>A normal map: an image with a Normal Map adjustment, or Export Material’s normal map</td>
 <td>VRAM Compressed, Normal Map on, mipmaps</td>
 </tr>
 <tr>
@@ -2931,9 +2966,13 @@ imports it:</p>
 <td>Export Material’s height</td>
 <td>Lossless, mipmaps, so a displacement has no steps</td>
 </tr>
+<tr>
+<td>Export Material’s packed ORM texture</td>
+<td>VRAM Compressed, mipmaps, with roughness read from green and the material’s normal map for Godot’s roughness limiter</td>
+</tr>
 </tbody>
 </table>
-<p>Any other picture gets no <code>.import</code> file, and Godot’s defaults stand. <strong>ImageGui never changes an
+<p>Any other image gets no <code>.import</code> file, and Godot’s defaults stand. <strong>ImageGui never changes an
 existing <code>.import</code> file</strong>: once Godot has imported a texture, or you’ve changed its settings in Godot’s
 <strong>Import</strong> dock, the settings are yours.</p>
 <p>Three places write them, each with its own switch:</p>
@@ -2952,14 +2991,14 @@ click.</p>
 <p>Undo keeps the pixels of layers you delete, merge, rasterize, or relink, so they can come back. The line
 at the top of History says how much memory that takes. <strong>File &gt; Preferences &gt; History memory limit</strong>
 (1 GB unless you change it) caps it: past the limit, the oldest steps are let go, and the first row
-becomes the oldest state kept rather than the picture as it was opened. The newest step is always kept,
+becomes the oldest state kept rather than the image as it was opened. The newest step is always kept,
 however large. If the step a save wrote is let go, the project reads as unsaved until you save again.</p>
 <p><img  src="/_astro/history.07XHbk6W_MPQVY.webp" alt="History" loading="lazy" decoding="async" width="1440" height="900"></p>
-<p><strong>New Snapshot</strong>, at the top of History, keeps the picture as it is now under a name (type one in the
+<p><strong>New Snapshot</strong>, at the top of History, keeps the image as it is now under a name (type one in the
 field beside it, or leave it empty for <em>Snapshot 1</em>, <em>Snapshot 2</em>, …). Snapshots are listed above the
 steps. Click one to return to it: that’s one new step, so Ctrl+Z takes you back to where you were, and
 everything you did after the snapshot stays in the history. Right-click a snapshot to delete it.
-Snapshots last until you open another picture and aren’t saved with the project. They count toward the
+Snapshots last until you open another image and aren’t saved with the project. They count toward the
 history memory limit, but they’re the last thing let go: the oldest steps go first. If a snapshot does
 have to go, a message names it.</p>
 <p><img  src="/_astro/history-snapshots.CPWHyi9L_Z2aHvhL.webp" alt="History snapshots" loading="lazy" decoding="async" width="1440" height="900"></p>
@@ -2985,8 +3024,8 @@ font behind it.</p>
 <p><img  src="/_astro/interface-size.DV4yKa5k_523yv.webp" alt="Interface size" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p><strong>Theme</strong> is <strong>Dark</strong> (the default), <strong>Light</strong>, or <strong>Follow the system</strong>, which uses whichever your
 operating system is set to and changes with it while ImageGui runs. On Linux the system’s setting is read
-from GNOME’s <code>color-scheme</code>, or the GTK theme’s name. The space around the picture, the rulers, and the
-guides change with the theme; marks drawn over the picture itself, such as selection outlines and
+from GNOME’s <code>color-scheme</code>, or the GTK theme’s name. The space around the image, the rulers, and the
+guides change with the theme; marks drawn over the image itself, such as selection outlines and
 handles, keep their black and white so they show on any image. Both themes keep text and hints at a
 contrast of at least 4.5:1 against the panels, and disabled text, graphs, and the keyboard-focus outline at
 least 3:1. Graphs draw their red, green, and blue darker in the light theme so they show on its white frame.</p>
@@ -3000,9 +3039,9 @@ Windows, <code>~</code> is your user folder). Preferences names the folder and h
 Warnings go to <code>Logs/imagegui.log</code> there as well as the console. Files an earlier version kept in the
 local application data folder are moved there on the first launch, once, and the log says what moved.</p>
 <p><img  src="/_astro/where-imagegui-keeps-its-files.BqV_wMFt_ZaEHGI.webp" alt="Where ImageGui keeps its files" loading="lazy" decoding="async" width="457" height="810"></p>
-<p>The <strong>Performance</strong> tab holds the <strong>Preview cache</strong>: how much of the evaluated picture ImageGui keeps
+<p>The <strong>Performance</strong> tab holds the <strong>Preview cache</strong>: how much of the evaluated image ImageGui keeps
 so that a drag redraws only the layer and adjustments it changes. <strong>Automatic</strong>, the default, takes an
-eighth of your computer’s memory, never less than 512 MB nor more than 4 GB; a busy 24 MP picture
+eighth of your computer’s memory, never less than 512 MB nor more than 4 GB; a busy 24 MP image
 needs about 700 MB at the 2048 px preview size. The line beneath says how much is held now. A smaller
 cache is applied at once, letting go of the least recently used results first.</p>
 <p><img  src="/_astro/preview-cache.5J1_XVVN_Z1qGc75.webp" alt="Preview cache" loading="lazy" decoding="async" width="325" height="150"></p>
