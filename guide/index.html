@@ -131,7 +131,7 @@ nothing.</p>
 so you can start from a preset and fine-tune it. Moving either makes the white balance Custom. A higher
 temperature makes the picture warmer, and a positive tint makes it more magenta. The numbers mean what
 they mean in other raw developers.</li>
-<li>The eyedropper beside <strong>White Balance</strong> sets the temperature and tint from a spot on the canvas that
+<li>The pick button beside <strong>White Balance</strong> sets the temperature and tint from a spot on the canvas that
 should be gray or white. Click it, then click the spot; Esc cancels. It measures the photo itself, so
 adjustments and layers above it don’t change what it picks.</li>
 <li><strong>Highlights</strong> is <strong>Clip</strong>, which turns anything the sensor couldn’t hold into a clean white, or
@@ -239,8 +239,8 @@ they were drawn.</li>
 </ul>
 <p>Color fields still show and take sRGB colors, as a picker always does, and the swatches and recent colors
 are the same ones every picture shares. Their popup adds the <strong>ACEScg</strong> values the picture stores, where
-a light brighter than white is typed as a value above 1. The eyedropper picks the working value under
-the pointer as it is.</p>
+a light brighter than white is typed as a value above 1. Picking a color from the canvas takes the working
+value under the pointer as it is.</p>
 <p><img  src="/_astro/color-management.CxL9gwNK_ZdQr29.webp" alt="Color Management" loading="lazy" decoding="async" width="421" height="202"></p>
 <h3 id="viewing-through-aces">Viewing through ACES</h3>
 <p>An ACEScg document holds scene light, where a highlight can be many times brighter than white, and is
@@ -1817,7 +1817,7 @@ changed on disk.</p>
 covered, so the edges stay hard for sprites, tiles and icons. Press B with the Brush chosen, or click
 the Pixel button at the start of the Brush’s options. The Pixel tool shares the Brush’s button on the tool
 strip, which shows whichever of the two you chose last. It paints color onto a paint layer, or into the selection, just as the
-Brush does, with the same color, blend mode and symmetry, and it keeps a size and an eraser of its own,
+Brush does, with the same color, blend mode and symmetry, and it keeps a size and an Erase of its own,
 so switching between the two never resizes either.</p>
 <ul>
 <li><strong>Size</strong> is from 1 to 256 pixels across, and [ and ] change it a pixel at a time. An odd size sits
@@ -1833,6 +1833,85 @@ does, so a hand-drawn curve stays one pixel thick.</li>
 shows each pixel as a square block rather than a smoothed one, and moving the layer carries the pixels
 along. Its strokes are saved in project format 14.</p>
 <p><img  src="/_astro/drawing-pixel-art.CDQGS1x0_Z1Bzfza.webp" alt="Drawing pixel art" loading="lazy" decoding="async" width="1088" height="874"></p>
+<h3 id="packing-channels">Packing channels</h3>
+<p>Game engines save memory by packing several grayscale maps into the channels of one texture.
+ImageGui writes those textures from the layers of one project, so the maps stay separate while you
+work on them and are combined only when they are exported.</p>
+<p>Tick <strong>Pack channels</strong> on an output in <strong>File &gt; Export As Set</strong>, and the output writes one texture
+whose red, green, blue, and alpha channels each hold something different. Each channel has a row
+with a swatch showing what it will hold:</p>
+<ul>
+<li><strong>Source</strong> is a layer or group, a layer comp, or <strong>Constant</strong>. A layer or group is read whether or
+not it is visible, with its own adjustments, masks, and effects. A layer comp is read as the whole
+picture that comp shows.</li>
+<li><strong>Read</strong> chooses what of the source goes in the channel: its <strong>Luminance</strong>, or its own red, green,
+blue, or alpha.</li>
+<li><strong>Invert</strong> turns the values over, so a roughness layer can be written as smoothness.</li>
+<li><strong>Value</strong> is the constant, for a constant channel. For a layer or comp, it is labelled <strong>If
+missing</strong> and is what the channel holds where the source is transparent, and everywhere when the
+source isn’t in the picture.</li>
+</ul>
+<p><strong>Fill from a preset</strong> sets all four rows for one engine’s layout. The sets that come with ImageGui
+include one output for each:</p>
+<table>
+<thead>
+<tr>
+<th>Preset</th>
+<th>Suffix</th>
+<th>Red</th>
+<th>Green</th>
+<th>Blue</th>
+<th>Alpha</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ORM (Unreal)</td>
+<td><code>_ORM</code></td>
+<td>AO</td>
+<td>Roughness</td>
+<td>Metallic</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Mask map (Unity HDRP)</td>
+<td><code>_MaskMap</code></td>
+<td>Metallic</td>
+<td>AO</td>
+<td>Detail Mask</td>
+<td>1 - Roughness</td>
+</tr>
+<tr>
+<td>Roughness + metal (glTF)</td>
+<td><code>_MetallicRoughness</code></td>
+<td>1</td>
+<td>Roughness</td>
+<td>Metallic</td>
+<td>1</td>
+</tr>
+<tr>
+<td>ORM (Godot)</td>
+<td><code>_orm</code></td>
+<td>AO</td>
+<td>Roughness</td>
+<td>Metallic</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>A source is found by the layer it was picked from first, so renaming the layer doesn’t lose it, and
+then by its name, in any case. That is what lets one set, or a batch, write textures for many
+projects: name the layers AO, Roughness, and Metallic in each, and the presets find them. When a
+channel’s source isn’t in a picture, the channel holds its <strong>If missing</strong> value and the export
+still goes ahead, with a note saying which channel had nothing to read. <strong>File &gt; Batch</strong> and the
+command line list the same notes.</p>
+<p><img  src="/_astro/packing-channels.C9SiawPk_Za4bWv.webp" alt="Packing channels" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>The channels are written as data. Nothing in <strong>View &gt; Display</strong>, <strong>View &gt; View Transform</strong>, the
+working space, or <strong>Dither gradients on 8-bit output</strong> reaches them, and the file carries no color profile, so the same
+project writes the same bytes whatever its color settings. A gray of 128 out of 255 in a layer is
+128 in the channel. Packed outputs can be PNG, at 8 or <strong>16 bits a channel</strong>, TGA at 8, or OpenEXR,
+as half or <strong>Full float</strong>. In the engine, read a packed texture as linear data: <strong>Non-Color</strong> in Blender,
+<strong>sRGB</strong> unticked in Unity, and <strong>sRGB</strong> off in Unreal.</p>
 <h3 id="drawing-with-a-palette">Drawing with a palette</h3>
 <p>Every document can carry a palette, an ordered list of up to 256 colors, saved with the project.
 <strong>View &gt; Palette</strong> opens it in a panel docked beside Layers.</p>
@@ -1943,7 +2022,9 @@ change every choice afterwards.</p>
 <ul>
 <li><strong>Unity</strong> imports from <code>Assets/</code>, so a folder outside it is moved to <code>Assets/</code>. The target writes a PNG.</li>
 <li><strong>Godot</strong> imports anything in its project, which it calls <code>res://</code>, and the dialog shows the folder
-that way. The target writes a PNG.</li>
+that way. The target writes a PNG, and <strong>Write Godot import settings</strong> is on, so a normal map, pixel
+art, or a 9-slice frame is imported the way it needs (see
+<a href="#import-settings-for-godot">Import settings for Godot</a>).</li>
 <li><strong>Unreal</strong> imports from <code>Content/</code>, so a folder outside it is moved to <code>Content/</code>. The target writes a
 TGA. Unreal only reimports a file that changes on disk when <strong>Auto Reimport</strong> is on: turn it on in
 <strong>Editor Preferences &gt; General &gt; Loading &amp; Saving</strong>, and check that <code>Content/</code> is among its
@@ -2690,6 +2771,7 @@ themselves.</p>
 <li><a href="#sprite-sheets-and-tile-sets">Sprite sheets and tile sets</a></li>
 <li><a href="#using-a-project-in-godot">Using a project in Godot</a></li>
 <li><a href="#a-ui-frame-as-a-godot-style-box">A UI frame as a Godot style box</a></li>
+<li><a href="#import-settings-for-godot">Import settings for Godot</a></li>
 </ul>
 <h3 id="the-godot-plugin">The Godot plugin</h3>
 <p>ImageGui ships with a plugin for Godot 4.3 and later. <strong>Help &gt; Add-Ons for Other Apps</strong> shows where its
@@ -2752,8 +2834,8 @@ Godot 4.3 or later, the material has each map in its slot:</p>
 </table>
 <p>A <strong>Custom</strong> map has no slot and is left out, and when two outputs are the same map the first one is
 used. Normal maps are OpenGL style, which is what Godot expects, unless the Height to Normal node is
-set to DirectX. Godot’s texture import setting for normal maps starts at <strong>Detect</strong>, so it imports
-the file as a normal map once the material is used in the editor.</p>
+set to DirectX. <strong>Godot import settings</strong>, on by default, tells Godot how to import each map before it
+first does (see <a href="#import-settings-for-godot">Import settings for Godot</a>).</p>
 <p>When the folder isn’t in a Godot project, the option is off and the dialog says why. The material is
 written only once every map has been, so it never names a file that isn’t there.</p>
 <p><img  src="/_astro/exporting-a-material-for-godot.DD_ysRP6_Qoqgs.webp" alt="Exporting a material for Godot" loading="lazy" decoding="async" width="1440" height="900"></p>
@@ -2812,6 +2894,57 @@ the preview’s choice: <strong>Stretch</strong> stretches the edges and middle,
 own size. Drop the <code>.tres</code> on a button’s or panel’s style in the Inspector, or into a theme. Exporting
 each artboard writes each one’s own style box beside it. When the export is a nine-patch itself
 (<code>button.9.png</code>), the style box leaves the one-pixel marking border out.</p>
+<h3 id="import-settings-for-godot">Import settings for Godot</h3>
+<p>Godot keeps how it imports a texture in a <code>.import</code> file beside it, and its defaults suit a photo on a
+sprite. When ImageGui writes a texture into a Godot project that Godot hasn’t imported yet, it also
+writes that <code>.import</code> file with the settings the texture needs, and Godot uses them the first time it
+imports it:</p>
+<table>
+<thead>
+<tr>
+<th>Texture</th>
+<th>Godot import settings</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A normal map: a picture with a Normal Map adjustment, or Export Material’s normal map</td>
+<td>VRAM Compressed, Normal Map on, mipmaps</td>
+</tr>
+<tr>
+<td>Pixel art: drawn with the Pixel tool, or exported at a whole multiple (× N, nearest)</td>
+<td>Lossless, no mipmaps, not compressed for 3D</td>
+</tr>
+<tr>
+<td>A 9-slice interface frame</td>
+<td>Lossless, no mipmaps, not compressed for 3D</td>
+</tr>
+<tr>
+<td>Export Material’s base color, metallic, and ambient occlusion</td>
+<td>VRAM Compressed, mipmaps</td>
+</tr>
+<tr>
+<td>Export Material’s roughness</td>
+<td>VRAM Compressed, mipmaps, with the material’s normal map for Godot’s roughness limiter</td>
+</tr>
+<tr>
+<td>Export Material’s height</td>
+<td>Lossless, mipmaps, so a displacement has no steps</td>
+</tr>
+</tbody>
+</table>
+<p>Any other picture gets no <code>.import</code> file, and Godot’s defaults stand. <strong>ImageGui never changes an
+existing <code>.import</code> file</strong>: once Godot has imported a texture, or you’ve changed its settings in Godot’s
+<strong>Import</strong> dock, the settings are yours.</p>
+<p>Three places write them, each with its own switch:</p>
+<ul>
+<li><strong>File &gt; Export Targets</strong>: <strong>Write Godot import settings</strong> on each target in a Godot project. It’s on
+for a target added in a Godot project.</li>
+<li><strong>Export Material</strong>: <strong>Godot import settings</strong> in its options, on unless you turn it off. ImageGui
+remembers the choice.</li>
+<li><strong>File &gt; Export</strong>: <strong>Write Godot import settings beside exports</strong> in <strong>File &gt; Preferences</strong>, on unless
+you turn it off.</li>
+</ul>
 <h2 id="undo-and-history">Undo and history</h2>
 <p><strong>Edit &gt; Undo</strong> (Ctrl+Z) and <strong>Redo</strong> (Ctrl+Y) step through every change, including each drag. <strong>View &gt;
 History</strong> lists the steps by name, marks the one the saved file holds, and jumps to any step in one
@@ -3082,7 +3215,7 @@ alias and what ImageGui calls it.</p>
 <td>B</td>
 </tr>
 <tr>
-<td>Erase (the Pixel tool’s eraser while it is chosen)</td>
+<td>Erase (the Pixel tool’s own Erase while it is chosen)</td>
 <td>E</td>
 </tr>
 <tr>
