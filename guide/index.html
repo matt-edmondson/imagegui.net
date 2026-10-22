@@ -127,6 +127,7 @@ switched off.</p>
 <li><a href="#exporting-as-svg">Exporting as SVG</a></li>
 <li><a href="#exporting-as-a-photoshop-file">Exporting as a Photoshop file</a></li>
 <li><a href="#exporting-openexr-files">Exporting OpenEXR files</a></li>
+<li><a href="#exporting-hdr-images">Exporting HDR images</a></li>
 <li><a href="#exporting-an-animation">Exporting an animation</a></li>
 <li><a href="#exporting-several-files-at-once">Exporting several files at once</a></li>
 <li><a href="#replacing-files">Replacing files</a></li>
@@ -249,9 +250,9 @@ and the next check asks the new channel.</p>
 <p><strong>Help &gt; About ImageGui</strong> says which version you have, and shows the ImageGui Freeware License and the
 notices for the third-party software ImageGui includes. <strong>Copy version details</strong> puts the version, your
 operating system, and the .NET runtime on the clipboard, ready to paste into a bug report.</p>
-<p><img  src="/_astro/about-imagegui.BaUbVGYR_ZuQgS3.webp" alt="About ImageGui" loading="lazy" decoding="async" width="704" height="548"></p>
+<p><img  src="/_astro/about-imagegui.CcJ_Etp-_18lAUu.webp" alt="About ImageGui" loading="lazy" decoding="async" width="704" height="548"></p>
 <h2 id="opening-images-and-projects">Opening images and projects</h2>
-<p><strong>File &gt; Open</strong> (Ctrl+O) opens a PNG, JPEG, WebP, TIFF, OpenEXR, GIF, BMP, or ICO image, a camera raw photo (see
+<p><strong>File &gt; Open</strong> (Ctrl+O) opens a PNG, JPEG, WebP, TIFF, OpenEXR, GIF, BMP, ICO, HEIC or HEIF, AVIF, or JPEG XL image, a camera raw photo (see
 <a href="#raw-photos">Raw photos</a>), a Photoshop file (<code>.psd</code> or <code>.psb</code>), or an <code>.imagegui</code> project. You can also name one when starting ImageGui (<code>ImageGui photo.jpg</code>). With
 nothing open, the canvas shows a start screen in its middle: <strong>New</strong>, <strong>Open</strong>, a reminder that you can
 drop files onto the window, a button that opens the sample project, and your recent files as a grid of thumbnails with each file’s name and
@@ -277,10 +278,20 @@ white stays brighter than white, so an Exposure adjustment can bring it back dow
 it clipped. An OpenEXR file opened on its own makes a document that works in ACEScg, which keeps
 every value. Files in ACES2065-1 or ACEScg are converted to it as they open. <strong>File &gt; Place</strong> takes
 them too. Placed in a document that works in linear sRGB, which clips everything above white wherever
-it blends, adjusts, or exports, a file with brighter values says so once. A file
-compressed in a way ImageGui doesn’t read, such as DWAA or B44, is refused with a message saying so.
+it blends, adjusts, or exports, a file with brighter values says so once. Files
+compressed with any of OpenEXR’s long-standing methods open, the lossy DWAA, DWAB, B44, B44A, and
+PXR24 included. A file compressed with one of the newest, HTJ2K or ZSTD, is refused with a message
+naming it.
 A render saved with its passes opens as layers (see <a href="#working-with-blender">Working with Blender</a>).</p>
 <p><img  src="/_astro/opening-openexr-files.B-fBkKFl_1dEqs2.webp" alt="Opening OpenEXR files" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p>HEIC and HEIF photos from iPhones and other phones open, and so do AVIF and JPEG XL images from the
+web. Each opens turned the way the camera was held and converted to sRGB from its color profile,
+Display P3 included. An image saved with more than 8 bits a channel keeps them, and one made for an
+HDR screen, in PQ or HLG, keeps its highlights brighter than white, as an OpenEXR file does. An
+animated AVIF or JPEG XL opens at its first frame. <strong>File &gt; Place</strong> and batches take them too. A file
+that uses something ImageGui doesn’t read yet, such as a JPEG XL image in CMYK, is refused with a
+message saying so.</p>
+<p><img  src="/_astro/opening-heic-avif-and-jpeg-xl-images.C7tuEyWj_ZqiQta.webp" alt="Opening HEIC, AVIF, and JPEG XL images" loading="lazy" decoding="async" width="1440" height="900"></p>
 <p>An animated GIF or WebP opens at its first frame, and a TIFF file at its first page. <strong>File &gt; Open as
 Layers</strong> opens every frame, or every page, as a layer of its own, the first at the bottom, with a layer
 comp for each that shows it alone and remembers how long the frame shows. <strong>File &gt; Export Animation</strong>
@@ -450,7 +461,7 @@ RGB tab, so you can see which part of the graph the color goes through. <strong>
 editor turns the marks off. <strong>View &gt; Show Samplers</strong> hides or shows the targets, and the Sampler
 shows them while it is chosen. Samplers are saved with the project and move with the image through
 crops, turns, and Canvas Size, but they are never drawn into the image.</p>
-<p><img  src="/_astro/color-samplers.0VjIMsB-_Z2x48RO.webp" alt="Color samplers" loading="lazy" decoding="async" width="1440" height="900"></p>
+<p><img  src="/_astro/color-samplers.DMjNb61U_1tcg6x.webp" alt="Color samplers" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h3 id="notes-on-the-canvas">Notes on the canvas</h3>
 <p>Notes are reminders pinned to a spot on the image, such as “fix this edge” or “client wants
 warmer.” Choose the <strong>Note</strong> tool (N), click where the note belongs, type it, and press Enter.
@@ -516,8 +527,9 @@ canvas. The export options say which display and view they use. A PNG, JPEG, or 
 P3 or Rec.709 carries that display’s color profile, so other programs show it correctly. Other formats
 carry no profile, and the options say so. The export preview, and its original, go through the same
 output. Export as OpenEXR to keep the scene light itself (see
-<a href="#exporting-openexr-files">Exporting OpenEXR files</a>).</p>
-<p><img  src="/_astro/exporting-from-acescg.BINEN4Dz_Z1mSVDo.webp" alt="Exporting from ACEScg" loading="lazy" decoding="async" width="564" height="612"></p>
+<a href="#exporting-openexr-files">Exporting OpenEXR files</a>), or as an HDR PNG for an HDR screen (see
+<a href="#exporting-hdr-images">Exporting HDR images</a>).</p>
+<p><img  src="/_astro/exporting-from-acescg.D9kWfm26_I2NaI.webp" alt="Exporting from ACEScg" loading="lazy" decoding="async" width="564" height="658"></p>
 <h2 id="adjusting-color-and-tone">Adjusting color and tone</h2>
 <p>Select a layer and choose from <strong>Add adjustment</strong> in the inspector. Adjustments stack, and each
 applies to the result of the ones before it. Move one up or down with its arrow buttons, switch it
@@ -1779,7 +1791,7 @@ carries that.</p>
 <p>Leaving the field empty is fine. Empty, it says “Describe the image for people who can’t see it”. If
 your images never go on the web, turn off <strong>Suggest a description when exporting</strong> in
 <strong>Preferences &gt; General</strong> and the field stays blank.</p>
-<p><img  src="/_astro/describing-an-image-as-you-export-it.DPxyUXxN_azOVR.webp" alt="Describing an image as you export it" loading="lazy" decoding="async" width="564" height="616"></p>
+<p><img  src="/_astro/describing-an-image-as-you-export-it.DKDkK3S2_ZhftEj.webp" alt="Describing an image as you export it" loading="lazy" decoding="async" width="564" height="622"></p>
 <h3 id="showing-issues-on-the-canvas">Showing issues on the canvas</h3>
 <p><strong>View &gt; Show Accessibility Issues</strong> outlines in red every part of the image’s text and shapes that
 fails the contrast check, so you can see what to fix without reading through the panel. It runs the
@@ -1855,7 +1867,7 @@ A project remembers its selection and straighten angle, so you pick up where you
 <p><strong>File &gt; Export</strong> writes the finished image as PNG, JPEG, WebP, TIFF, TGA, PDF, SVG, OpenEXR, or a layered Photoshop file. An ACEScg image is written as the canvas shows it (see <a href="#viewing-through-aces">Viewing through ACES</a>). It asks what size to write at (the
 image’s own size, a percentage, or a long edge in pixels) and, for JPEG and WebP, a quality. Both
 are remembered for next time.</p>
-<p><img  src="/_astro/export-size.DN7NX7Ld_2fDxzH.webp" alt="Export size" loading="lazy" decoding="async" width="564" height="640"></p>
+<p><img  src="/_astro/export-size.EhksxFi8_foCAS.webp" alt="Export size" loading="lazy" decoding="async" width="564" height="646"></p>
 <p><img  src="/_astro/export-quality.BUDZuho1_5fWkN.webp" alt="Export quality" loading="lazy" decoding="async" width="564" height="662"></p>
 <p>Beneath the options is a preview of the file: the image as that format and quality will write it,
 fitted so the whole of it shows, and how big the file will be. Both catch up a moment after you stop
@@ -1935,6 +1947,30 @@ hold, or <strong>Float (32-bit)</strong>, which keeps everything at twice the si
 choices, and <strong>Batch</strong> writes EXR too, keeping an EXR image as EXR when it writes each image’s own
 format.</p>
 <p><img  src="/_astro/exporting-openexr-files.DMmtpuAe_ZGdyav.webp" alt="Exporting OpenEXR files" loading="lazy" decoding="async" width="564" height="704"></p>
+<h3 id="exporting-hdr-images">Exporting HDR images</h3>
+<p>A PNG can be written for HDR screens, phones, and televisions. In <strong>File &gt; Export</strong>, choose a name
+ending in <code>.png</code> and pick from <strong>Dynamic range</strong> in the export options:</p>
+<ul>
+<li><strong>SDR</strong>, the default, 8 bits a channel, as every screen and app shows it.</li>
+<li><strong>HDR, PQ, 1,000 nits</strong>, Rec.2100 PQ mastered to 1,000 nits, which HDR phones, televisions, and most
+HDR monitors take. <strong>2,000 nits</strong> and <strong>4,000 nits</strong> are for the brightest screens.</li>
+<li><strong>HDR, HLG</strong>, Rec.2100 HLG for a 1,000-nit display, as broadcast HDR is. A screen that doesn’t know
+HLG still shows it reasonably.</li>
+</ul>
+<p>An ACEScg image goes through the ACES 2.0 HDR output transform at the chosen peak, limited to the P3
+gamut HDR is mastered in, so the highlights the SDR view rolls off keep their brightness. In the
+Un-tone-mapped view its values are written as they are, 1 at 100 nits, and clip at the peak. A linear
+sRGB image is placed with its white at 203 nits, as HDR video places graphics, so it looks as it did on
+the canvas, and whatever is brighter than white keeps its headroom.</p>
+<p>The file holds 16 bits a channel in Rec.2020 and is tagged with a <code>cICP</code> chunk, which Chrome, Safari,
+Edge, and the Windows, macOS, and Android photo viewers read to show it in HDR. A PQ file also carries
+its mastering display and its brightest pixel and frame average. An app that doesn’t read the tag shows
+the file flat and gray. The export preview shows the SDR image, since an SDR screen can’t show the HDR
+one, and the file size it estimates is the HDR file’s. The choice is remembered for the next PNG export,
+and <a href="#verifying-an-export">verifying an export</a> and export updates write an HDR PNG again the same way. Indexed colors are SDR only.</p>
+<p>The canvas itself stays SDR: ImageGui draws through OpenGL, which can’t hand an HDR image to the
+screen, so the image is shown through the SDR output and the HDR is in the file.</p>
+<p><img  src="/_astro/exporting-hdr-images.BF3TYGWN_2iH9UT.webp" alt="Exporting HDR images" loading="lazy" decoding="async" width="564" height="650"></p>
 <h3 id="exporting-an-animation">Exporting an animation</h3>
 <p><strong>File &gt; Export Animation</strong> writes an animated GIF or WebP whose frames are your
 <a href="#layer-comps">layer comps</a>, in the order the panel lists them, or each layer at the top of the
@@ -2355,7 +2391,7 @@ turn on <strong>Dither colors outside the palette</strong>, which draws each one
 colors with the same ordered dither the other exports use. Exporting at another size blends
 neighboring pixels into new colors, so it usually needs dither too. <strong>× N, nearest</strong> repeats each pixel’s index
 without blending, so it keeps the palette.</p>
-<p><img  src="/_astro/exporting-an-indexed-png.CQLaH-rj_Z1alN3l.webp" alt="Exporting an indexed PNG" loading="lazy" decoding="async" width="564" height="686"></p>
+<p><img  src="/_astro/exporting-an-indexed-png.B03K55gg_Z2gcrJd.webp" alt="Exporting an indexed PNG" loading="lazy" decoding="async" width="564" height="692"></p>
 <h3 id="whole-pixel-scaling">Whole-pixel scaling</h3>
 <p>Pixel art is drawn small and shipped large. In <strong>Export</strong>, <strong>Export Set</strong>, and <strong>Batch</strong>, the size
 option <strong>× N, nearest</strong> writes the image a whole number of times its size, from 2 to 16, with each
@@ -2371,7 +2407,7 @@ image are untouched, and the pixel grid still waits for 600%.</p>
 whole multiple of the old one, it suggests <strong>Nearest</strong> so every pixel becomes a hard square, and it
 warns when Nearest is chosen at a scale that isn’t whole, where some pixels come out wider than
 others. Changing the filter and the size there is one step to undo.</p>
-<p><img  src="/_astro/exporting-pixel-art-at-a-whole-multiple.BSH4Onrg_ZeNotu.webp" alt="Exporting pixel art at a whole multiple" loading="lazy" decoding="async" width="564" height="672"></p>
+<p><img  src="/_astro/exporting-pixel-art-at-a-whole-multiple.4T963DTl_Z21B3O4.webp" alt="Exporting pixel art at a whole multiple" loading="lazy" decoding="async" width="564" height="678"></p>
 <p><img  src="/_astro/pixel-art-display.6RH0Fbg7_Z1BSQV1.webp" alt="Pixel art display" loading="lazy" decoding="async" width="1440" height="900"></p>
 <h3 id="working-on-a-normal-map">Working on a normal map</h3>
 <p>A normal map tells a game or a 3D renderer which way each point of a surface faces, so flat geometry
@@ -2783,7 +2819,7 @@ writes, and exits with 0, or with 2 when the folder isn’t in a repository or g
 <p>git doesn’t copy settings when a repository is cloned, so a clone has the <code>.gitattributes</code> lines but
 not the drivers they name. When that’s so for the open file, the Versions panel says this copy
 isn’t set up yet, with a <strong>Set up</strong> button that opens the same window.</p>
-<p><img  src="/_astro/setting-up-a-repository.CJxL9foi_Z1PCukQ.webp" alt="Setting up a repository" loading="lazy" decoding="async" width="724" height="464"></p>
+<p><img  src="/_astro/setting-up-a-repository.C2uhce_w_9AzsO.webp" alt="Setting up a repository" loading="lazy" decoding="async" width="724" height="464"></p>
 <h3 id="committing-a-project">Committing a project</h3>
 <p><strong>File &gt; Git &gt; Commit</strong> commits a project in a git repository together with the files it depends on.
 It lists the project, each original, each placed project, and the export-set files written from it,
@@ -2937,8 +2973,10 @@ you name none) and prints one line for each:</p>
 <p>A stale export names the saved version or the commit it was made from when one can be found, and
 what has changed since. It exits with 0 when every export is up to date and 1 otherwise, so it can
 run as a pre-commit hook or a CI step. <code>--render</code> also renders each up-to-date export again and
-compares the pixels, which catches a change in how ImageGui draws rather than in the project. Add
-<code>--tolerance</code> (0 to 254 levels) for a JPEG or WebP, whose compression changes pixels slightly.</p>
+compares the pixels, which catches a change in how ImageGui draws rather than in the project. A PDF
+is compared by the image on its page, and an artboard’s export by that artboard alone. Add
+<code>--tolerance</code> (0 to 254 levels) for a JPEG, a WebP, or a PDF stored as JPEG, whose compression changes
+pixels slightly.</p>
 <p>To bring stale exports up to date, <strong>Export Stale</strong> in <strong>File &gt; Export As Set</strong> writes only the files
 that aren’t (see <a href="#exporting-several-files-at-once">Exporting several files at once</a>).</p>
 <p>To keep your project’s file name out of what you send, turn on <strong>File &gt; Preferences &gt; Leave out
@@ -2954,20 +2992,27 @@ computer, so the same project at the same version writes the same bytes.</p>
 the open project: the files you exported from it, and any under its folder whose metadata names it, so
 an export someone else made and committed beside the project is checked too. Each line says what was
 found.</p>
-<p><img  src="/_astro/verifying-an-export.DM_0LVjj_Z1qqVgD.webp" alt="Verifying an export" loading="lazy" decoding="async" width="620" height="360"></p>
+<p><img  src="/_astro/verifying-an-export.3FqLVPQe_Z1v8XOE.webp" alt="Verifying an export" loading="lazy" decoding="async" width="620" height="360"></p>
 <p><code>ImageGui --verify</code> does the same from the command line, for the files you name or every export under
 a folder:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="sh"><code><span class="line"><span style="color:#B392F0">$</span><span style="color:#9ECBFF"> ImageGui</span><span style="color:#79B8FF"> --verify</span><span style="color:#9ECBFF"> exports</span></span>
 <span class="line"><span style="color:#B392F0">exports/poster-print.tif:</span><span style="color:#9ECBFF"> the</span><span style="color:#9ECBFF"> bytes</span><span style="color:#9ECBFF"> match</span><span style="color:#9ECBFF"> commit</span><span style="color:#9ECBFF"> 3f2a9c1</span></span>
 <span class="line"><span style="color:#B392F0">exports/poster-web.jpg:</span><span style="color:#9ECBFF"> the</span><span style="color:#9ECBFF"> bytes</span><span style="color:#9ECBFF"> differ</span><span style="color:#9ECBFF"> from</span><span style="color:#9ECBFF"> commit</span><span style="color:#9ECBFF"> 3f2a9c1:</span><span style="color:#9ECBFF"> 1,204</span><span style="color:#9ECBFF"> pixels</span><span style="color:#9ECBFF"> differ,</span><span style="color:#9ECBFF"> by</span><span style="color:#9ECBFF"> up</span><span style="color:#9ECBFF"> to</span><span style="color:#79B8FF"> 38</span><span style="color:#9ECBFF"> levels,</span><span style="color:#9ECBFF"> in</span><span style="color:#9ECBFF"> "Title"</span></span>
+<span class="line"><span style="color:#B392F0">exports/poster-Card.png:</span><span style="color:#9ECBFF"> the</span><span style="color:#9ECBFF"> bytes</span><span style="color:#9ECBFF"> match</span><span style="color:#9ECBFF"> the</span><span style="color:#9ECBFF"> "Card"</span><span style="color:#9ECBFF"> artboard</span><span style="color:#9ECBFF"> of</span><span style="color:#9ECBFF"> commit</span><span style="color:#9ECBFF"> 3f2a9c1</span></span>
+<span class="line"><span style="color:#B392F0">exports/poster.svg:</span><span style="color:#9ECBFF"> the</span><span style="color:#9ECBFF"> bytes</span><span style="color:#9ECBFF"> differ</span><span style="color:#9ECBFF"> from</span><span style="color:#9ECBFF"> commit</span><span style="color:#9ECBFF"> 3f2a9c1:</span><span style="color:#9ECBFF"> "Title"</span><span style="color:#9ECBFF"> is</span><span style="color:#9ECBFF"> drawn</span><span style="color:#9ECBFF"> differently</span></span>
 <span class="line"><span style="color:#B392F0">exports/logo.png:</span><span style="color:#9ECBFF"> no</span><span style="color:#9ECBFF"> provenance,</span><span style="color:#9ECBFF"> so</span><span style="color:#9ECBFF"> there</span><span style="color:#9ECBFF"> is</span><span style="color:#9ECBFF"> no</span><span style="color:#9ECBFF"> project</span><span style="color:#9ECBFF"> to</span><span style="color:#9ECBFF"> verify</span><span style="color:#9ECBFF"> it</span><span style="color:#9ECBFF"> against</span></span></code></pre>
 <p>When the bytes differ, ImageGui reads both files back. If every pixel matches, only the encoding or the
 metadata changed. If not, it says how many pixels differ and by how much, and names the layers that
 account for them: each visible layer is hidden in turn, and a layer is named when hiding it changes a
 pixel the two files disagree on, with the layers inside a group named in its place. It also says when
 the export was written by another version of ImageGui, or when an original image has changed on disk
-since the project recorded it, since either would explain the difference. A PDF or SVG can’t be read
-back, so for those only the bytes are compared, and an artboard’s export isn’t verified yet.</p>
+since the project recorded it, since either would explain the difference.</p>
+<p>A PDF is written again on the page it was laid out on, which its metadata records when it isn’t the
+default page, and read back as that page and the image on it. A page of another size, or the image
+placed elsewhere on it, is said first; otherwise the image’s pixels are compared and the layers named
+as for any other export. An SVG is read back as the layers it draws, so the layers drawn differently are
+named straight from the file, with how many pixels differ in the images it embeds. An artboard’s export
+is written again from that artboard alone and says which artboard it was checked against.</p>
 <p>It exits with 0 when every export matches, 1 when any doesn’t or can’t be verified, and 2 when the
 command line can’t be understood.</p>
 <h3 id="from-an-export-back-to-its-project">From an export back to its project</h3>
@@ -3047,8 +3092,9 @@ only ever need display colors.</p>
 <h3 id="bringing-a-blender-render-into-imagegui">Bringing a Blender render into ImageGui</h3>
 <p>In Blender’s Output Properties, choose <strong>OpenEXR</strong> as the file format and <strong>Float (Half)</strong> as its
 depth, which is what ImageGui holds an EXR in anyway. Use <strong>Float (Full)</strong> for data such as depth or
-position, where half loses precision. Leave the codec at <strong>ZIP</strong>, Blender’s default. ImageGui reads
-None, RLE, ZIPS, ZIP, and PIZ, but not the lossy DWAA, DWAB, B44, or Pxr24. Save as <strong>OpenEXR</strong> for
+position, where half loses precision. Leave the codec at <strong>ZIP</strong>, Blender’s default, unless you want
+smaller files: ImageGui also reads the lossy DWAA, DWAB, B44, B44A, and Pxr24. A lossy codec
+throws away detail for good, so keep it for previews rather than passes you will grade or composite. Save as <strong>OpenEXR</strong> for
 one image, or as <strong>OpenEXR MultiLayer</strong> to bring in every pass as a layer (see
 <a href="#opening-a-render-with-its-passes">Opening a render with its passes</a>).</p>
 <p>What happens to the colors depends on the version of Blender:</p>
